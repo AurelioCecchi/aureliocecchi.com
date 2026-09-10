@@ -1,43 +1,49 @@
-# Astro Starter Kit: Minimal
+# aureliocecchi.com
 
-```sh
-npm create astro@latest -- --template minimal
+Source of my personal site: a bilingual (Italian / Spanish) static site presenting my
+work in Salesforce, automation and content architecture.
+
+Live at [aureliocecchi.com](https://aureliocecchi.com).
+
+## Stack
+
+- [Astro](https://astro.build) — static site generator, no client-side framework
+- Built-in Astro i18n routing: Italian at `/`, Spanish at `/es/`
+- `@astrojs/sitemap` for sitemap generation
+- Deployed to Cloudflare Workers (static assets), built automatically on push to `main`
+
+## Structure
+
+```
+src/
+  layouts/    shared page shell (head, metadata, hreflang)
+  components/ reusable page fragments
+  pages/      one file per route — index.astro is /, es/index.astro is /es/
+  styles/     global stylesheet
+public/       files served as-is (favicon, images)
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Running locally
 
-## 🚀 Project Structure
+Requires Node 20 or later.
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm install
+npm run dev     # dev server at http://localhost:4321
+npm run build   # production build into dist/
+npm run preview # serve the built output locally
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Deployment
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Pushing to `main` triggers a build on Cloudflare Workers. Build command `npm run build`,
+output directory `dist`, configured in `wrangler.jsonc`. There is no server-side
+rendering: every page is prerendered at build time.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Notes
 
-## 🧞 Commands
+This repository contains no client data, credentials or environment files.
 
-All commands are run from the root of the project, from a terminal:
+## Author
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Aurelio Cecchi — [aurelio@aureliocecchi.com](mailto:aurelio@aureliocecchi.com)
