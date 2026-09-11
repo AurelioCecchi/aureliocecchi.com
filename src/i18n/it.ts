@@ -1,5 +1,54 @@
 // Testi italiani. Le stringhe vuote ('') sono tue: finché ne resta una, la build si ferma.
-// Le altre sono etichette d'interfaccia: modificale pure.
+// null invece indica un campo assente di proposito (non ancora, ma per scelta): il motore
+// i18n lo lascia passare senza bloccare la build. Le altre stringhe sono etichette
+// d'interfaccia: modificale pure.
+
+interface Decisione {
+  scelta: string;
+  perche: string;
+  alternativa: string;
+}
+
+// Struttura di un case study. progetti[0].sottotitolo, .architettura, .risultati
+// e .risultati.aggiornamento possono essere null: la pagina li omette senza lasciare
+// un buco nel layout. Per aggiungerne uno: nuovo elemento in progetti + nuova rotta
+// in i18n/index.ts (rotte.progetto) + nuova pagina in src/pages.
+interface CaseStudy {
+  titolo: string;       // h1 della pagina, e titolo del quadrato in home. 4-6 parole.
+  sottotitolo: string | null; // una riga, sotto il titolo
+  breve: string;         // 1 frase per il quadrato in home
+
+  metadati: {
+    cliente: string;
+    settore: string;
+    periodo: string;
+    ruolo: string;        // il mio ruolo nel progetto (non il ruolo del sito, vedi sopra)
+    stack: string[];      // tag, non testo corrente
+  };
+
+  problema: string[];     // paragrafi, 3-4 brevi
+
+  architettura: {
+    paragrafi: string[];
+    immagine: {
+      src: string | null; // null finché non c'è un file reale: mostra un contenitore segnaposto
+      alt: string;
+      didascalia: string;
+    };
+  } | null;
+
+  decisioni: Decisione[]; // 3-4 elementi, la sezione con più peso visivo
+
+  consegne: string[];     // 6-10 voci brevi, molte con numeri
+
+  risultati: {
+    strutturali: string[];
+    aggiornamento: { data: string; testo: string } | null;
+  } | null;
+
+  link: { url: string; testo: string };            // primario, verso il sito del progetto
+  linkAutore: { url: string; testo: string } | null; // secondario, pagina autore su quel sito
+}
 
 const it = {
   meta: {
@@ -29,6 +78,22 @@ const it = {
     oggettoEmail: 'Contatto da aureliocecchi.com',
     progetti: 'Progetti',
     leggiCaseStudy: 'Leggi il case study',
+
+    // Etichette fisse della pagina di dettaglio progetto: uguali per ogni case study.
+    caseStudio: {
+      cliente: 'Cliente',
+      settore: 'Settore',
+      periodo: 'Periodo',
+      ruolo: 'Ruolo',
+      stack: 'Stack',
+      problema: 'Il problema',
+      architettura: 'L’architettura',
+      immagineInArrivo: 'Immagine in arrivo',
+      decisioni: 'Le decisioni',
+      alternativaScartata: 'Alternativa scartata',
+      consegne: 'Cosa ho consegnato',
+      risultati: 'Risultati',
+    },
   },
 
   home: {
@@ -59,29 +124,88 @@ const it = {
     },
   },
 
-  // Case study. Uno per elemento: la home ne mostra un quadrato (titolo + breve),
-  // ogni elemento ha una pagina propria. Per aggiungerne uno: nuovo elemento qui
-  // + nuova rotta in i18n/index.ts (rotte.progetto) + nuova pagina in src/pages.
   progetti: [
     {
       titolo: 'Architettura dei contenuti per l’acquisizione di studenti internazionali',
+      sottotitolo: 'Tassonomia, contenuti e SEO tecnica per un portale di recruiting internazionale.',
       breve: 'Per Alma Mater Europaea, un portale di lead generation su 29 Stati UE/SEE: tre cluster tematici su tassonomia gerarchica, 51 articoli ottimizzati on-page.',
-      paragrafi: [''],
-      dettagli: [
-        { voce: 'Cliente', valore: 'Alma Mater Europaea' },
-        { voce: 'Settore', valore: '' },
-        { voce: 'Periodo', valore: 'Luglio – settembre 2026' },
+
+      metadati: {
+        cliente: 'Alma Mater Europaea',
+        settore: 'Istruzione superiore',
+        periodo: 'Luglio – settembre 2026',
+        ruolo: 'Architettura dei contenuti, implementazione',
+        stack: ['WordPress', 'Yoast', 'MCP', 'HTML/CSS'],
+      },
+
+      problema: [
+        'Alma Mater Europaea aveva bisogno di un portale in grado di intercettare la ricerca organica di studenti internazionali interessati a un percorso di studi, in un mercato coperto da università in 29 Stati tra UE e SEE.',
+        'I contenuti esistenti erano frammentati: pagine isolate, nessuna gerarchia tematica, link interni quasi assenti. Il sito non comunicava a Google, né ai lettori, quali fossero i temi su cui costruiva autorevolezza.',
+        'Il rischio principale era la cannibalizzazione: pagine diverse in competizione per le stesse query, senza un piano di collegamento tra contenuti pillar e contenuti di supporto.',
       ],
-      titoloConsegne: 'Cosa ho consegnato',
-      // Una riga per consegna. Materiale dal brief: 26 articoli nuovi; 25 riscritti
-      // conservando URL e date; tassonomia a tre assi; home in HTML/CSS; restyling
-      // del tema; connettore MCP su WordPress; blocco anti-bot; invalidazione cache.
-      // "51 ottimizzati" è la somma di 26 + 25: esporlo accanto agli altri due conta doppio.
-      consegne: [''],
-      url: 'https://physiotherapist.university/',
-      link: 'Visita physiotherapist.university',
+
+      architettura: {
+        paragrafi: [
+          'Ho impostato una tassonomia gerarchica a tre assi — argomento, area geografica, tipo di contenuto — e riorganizzato i contenuti esistenti attorno a tre cluster tematici, ciascuno con una pagina pillar e articoli di supporto collegati in entrambe le direzioni.',
+          'La struttura degli URL e l’internal linking seguono la gerarchia della tassonomia, così che crawler e lettori possano risalire dal contenuto specifico al tema generale in un solo passaggio.',
+        ],
+        immagine: {
+          src: null,
+          alt: 'Schema della tassonomia a tre assi: argomento, area geografica, tipo di contenuto',
+          didascalia: 'Schema semplificato della tassonomia: tre cluster tematici, ciascuno con una pagina pillar e gli articoli di supporto collegati.',
+        },
+      },
+
+      decisioni: [
+        {
+          scelta: 'Categorie invece di tag',
+          perche: 'Le categorie WordPress creano una gerarchia di URL esplicita, che rispecchia la tassonomia e aiuta i motori di ricerca a capire come le pagine si relazionano tra loro.',
+          alternativa: 'I tag, già in uso su parte del sito, non impongono nessuna gerarchia: utili per etichettare trasversalmente, ma incapaci da soli di comunicare una struttura a cluster.',
+        },
+        {
+          scelta: 'Tabelle informative in HTML inline, non un documento scaricabile',
+          perche: 'Ogni programma doveva includere i dati previsti dall’Articolo 11 in una tabella indicizzabile, leggibile da mobile e aggiornabile pagina per pagina senza toccare un file esterno.',
+          alternativa: 'Un PDF per programma, l’approccio in uso in precedenza: più rapido da produrre in blocco, ma invisibile ai motori di ricerca e scomodo su mobile.',
+        },
+        {
+          scelta: 'Home page scritta a mano in HTML/CSS',
+          perche: 'La home è la pagina con più traffico e doveva restare leggera: nessuno script di un builder a blocchi da caricare, tempi di risposta migliori e un impatto diretto sul Core Web Vitals.',
+          alternativa: 'Il page builder visuale già installato sul tema: più comodo da modificare senza toccare codice, ma con un peso di script e CSS superfluo per una singola pagina statica.',
+        },
+      ],
+
+      // Materiale dal brief: 26 articoli nuovi; 25 riscritti conservando URL e date;
+      // 51 ottimizzati on-page (somma dei due); 29 tabelle Articolo 11; tassonomia a tre
+      // assi; home in HTML/CSS; restyling del tema; integrazione MCP; blocco anti-bot;
+      // invalidazione cache.
+      consegne: [
+        '26 articoli nuovi',
+        '25 articoli riscritti, URL e date conservate',
+        '51 contenuti ottimizzati on-page',
+        '29 tabelle Articolo 11',
+        'Tassonomia a tre assi',
+        'Home page scritta a mano',
+        'Restyling del tema',
+        'Integrazione MCP su misura',
+        'Blocco anti-bot e invalidazione cache',
+      ],
+
+      risultati: {
+        strutturali: [
+          'Tre cluster tematici pubblicati e collegati tra loro',
+          'Tassonomia attiva su tutte le pagine del portale',
+          'Sito in fase di indicizzazione su Google Search Console',
+        ],
+        aggiornamento: null, // niente metriche ancora: il blocco datato resta assente finché non arrivano
+      },
+
+      link: { url: 'https://physiotherapist.university/', testo: 'Visita physiotherapist.university' },
+      linkAutore: {
+        url: 'https://physiotherapist.university/author/aurelio-cecchi/',
+        testo: 'La mia pagina autore su physiotherapist.university',
+      },
     },
-  ],
+  ] as CaseStudy[],
 
   contatti: {
     titolo: '', // h1

@@ -1,39 +1,121 @@
 ---
 import { rotte, testi, type Lang } from '../i18n';
 
-interface Props { lang: Lang; }
-const { lang } = Astro.props;
+interface Props { lang: Lang; indice?: number; }
+const { lang, indice = 0 } = Astro.props;
 const t = testi[lang];
-// Un solo case study per ora: indice fisso. Quando ce ne sarà un secondo,
-// ogni pagina passerà il proprio indice (o una chiave) invece di [0].
-const p = t.progetti[0];
+const p = t.progetti[indice];
+const s = t.interfaccia.caseStudio;
 ---
 
-<section class="sezione sezione--nebbia" id="progetto" aria-labelledby="progetto-titolo">
-  <div class="contenitore binario">
+<section class="sezione sezione--nebbia" id="progetto">
+  <div class="contenitore progetto__intestazione">
+    <a class="progetto__indietro" href={`${rotte.home[lang]}#progetti`}>
+      <span aria-hidden="true">←</span> {t.interfaccia.progetti}
+    </a>
+    <h1 id="progetto-titolo">{p.titolo}</h1>
+    {p.sottotitolo && <p class="progetto__sottotitolo">{p.sottotitolo}</p>}
+  </div>
+
+  <div class="contenitore binario progetto__corpo">
     <div class="binario__lato">
-      <a class="progetto__indietro" href={`${rotte.home[lang]}#progetti`}>
-        <span aria-hidden="true">←</span> {t.interfaccia.progetti}
-      </a>
-      <h1 id="progetto-titolo">{p.titolo}</h1>
       <dl class="dettagli">
-        {p.dettagli.map(({ voce, valore }) => (
-          <div>
-            <dt>{voce}</dt>
-            <dd>{valore}</dd>
-          </div>
-        ))}
+        <div>
+          <dt>{s.cliente}</dt>
+          <dd>{p.metadati.cliente}</dd>
+        </div>
+        <div>
+          <dt>{s.settore}</dt>
+          <dd>{p.metadati.settore}</dd>
+        </div>
+        <div>
+          <dt>{s.periodo}</dt>
+          <dd>{p.metadati.periodo}</dd>
+        </div>
+        <div>
+          <dt>{s.ruolo}</dt>
+          <dd>{p.metadati.ruolo}</dd>
+        </div>
+        <div>
+          <dt>{s.stack}</dt>
+          <dd>
+            <ul class="progetto__stack">
+              {p.metadati.stack.map((voce) => <li>{voce}</li>)}
+            </ul>
+          </dd>
+        </div>
       </dl>
     </div>
+
     <div class="binario__corpo">
-      <div class="testo-lungo">
-        {p.paragrafi.map((paragrafo) => <p>{paragrafo}</p>)}
+      <section class="progetto__sezione" aria-labelledby="progetto-problema">
+        <h2 id="progetto-problema">{s.problema}</h2>
+        <div class="testo-lungo">
+          {p.problema.map((paragrafo) => <p>{paragrafo}</p>)}
+        </div>
+      </section>
+
+      {p.architettura && (
+        <section class="progetto__sezione" aria-labelledby="progetto-architettura">
+          <h2 id="progetto-architettura">{s.architettura}</h2>
+          <div class="testo-lungo">
+            {p.architettura.paragrafi.map((paragrafo) => <p>{paragrafo}</p>)}
+          </div>
+          <figure class="progetto__figura">
+            {p.architettura.immagine.src ? (
+              <img src={p.architettura.immagine.src} alt={p.architettura.immagine.alt} />
+            ) : (
+              <div class="progetto__placeholder" role="img" aria-label={p.architettura.immagine.alt}>
+                {s.immagineInArrivo}
+              </div>
+            )}
+            <figcaption class="progetto__didascalia">{p.architettura.immagine.didascalia}</figcaption>
+          </figure>
+        </section>
+      )}
+
+      <section class="progetto__sezione" aria-labelledby="progetto-decisioni">
+        <h2 id="progetto-decisioni">{s.decisioni}</h2>
+        <div class="decisioni">
+          {p.decisioni.map((d) => (
+            <article class="decisione">
+              <p class="decisione__scelta">{d.scelta}</p>
+              <p class="decisione__perche">{d.perche}</p>
+              <span class="decisione__alternativa-etichetta">{s.alternativaScartata}</span>
+              <p class="decisione__alternativa">{d.alternativa}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="progetto__sezione" aria-labelledby="progetto-consegne">
+        <h2 id="progetto-consegne" class="consegne__titolo">{s.consegne}</h2>
+        <ul class="consegne">
+          {p.consegne.map((voce) => <li>{voce}</li>)}
+        </ul>
+      </section>
+
+      {p.risultati && (
+        <section class="progetto__sezione" aria-labelledby="progetto-risultati">
+          <h2 id="progetto-risultati">{s.risultati}</h2>
+          <ul class="risultati__strutturali">
+            {p.risultati.strutturali.map((voce) => <li>{voce}</li>)}
+          </ul>
+          {p.risultati.aggiornamento && (
+            <p class="risultati__aggiornamento">
+              <time datetime={p.risultati.aggiornamento.data}>{p.risultati.aggiornamento.data}</time>
+              {p.risultati.aggiornamento.testo}
+            </p>
+          )}
+        </section>
+      )}
+
+      <div class="azioni progetto__chiusura">
+        <a class="bottone" href={p.link.url}>{p.link.testo}</a>
+        {p.linkAutore && (
+          <a class="bottone bottone--secondario" href={p.linkAutore.url}>{p.linkAutore.testo}</a>
+        )}
       </div>
-      <h3 class="consegne__titolo">{p.titoloConsegne}</h3>
-      <ul class="consegne">
-        {p.consegne.map((consegna) => <li>{consegna}</li>)}
-      </ul>
-      <p class="progetto__link"><a href={p.url}>{p.link}</a></p>
     </div>
   </div>
 </section>

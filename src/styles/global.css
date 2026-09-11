@@ -135,16 +135,24 @@ main:focus { outline: none; }
   margin-top: 2rem;
 }
 
-/* Coppie voce/valore, usate in hero, progetto e contatti */
+/* Coppie voce/valore, usate in hero, progetto e contatti.
+   min-width: 0 sulle celle e overflow-wrap sul testo evitano che un valore
+   lungo esca dalla propria colonna e si sovrapponga a quella accanto. */
 .scheda,
 .dettagli { display: grid; }
+.scheda > div,
+.dettagli > div { min-width: 0; }
 .scheda dt,
 .dettagli dt {
   font-size: var(--t-piccolo);
   color: var(--grafite);
+  overflow-wrap: anywhere;
 }
 .scheda dd,
-.dettagli dd { font-weight: var(--forte); }
+.dettagli dd {
+  font-weight: var(--forte);
+  overflow-wrap: anywhere;
+}
 
 /* ---------- Bottoni ---------- */
 
@@ -329,13 +337,6 @@ main:focus { outline: none; }
 
 /* ---------- Progetto (pagina del case study) ---------- */
 
-.dettagli { gap: 1.25rem; align-content: start; }
-.dettagli > div { padding-top: 1rem; border-top: 1px solid var(--linea); }
-.dettagli dd { margin-top: 0.25rem; }
-@media (min-width: 60rem) {
-  #progetto .binario__lato { position: sticky; top: calc(var(--altezza-testata) + 2rem); align-self: start; }
-}
-
 .progetto__indietro {
   display: inline-flex;
   align-items: center;
@@ -348,9 +349,83 @@ main:focus { outline: none; }
 }
 .progetto__indietro:hover { color: var(--tevere); }
 
-#progetto h1 { font-size: var(--t-h2); letter-spacing: -0.02em; margin-bottom: 2rem; }
+#progetto h1 { max-width: 30ch; font-size: var(--t-h2); letter-spacing: -0.02em; }
 
-.consegne__titolo { margin-top: 3rem; margin-bottom: 1rem; }
+.progetto__sottotitolo { margin-top: 0.75rem; max-width: var(--misura); font-size: var(--t-medio); color: var(--grafite); }
+
+.progetto__corpo { margin-top: clamp(2.5rem, 1.5rem + 3vw, 4rem); }
+
+.dettagli { gap: 1.25rem; align-content: start; }
+.dettagli > div { padding-top: 1rem; border-top: 1px solid var(--linea); }
+.dettagli dd { margin-top: 0.25rem; }
+@media (min-width: 60rem) {
+  #progetto .binario__lato { position: sticky; top: calc(var(--altezza-testata) + 2rem); align-self: start; }
+}
+
+/* Stack: tag, non testo corrente */
+.progetto__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.progetto__stack li {
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--linea);
+  border-radius: 999px;
+  background: var(--carta);
+  font-size: var(--t-piccolo);
+  font-weight: var(--forte);
+  overflow-wrap: anywhere;
+}
+
+/* Ogni sezione (Il problema, L'architettura, ecc.) */
+.progetto__sezione { margin-top: clamp(3rem, 2rem + 3vw, 5rem); }
+.progetto__sezione:first-child { margin-top: 0; }
+
+/* Contenitore per il diagramma: predisposto anche senza un'immagine reale */
+.progetto__figura { margin: 2rem 0 0; }
+.progetto__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 14rem;
+  padding: 1.5rem;
+  border: 1px dashed var(--linea);
+  border-radius: var(--raggio);
+  background: var(--nebbia);
+  color: var(--grafite);
+  font-size: var(--t-piccolo);
+  text-align: center;
+}
+.progetto__figura img { width: 100%; border-radius: var(--raggio); }
+.progetto__didascalia { margin-top: 0.75rem; color: var(--grafite); font-size: var(--t-piccolo); }
+
+/* Le decisioni: blocchi distinti, non un elenco puntato. La sezione con più peso visivo. */
+.decisioni { display: grid; gap: 1.5rem; margin-top: 2rem; }
+.decisione {
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--linea);
+  border-left: 3px solid var(--tevere);
+  border-radius: var(--raggio);
+  background: var(--carta);
+}
+.decisione__scelta { font-size: var(--t-h3); font-weight: var(--forte); }
+.decisione__perche { margin-top: 0.75rem; }
+.decisione__alternativa-etichetta {
+  display: block;
+  margin-top: 1.25rem;
+  color: var(--grafite);
+  font-size: 0.75rem;
+  font-weight: var(--forte);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.decisione__alternativa { margin-top: 0.35rem; color: var(--grafite); font-size: 0.9375rem; }
+
+.consegne__titolo { margin-bottom: 1rem; }
 
 .consegne {
   max-width: var(--misura);
@@ -361,9 +436,23 @@ main:focus { outline: none; }
 .consegne li {
   padding-block: 0.85rem;
   border-bottom: 1px solid var(--linea);
+  overflow-wrap: anywhere;
 }
 
-.progetto__link { margin-top: 2rem; font-weight: var(--forte); }
+/* Risultati: elenco strutturale + blocco "aggiornamento" omettibile */
+.risultati__strutturali { margin-top: 1.5rem; padding-left: 1.25rem; max-width: var(--misura); }
+.risultati__strutturali li { margin-top: 0.5rem; }
+.risultati__aggiornamento {
+  margin-top: 2rem;
+  max-width: var(--misura);
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--tevere);
+  background: var(--nebbia);
+  font-size: 0.9375rem;
+}
+.risultati__aggiornamento time { display: block; margin-bottom: 0.25rem; color: var(--grafite); font-size: var(--t-piccolo); font-weight: var(--forte); }
+
+.progetto__chiusura { padding-top: 1rem; border-top: 1px solid var(--linea); }
 
 /* ---------- Invito ---------- */
 
