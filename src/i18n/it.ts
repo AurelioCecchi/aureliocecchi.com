@@ -53,11 +53,17 @@ interface CaseStudy {
 const it = {
   meta: {
     home: {
-      titolo: '',      // <title>: 50-60 caratteri, nome incluso
-      descrizione: '', // meta description: 140-155 caratteri
+      titolo: 'Aurelio Cecchi — Salesforce, integrazioni e crescita organica',
+      descrizione: 'Sviluppatore freelance: sistemi CRM, integrazioni e architetture di contenuti pensate per la ricerca organica. Specializzato in Salesforce, tra Italia e Spagna.',
     },
-    contatti: { titolo: '', descrizione: '' },
-    progetto: { titolo: '', descrizione: '' },
+    contatti: {
+      titolo: 'Contatti — Aurelio Cecchi',
+      descrizione: 'Scrivimi per parlare di un processo da automatizzare, un’integrazione o un progetto Salesforce. Rispondo a tutti, di solito entro pochi giorni lavorativi.',
+    },
+    progetto: {
+      titolo: 'Case study: architettura di contenuti per il recruiting internazionale',
+      descrizione: 'Come ho progettato la tassonomia e i contenuti di un portale di lead generation per studenti internazionali, per Alma Mater Europaea: 51 articoli, 29 Stati UE/SEE.',
+    },
   },
 
   // Il mestiere in poche parole. Compare sopra il titolo della home,
@@ -215,13 +221,13 @@ const it = {
   ] as CaseStudy[],
 
   contatti: {
-    titolo: '', // h1
-    testo: '',
+    titolo: 'Scriviamoci',
+    testo: 'Se hai un processo che gira a mano, uno strumento che non si parla con gli altri, o un progetto Salesforce di cui vorresti discutere, scrivimi direttamente qui sotto. Rispondo a tutti.',
     etichettaEmail: 'Email',
     bottone: 'Scrivi un’email',
     voci: [
-      { voce: 'Lingue di lavoro', valore: '' },
-      { voce: 'Tempi di risposta', valore: '' },
+      { voce: 'Lingue di lavoro', valore: 'Italiano, spagnolo, inglese' },
+      { voce: 'Tempi di risposta', valore: 'Di solito entro 1-2 giorni lavorativi' },
     ],
   },
 };

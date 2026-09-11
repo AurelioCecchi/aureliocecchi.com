@@ -3,9 +3,18 @@ import type { Testi } from './it';
 
 const en: Testi = {
   meta: {
-    home: { titolo: '', descrizione: '' },
-    contatti: { titolo: '', descrizione: '' },
-    progetto: { titolo: '', descrizione: '' },
+    home: {
+      titolo: 'Aurelio Cecchi — Salesforce, Integrations & Organic Growth',
+      descrizione: 'Freelance developer: CRM systems, integrations and content architectures designed for organic search. Salesforce specialist, working across Italy and Spain.',
+    },
+    contatti: {
+      titolo: 'Contact — Aurelio Cecchi',
+      descrizione: "Get in touch about a process to automate, an integration, or a Salesforce project. I reply to everyone, usually within a few business days.",
+    },
+    progetto: {
+      titolo: 'Case study: content architecture for international recruitment',
+      descrizione: 'How I designed the taxonomy and content for a lead-generation portal aimed at international students, for Alma Mater Europaea: 51 articles, 29 EU/EEA states.',
+    },
   },
 
   ruolo: 'Salesforce & automation',
@@ -155,13 +164,13 @@ const en: Testi = {
   ],
 
   contatti: {
-    titolo: '',
-    testo: '',
+    titolo: 'Get in touch',
+    testo: "Got a process that still runs by hand, a tool that doesn't talk to the others, or a Salesforce project you'd like to discuss? Write to me below. I reply to everyone.",
     etichettaEmail: 'Email',
     bottone: 'Send an email',
     voci: [
-      { voce: 'Working languages', valore: '' },
-      { voce: 'Response time', valore: '' },
+      { voce: 'Working languages', valore: 'Italian, Spanish, English' },
+      { voce: 'Response time', valore: 'Usually within 1-2 business days' },
     ],
   },
 };

@@ -3,9 +3,18 @@ import type { Testi } from './it';
 
 const es: Testi = {
   meta: {
-    home: { titolo: '', descrizione: '' },
-    contatti: { titolo: '', descrizione: '' },
-    progetto: { titolo: '', descrizione: '' },
+    home: {
+      titolo: 'Aurelio Cecchi — Salesforce, integraciones y crecimiento orgánico',
+      descrizione: 'Desarrollador freelance: sistemas CRM, integraciones y arquitecturas de contenidos pensadas para la búsqueda orgánica. Especializado en Salesforce, entre Italia y España.',
+    },
+    contatti: {
+      titolo: 'Contacto — Aurelio Cecchi',
+      descrizione: 'Escríbeme para hablar de un proceso que automatizar, una integración o un proyecto de Salesforce. Respondo a todos, normalmente en pocos días laborables.',
+    },
+    progetto: {
+      titolo: 'Caso de estudio: arquitectura de contenidos para captación internacional',
+      descrizione: 'Cómo diseñé la taxonomía y los contenidos de un portal de generación de leads para estudiantes internacionales, para Alma Mater Europaea: 51 artículos, 29 Estados UE/EEE.',
+    },
   },
 
   ruolo: 'Salesforce y automatización',
@@ -155,13 +164,13 @@ const es: Testi = {
   ],
 
   contatti: {
-    titolo: '',
-    testo: '',
+    titolo: 'Escríbeme',
+    testo: 'Si tienes un proceso que se hace a mano, una herramienta que no se comunica con las demás, o un proyecto de Salesforce del que te gustaría hablar, escríbeme aquí abajo. Respondo a todos.',
     etichettaEmail: 'Correo',
     bottone: 'Enviar un correo',
     voci: [
-      { voce: 'Idiomas de trabajo', valore: '' },
-      { voce: 'Plazo de respuesta', valore: '' },
+      { voce: 'Idiomas de trabajo', valore: 'Italiano, español, inglés' },
+      { voce: 'Plazo de respuesta', valore: 'Normalmente en 1-2 días laborables' },
     ],
   },
 };
