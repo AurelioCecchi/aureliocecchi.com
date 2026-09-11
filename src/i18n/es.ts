@@ -39,7 +39,11 @@ const es: Testi = {
       { voce: 'Ubicación', valore: 'Toscana (Italia) · en remoto' },
     ],
     profilo: { titolo: '', paragrafi: [''] },
-    invito: { titolo: '', testo: '', bottone: 'Escríbeme' },
+    invito: {
+      titolo: 'Escríbeme',
+      testo: 'Si tienes un proceso que se hace a mano, una herramienta que no se comunica con las demás, o un proyecto de Salesforce del que te gustaría hablar, escríbeme. Respondo a todos.',
+      bottone: 'Escríbeme',
+    },
   },
 
   progetti: [

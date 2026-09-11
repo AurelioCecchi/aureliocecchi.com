@@ -49,8 +49,8 @@ const it = {
       paragrafi: [''], // un elemento per paragrafo
     },
     invito: {
-      titolo: '',
-      testo: '',
+      titolo: 'Scrivimi',
+      testo: 'Se hai un processo che gira a mano, uno strumento che non si parla con gli altri, o un progetto Salesforce di cui vorresti discutere — scrivimi. Rispondo a tutti.',
       bottone: 'Scrivimi',
     },
   },

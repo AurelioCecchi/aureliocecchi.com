@@ -39,7 +39,11 @@ const en: Testi = {
       { voce: 'Based in', valore: 'Tuscany, Italy · remote' },
     ],
     profilo: { titolo: '', paragrafi: [''] },
-    invito: { titolo: '', testo: '', bottone: 'Get in touch' },
+    invito: {
+      titolo: 'Get in touch',
+      testo: "Got a process that still runs by hand, a tool that doesn't talk to the others, or a Salesforce project you'd like to discuss? Get in touch. I reply to everyone.",
+      bottone: 'Get in touch',
+    },
   },
 
   progetti: [
