@@ -48,7 +48,7 @@ const es: Testi = {
 
   progetti: [
     {
-      titolo: 'Arquitectura SEO por clústeres temáticos en WordPress',
+      titolo: 'Arquitectura de contenidos para la captación de estudiantes internacionales',
       breve: 'Para Alma Mater Europaea, un portal de generación de leads con cobertura de 29 Estados UE/EEE: tres clústeres temáticos en una taxonomía jerárquica, 51 artículos optimizados on-page.',
       paragrafi: [''],
       dettagli: [

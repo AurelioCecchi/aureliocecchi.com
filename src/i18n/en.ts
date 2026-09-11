@@ -48,7 +48,7 @@ const en: Testi = {
 
   progetti: [
     {
-      titolo: 'Topic-cluster SEO architecture on WordPress',
+      titolo: 'Content architecture for international student recruitment',
       breve: 'For Alma Mater Europaea, a lead-generation portal covering 29 EU/EEA states: three topic clusters on a hierarchical taxonomy, 51 articles optimised on-page.',
       paragrafi: [''],
       dettagli: [

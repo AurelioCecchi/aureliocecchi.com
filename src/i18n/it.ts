@@ -60,7 +60,7 @@ const it = {
   // + nuova rotta in i18n/index.ts (rotte.progetto) + nuova pagina in src/pages.
   progetti: [
     {
-      titolo: 'Architettura SEO a cluster tematici su WordPress',
+      titolo: 'Architettura dei contenuti per l’acquisizione di studenti internazionali',
       breve: 'Per Alma Mater Europaea, un portale di lead generation su 29 Stati UE/SEE: tre cluster tematici su tassonomia gerarchica, 51 articoli ottimizzati on-page.',
       paragrafi: [''],
       dettagli: [
