@@ -61,6 +61,7 @@ const es: Testi = {
       { voce: 'Ámbito', valore: 'Salesforce, integraciones, SEO' },
       { voce: 'Idiomas', valore: 'Italiano, español, inglés' },
       { voce: 'Ubicación', valore: 'Toscana (Italia) · en remoto' },
+      { voce: 'Disponibilidad', valore: 'A partir de mayo de 2027' },
     ],
     profilo: {
       titolo: 'Perfil',
@@ -171,6 +172,7 @@ const es: Testi = {
     voci: [
       { voce: 'Idiomas de trabajo', valore: 'Italiano, español, inglés' },
       { voce: 'Plazo de respuesta', valore: 'Normalmente en 1-2 días laborables' },
+      { voce: 'Disponibilidad', valore: 'Para trabajos freelance a partir de mayo de 2027' },
     ],
   },
 };

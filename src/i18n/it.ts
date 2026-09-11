@@ -114,6 +114,7 @@ const it = {
       { voce: 'Ambito', valore: 'Salesforce, integrazioni, SEO' },
       { voce: 'Lingue', valore: 'Italiano, spagnolo, inglese' },
       { voce: 'Base', valore: 'Toscana · da remoto' },
+      { voce: 'Disponibilità', valore: 'Da maggio 2027' },
     ],
     profilo: {
       titolo: 'Profilo',
@@ -228,6 +229,7 @@ const it = {
     voci: [
       { voce: 'Lingue di lavoro', valore: 'Italiano, spagnolo, inglese' },
       { voce: 'Tempi di risposta', valore: 'Di solito entro 1-2 giorni lavorativi' },
+      { voce: 'Disponibilità', valore: 'Per lavori freelance da maggio 2027' },
     ],
   },
 };

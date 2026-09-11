@@ -61,6 +61,7 @@ const en: Testi = {
       { voce: 'Focus', valore: 'Salesforce, integrations, SEO' },
       { voce: 'Languages', valore: 'Italian, Spanish, English' },
       { voce: 'Based in', valore: 'Tuscany, Italy · remote' },
+      { voce: 'Availability', valore: 'From May 2027' },
     ],
     profilo: {
       titolo: 'Profile',
@@ -171,6 +172,7 @@ const en: Testi = {
     voci: [
       { voce: 'Working languages', valore: 'Italian, Spanish, English' },
       { voce: 'Response time', valore: 'Usually within 1-2 business days' },
+      { voce: 'Availability', valore: 'Freelance work from May 2027' },
     ],
   },
 };
