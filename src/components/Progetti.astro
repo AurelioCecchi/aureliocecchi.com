@@ -1,0 +1,30 @@
+---
+import { rotte, testi, type Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = testi[lang];
+
+// Un case study = un quadrato. Per aggiungerne uno: un elemento qui che abbina
+// i dati (testi[lang].progetti[n]) alla sua rotta (rotte.progetto2, ecc.).
+const progetti = [
+  { dati: t.progetti[0], rotta: rotte.progetto[lang] },
+];
+---
+
+<section class="sezione sezione--nebbia" id="progetti" aria-labelledby="progetti-titolo">
+  <div class="contenitore">
+    <h2 id="progetti-titolo">{t.interfaccia.progetti}</h2>
+    <ul class="progetti-griglia">
+      {progetti.map(({ dati, rotta }) => (
+        <li>
+          <a class="progetti-scheda" href={rotta}>
+            <h3>{dati.titolo}</h3>
+            <p>{dati.breve}</p>
+            <span class="progetti-scheda__link">{t.interfaccia.leggiCaseStudy}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

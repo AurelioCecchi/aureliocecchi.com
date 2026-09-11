@@ -1,0 +1,16 @@
+---
+import { testi, type Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const p = testi[lang].home.profilo;
+---
+
+<section class="sezione" id="profilo" aria-labelledby="profilo-titolo">
+  <div class="contenitore binario">
+    <h2 class="binario__lato" id="profilo-titolo">{p.titolo}</h2>
+    <div class="binario__corpo testo-lungo">
+      {p.paragrafi.map((paragrafo) => <p>{paragrafo}</p>)}
+    </div>
+  </div>
+</section>

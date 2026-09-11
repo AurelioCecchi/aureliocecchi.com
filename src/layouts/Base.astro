@@ -1,36 +1,99 @@
 ---
+import '@fontsource/ibm-plex-sans/latin-400.css';
+import '@fontsource/ibm-plex-sans/latin-600.css';
 import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { lingue, lingueSito, linguaXDefault, rotte, testi, type Lang, type Pagina } from '../i18n';
+import { sito } from '../sito';
 
 interface Props {
-  title: string;
-  description: string;
-  lang?: 'it' | 'es';
+  lang: Lang;
+  pagina: Pagina;
 }
 
-const { title, description, lang = 'it' } = Astro.props;
+const { lang, pagina } = Astro.props;
+const t = testi[lang];
+const { titolo, descrizione } = t.meta[pagina];
+const assoluto = (percorso: string) => new URL(percorso, sito.url).href;
+const canonical = assoluto(rotte[pagina][lang]);
+
+const tipoSchema: Record<Pagina, string> = {
+  home: 'ProfilePage',
+  contatti: 'ContactPage',
+  progetto: 'ItemPage',
+};
+
+const persona = {
+  '@type': 'Person',
+  '@id': `${sito.url}/#persona`,
+  name: sito.nome,
+  url: `${sito.url}/`,
+  jobTitle: t.ruolo,
+  email: `mailto:${sito.email}`,
+  knowsLanguage: [...lingue],
+  address: { '@type': 'PostalAddress', addressRegion: sito.regione, addressCountry: sito.paese },
+  sameAs: [sito.github, sito.paginaAutore].filter(Boolean),
+};
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    persona,
+    {
+      '@type': 'WebSite',
+      '@id': `${sito.url}/#sito`,
+      url: `${sito.url}/`,
+      name: sito.nome,
+      inLanguage: [...lingue],
+      publisher: { '@id': `${sito.url}/#persona` },
+    },
+    {
+      '@type': tipoSchema[pagina],
+      '@id': canonical,
+      url: canonical,
+      name: titolo,
+      description: descrizione,
+      inLanguage: lang,
+      isPartOf: { '@id': `${sito.url}/#sito` },
+      mainEntity: { '@id': `${sito.url}/#persona` },
+    },
+  ],
+};
+const jsonLd = JSON.stringify(schema).replace(/</g, '\\u003c');
 ---
+
 <!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
-
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={Astro.url.href} />
-
-    <link rel="alternate" hreflang="it" href="https://aureliocecchi.com/" />
-    <link rel="alternate" hreflang="es" href="https://aureliocecchi.com/es/" />
-    <link rel="alternate" hreflang="x-default" href="https://aureliocecchi.com/" />
+    <title>{titolo}</title>
+    <meta name="description" content={descrizione} />
+    <link rel="canonical" href={canonical} />
+    {lingue.map((l) => <link rel="alternate" hreflang={l} href={assoluto(rotte[pagina][l])} />)}
+    <link rel="alternate" hreflang="x-default" href={assoluto(rotte[pagina][linguaXDefault])} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={Astro.url.href} />
-    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'it_IT'} />
+    <meta property="og:site_name" content={sito.nome} />
+    <meta property="og:title" content={titolo} />
+    <meta property="og:description" content={descrizione} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={lingueSito[lang].og} />
+    {lingue.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={lingueSito[l].og} />)}
+    <meta name="twitter:card" content="summary" />
+
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <script type="application/ld+json" set:html={jsonLd} />
   </head>
-  <body>
-    <slot />
+  <body id="inizio">
+    <a class="salta" href="#contenuto">{t.interfaccia.saltaAlContenuto}</a>
+    <Header lang={lang} pagina={pagina} />
+    <main id="contenuto" tabindex="-1">
+      <slot />
+    </main>
+    <Footer lang={lang} pagina={pagina} />
   </body>
 </html>

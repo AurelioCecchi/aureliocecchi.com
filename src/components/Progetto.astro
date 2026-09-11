@@ -1,0 +1,39 @@
+---
+import { rotte, testi, type Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = testi[lang];
+// Un solo case study per ora: indice fisso. Quando ce ne sarà un secondo,
+// ogni pagina passerà il proprio indice (o una chiave) invece di [0].
+const p = t.progetti[0];
+---
+
+<section class="sezione sezione--nebbia" id="progetto" aria-labelledby="progetto-titolo">
+  <div class="contenitore binario">
+    <div class="binario__lato">
+      <a class="progetto__indietro" href={`${rotte.home[lang]}#progetti`}>
+        <span aria-hidden="true">←</span> {t.interfaccia.progetti}
+      </a>
+      <h1 id="progetto-titolo">{p.titolo}</h1>
+      <dl class="dettagli">
+        {p.dettagli.map(({ voce, valore }) => (
+          <div>
+            <dt>{voce}</dt>
+            <dd>{valore}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+    <div class="binario__corpo">
+      <div class="testo-lungo">
+        {p.paragrafi.map((paragrafo) => <p>{paragrafo}</p>)}
+      </div>
+      <h3 class="consegne__titolo">{p.titoloConsegne}</h3>
+      <ul class="consegne">
+        {p.consegne.map((consegna) => <li>{consegna}</li>)}
+      </ul>
+      <p class="progetto__link"><a href={p.url}>{p.link}</a></p>
+    </div>
+  </div>
+</section>

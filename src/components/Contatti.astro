@@ -1,0 +1,34 @@
+---
+import { testi, type Lang } from '../i18n';
+import { sito } from '../sito';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = testi[lang];
+const c = t.contatti;
+const mailto = `mailto:${sito.email}?subject=${encodeURIComponent(t.interfaccia.oggettoEmail)}`;
+---
+
+<section class="contatti" aria-labelledby="contatti-titolo">
+  <div class="contenitore binario">
+    <div class="binario__lato">
+      <h1 id="contatti-titolo">{c.titolo}</h1>
+    </div>
+    <div class="binario__corpo">
+      <p class="contatti__intro">{c.testo}</p>
+      <p class="contatti__etichetta">{c.etichettaEmail}</p>
+      <p class="contatti__email"><a href={mailto}>{sito.email}</a></p>
+      <div class="azioni">
+        <a class="bottone" href={mailto}>{c.bottone}</a>
+      </div>
+      <dl class="dettagli dettagli--riga">
+        {c.voci.map(({ voce, valore }) => (
+          <div>
+            <dt>{voce}</dt>
+            <dd>{valore}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+</section>

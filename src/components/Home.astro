@@ -1,0 +1,16 @@
+---
+// Ordine delle sezioni della home: per spostarne una, sposta la riga.
+import Hero from './Hero.astro';
+import Profilo from './Profilo.astro';
+import Progetti from './Progetti.astro';
+import Invito from './Invito.astro';
+import type { Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+---
+
+<Hero lang={lang} />
+<Profilo lang={lang} />
+<Progetti lang={lang} />
+<Invito lang={lang} />

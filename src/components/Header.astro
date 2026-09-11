@@ -1,0 +1,38 @@
+---
+import { lingue, lingueSito, rotte, testi, type Lang, type Pagina } from '../i18n';
+import { sito } from '../sito';
+
+interface Props { lang: Lang; pagina: Pagina; }
+const { lang, pagina } = Astro.props;
+const t = testi[lang].interfaccia;
+---
+
+<header class="testata">
+  <div class="contenitore testata__riga">
+    <a class="testata__nome" href={rotte.home[lang]} aria-current={pagina === 'home' ? 'page' : undefined}>
+      {sito.nome}
+    </a>
+    <div class="testata__azioni">
+      <nav aria-label={t.lingua}>
+        <ul class="lingue">
+          {lingue.map((l) => (
+            <li>
+              <a
+                href={rotte[pagina][l]}
+                hreflang={l}
+                lang={l}
+                aria-label={lingueSito[l].nome}
+                aria-current={l === lang ? 'page' : undefined}
+              >{l.toUpperCase()}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <a
+        class="bottone bottone--testata"
+        href={rotte.contatti[lang]}
+        aria-current={pagina === 'contatti' ? 'page' : undefined}
+      >{t.contatti}</a>
+    </div>
+  </div>
+</header>

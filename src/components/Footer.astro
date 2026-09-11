@@ -1,0 +1,48 @@
+---
+import { rotte, testi, type Lang, type Pagina } from '../i18n';
+import { sito } from '../sito';
+
+interface Props { lang: Lang; pagina: Pagina; }
+const { lang } = Astro.props;
+const t = testi[lang];
+const anno = new Date().getFullYear();
+---
+
+<footer class="piede">
+  <div class="contenitore">
+    <div class="piede__griglia">
+      <div class="piede__firma">
+        <p class="piede__nome">{sito.nome}</p>
+        <p>{t.ruolo}</p>
+      </div>
+
+      <nav aria-labelledby="piede-pagine">
+        <p class="piede__titolo" id="piede-pagine">{t.interfaccia.pagine}</p>
+        <ul class="piede__elenco">
+          <li><a href={rotte.home[lang]}>{t.interfaccia.home}</a></li>
+          <li><a href={rotte.progetto[lang]}>{t.interfaccia.progetti}</a></li>
+          <li><a href={rotte.contatti[lang]}>{t.interfaccia.contatti}</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="piede__titolo" id="piede-link">{t.interfaccia.link}</p>
+        <ul class="piede__elenco" aria-labelledby="piede-link">
+          <li><a href={`mailto:${sito.email}`}>{sito.email}</a></li>
+          <li><a href={sito.github} rel="me">GitHub</a></li>
+          {sito.paginaAutore && <li><a href={sito.paginaAutore} rel="me">{t.interfaccia.paginaAutore}</a></li>}
+        </ul>
+      </div>
+    </div>
+
+    <div class="piede__fondo">
+      <p>
+        © {anno} {sito.nome}. {t.interfaccia.diritti}
+        {sito.partitaIva && <span class="piede__iva">{t.interfaccia.partitaIva} {sito.partitaIva}</span>}
+      </p>
+      <a class="bottone bottone--secondario torna-su" href="#inizio">
+        {t.interfaccia.tornaSu}<span aria-hidden="true">↑</span>
+      </a>
+    </div>
+  </div>
+</footer>
