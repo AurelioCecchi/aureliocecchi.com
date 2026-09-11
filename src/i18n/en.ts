@@ -38,7 +38,14 @@ const en: Testi = {
       { voce: 'Languages', valore: 'Italian, Spanish, English' },
       { voce: 'Based in', valore: 'Tuscany, Italy · remote' },
     ],
-    profilo: { titolo: '', paragrafi: [''] },
+    profilo: {
+      titolo: 'Profile',
+      paragrafi: [
+        "I'm a freelance developer working on CRM systems, integrations and content architecture.",
+        "I've designed and built the content architecture behind a European university's international recruitment site, and I write MCP connectors — open source on GitHub — when the integration I need doesn't exist yet.",
+        "Right now I'm working toward the Salesforce Platform Administrator certification and building a full Salesforce implementation for a nonprofit organisation. Available for freelance work from May 2027.",
+      ],
+    },
     invito: {
       titolo: 'Get in touch',
       testo: "Got a process that still runs by hand, a tool that doesn't talk to the others, or a Salesforce project you'd like to discuss? Get in touch. I reply to everyone.",

@@ -38,7 +38,14 @@ const es: Testi = {
       { voce: 'Idiomas', valore: 'Italiano, español, inglés' },
       { voce: 'Ubicación', valore: 'Toscana (Italia) · en remoto' },
     ],
-    profilo: { titolo: '', paragrafi: [''] },
+    profilo: {
+      titolo: 'Perfil',
+      paragrafi: [
+        'Soy desarrollador freelance y trabajo con sistemas CRM, integraciones y arquitectura de contenidos.',
+        'He diseñado y construido la arquitectura de contenidos detrás del sitio de captación internacional de estudiantes de una universidad europea, y escribo conectores MCP — de código abierto en GitHub — cuando la integración que necesito todavía no existe.',
+        'Ahora mismo estoy preparando la certificación Salesforce Platform Administrator y construyendo una implementación completa de Salesforce para una organización sin ánimo de lucro. Disponible para trabajos freelance a partir de mayo de 2027.',
+      ],
+    },
     invito: {
       titolo: 'Escríbeme',
       testo: 'Si tienes un proceso que se hace a mano, una herramienta que no se comunica con las demás, o un proyecto de Salesforce del que te gustaría hablar, escríbeme. Respondo a todos.',

@@ -45,8 +45,12 @@ const it = {
       { voce: 'Base', valore: 'Toscana · da remoto' },
     ],
     profilo: {
-      titolo: '',
-      paragrafi: [''], // un elemento per paragrafo
+      titolo: 'Profilo',
+      paragrafi: [
+        'Sono uno sviluppatore freelance che si occupa di sistemi CRM, integrazioni e architettura dei contenuti.',
+        'Ho progettato e costruito l’architettura dei contenuti dietro il sito di acquisizione internazionale di studenti di un’università europea, e scrivo connettori MCP — open source su GitHub — quando l’integrazione di cui ho bisogno non esiste ancora.',
+        'Al momento sto preparando la certificazione Salesforce Platform Administrator e sto costruendo un’implementazione Salesforce completa per un’organizzazione non profit. Disponibile per lavori freelance da maggio 2027.',
+      ],
     },
     invito: {
       titolo: 'Scrivimi',
