@@ -28,7 +28,7 @@ const es: Testi = {
 
   home: {
     hero: {
-      titolo: '',
+      titolo: 'Sistemas CRM, integraciones y crecimiento orgánico.',
       testo: 'Construyo sistemas que eliminan el trabajo manual de los procesos. Trabajo principalmente con Salesforce, integraciones entre herramientas que no se comunican entre sí y arquitecturas de contenidos pensadas para la búsqueda orgánica.',
       bottoneContatti: 'Escríbeme',
       bottoneProgetto: 'Ver los proyectos',

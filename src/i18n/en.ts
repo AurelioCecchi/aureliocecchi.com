@@ -28,7 +28,7 @@ const en: Testi = {
 
   home: {
     hero: {
-      titolo: '',
+      titolo: 'CRM systems, integrations, and organic growth.',
       testo: "I build systems that take manual work out of processes. My work centres on Salesforce, integrations between tools that don't talk to each other, and content architectures designed for organic search.",
       bottoneContatti: 'Get in touch',
       bottoneProgetto: 'See the projects',

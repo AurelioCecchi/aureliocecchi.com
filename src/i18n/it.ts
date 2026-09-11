@@ -33,7 +33,7 @@ const it = {
 
   home: {
     hero: {
-      titolo: '', // h1 della pagina
+      titolo: 'Sistemi CRM, integrazioni e crescita organica.',
       testo: 'Costruisco sistemi che tolgono il lavoro manuale dai processi. Lavoro principalmente su Salesforce, integrazioni tra strumenti che non si parlano e architetture di contenuti pensate per la ricerca organica.',
       bottoneContatti: 'Scrivimi',
       bottoneProgetto: 'Guarda i progetti',
