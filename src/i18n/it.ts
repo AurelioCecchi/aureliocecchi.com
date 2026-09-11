@@ -13,7 +13,7 @@ const it = {
 
   // Il mestiere in poche parole. Compare sopra il titolo della home,
   // nel footer e nei dati strutturati (jobTitle).
-  ruolo: '',
+  ruolo: 'Salesforce e automazione',
 
   interfaccia: {
     saltaAlContenuto: 'Vai al contenuto',
@@ -40,10 +40,9 @@ const it = {
     },
     // Scheda a lato del titolo. Le voci si possono togliere o aggiungere.
     scheda: [
-      { voce: 'Ambito', valore: '' },
-      { voce: 'Mercati', valore: '' },
-      { voce: 'Lingue', valore: '' },
-      { voce: 'Base', valore: '' },
+      { voce: 'Ambito', valore: 'Salesforce, automazioni, contenuti SEO' },
+      { voce: 'Lingue', valore: 'Italiano, spagnolo, inglese' },
+      { voce: 'Base', valore: 'Toscana · da remoto' },
     ],
     profilo: {
       titolo: '',

@@ -8,7 +8,7 @@ const en: Testi = {
     progetto: { titolo: '', descrizione: '' },
   },
 
-  ruolo: '',
+  ruolo: 'Salesforce & automation',
 
   interfaccia: {
     saltaAlContenuto: 'Skip to content',
@@ -34,10 +34,9 @@ const en: Testi = {
       bottoneProgetto: 'See the projects',
     },
     scheda: [
-      { voce: 'Focus', valore: '' },
-      { voce: 'Markets', valore: '' },
-      { voce: 'Languages', valore: '' },
-      { voce: 'Based in', valore: '' },
+      { voce: 'Focus', valore: 'Salesforce, automation, SEO content' },
+      { voce: 'Languages', valore: 'Italian, Spanish, English' },
+      { voce: 'Based in', valore: 'Tuscany, Italy · remote' },
     ],
     profilo: { titolo: '', paragrafi: [''] },
     invito: { titolo: '', testo: '', bottone: 'Get in touch' },

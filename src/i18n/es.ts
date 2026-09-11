@@ -8,7 +8,7 @@ const es: Testi = {
     progetto: { titolo: '', descrizione: '' },
   },
 
-  ruolo: '',
+  ruolo: 'Salesforce y automatización',
 
   interfaccia: {
     saltaAlContenuto: 'Saltar al contenido',
@@ -34,10 +34,9 @@ const es: Testi = {
       bottoneProgetto: 'Ver los proyectos',
     },
     scheda: [
-      { voce: 'Ámbito', valore: '' },
-      { voce: 'Mercados', valore: '' },
-      { voce: 'Idiomas', valore: '' },
-      { voce: 'Ubicación', valore: '' },
+      { voce: 'Ámbito', valore: 'Salesforce, automatización, contenidos SEO' },
+      { voce: 'Idiomas', valore: 'Italiano, español, inglés' },
+      { voce: 'Ubicación', valore: 'Toscana (Italia) · en remoto' },
     ],
     profilo: { titolo: '', paragrafi: [''] },
     invito: { titolo: '', testo: '', bottone: 'Escríbeme' },
