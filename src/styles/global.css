@@ -400,7 +400,7 @@ main:focus { outline: none; }
   font-size: var(--t-piccolo);
   text-align: center;
 }
-.progetto__figura img { width: 100%; border-radius: var(--raggio); }
+.progetto__figura img { width: 100%; border: 1px solid var(--linea); border-radius: var(--raggio); }
 .progetto__didascalia { margin-top: 0.75rem; color: var(--grafite); font-size: var(--t-piccolo); }
 
 /* Le decisioni: blocchi distinti, non un elenco puntato. La sezione con più peso visivo. */

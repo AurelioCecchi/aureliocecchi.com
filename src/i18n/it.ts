@@ -151,9 +151,9 @@ const it = {
           'Durante l’implementazione ho dovuto risolvere anche due problemi indipendenti dal contenuto: un filtro anti-bot lato hosting che bloccava l’operatività del collegamento programmatico, isolato con test mirati e rimosso tramite un ticket con l’assistenza; e un layer di cache che non invalidava in modo prevedibile dopo ogni modifica, ricostruito e stabilizzato prima di continuare la produzione.',
         ],
         immagine: {
-          src: null,
-          alt: 'Schema della tassonomia a tre assi: argomento, area geografica, tipo di contenuto',
-          didascalia: 'Schema semplificato della tassonomia: tre cluster tematici, ciascuno con una pagina pillar e gli articoli di supporto collegati.',
+          src: '/case-studies/physiotherapist-university-taxonomy.svg',
+          alt: 'Schema della tassonomia a tre assi — Countries, Subjects, EU Regulations — con i sottogruppi di ciascun asse e un esempio di collegamento fra una scheda paese e i due hub tematici',
+          didascalia: 'I tre assi della tassonomia con i rispettivi sottogruppi, e un esempio di come una scheda paese si collega agli hub tematici e a tutte le altre schede paese tramite la tabella Articolo 11.',
         },
       },
 

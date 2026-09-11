@@ -95,9 +95,9 @@ const en: Testi = {
           "During implementation I also had to solve two problems unrelated to the content itself: a hosting-side anti-bot filter blocking the programmatic connection, isolated through targeted testing and cleared via a support ticket; and a cache layer that wasn't invalidating predictably after each change, rebuilt and stabilised before production work could continue.",
         ],
         immagine: {
-          src: null,
-          alt: 'Diagram of the three-axis taxonomy: topic, geographic area, content type',
-          didascalia: 'Simplified taxonomy diagram: three topic clusters, each with a pillar page and its linked supporting articles.',
+          src: '/case-studies/physiotherapist-university-taxonomy.svg',
+          alt: 'Diagram of the three-axis taxonomy — Countries, Subjects, EU Regulations — with each axis’s sub-groups and an example of how a country page links to the two hubs',
+          didascalia: 'The three taxonomy axes with their sub-groups, and an example of how a country page links to the topic hubs and to every other country page via the Article 11 table.',
         },
       },
 

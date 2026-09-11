@@ -95,9 +95,9 @@ const es: Testi = {
           'Durante la implementación también tuve que resolver dos problemas ajenos al contenido: un filtro antibots del lado del hosting que bloqueaba la conexión programática, aislado con pruebas específicas y resuelto mediante un ticket de soporte; y una capa de caché que no se invalidaba de forma predecible tras cada cambio, reconstruida y estabilizada antes de continuar la producción.',
         ],
         immagine: {
-          src: null,
-          alt: 'Esquema de la taxonomía en tres ejes: tema, área geográfica, tipo de contenido',
-          didascalia: 'Esquema simplificado de la taxonomía: tres clústeres temáticos, cada uno con una página pilar y los artículos de apoyo enlazados.',
+          src: '/case-studies/physiotherapist-university-taxonomy.svg',
+          alt: 'Esquema de la taxonomía en tres ejes — Countries, Subjects, EU Regulations — con los subgrupos de cada eje y un ejemplo de enlace entre una ficha de país y los dos hubs temáticos',
+          didascalia: 'Los tres ejes de la taxonomía con sus subgrupos, y un ejemplo de cómo una ficha de país enlaza con los hubs temáticos y con todas las demás fichas de país a través de la tabla del Artículo 11.',
         },
       },
 

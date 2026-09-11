@@ -1,0 +1,107 @@
+<svg viewBox="0 0 1000 660" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pu-tax-title">
+  <title id="pu-tax-title">Three-axis taxonomy: Countries, Subjects, EU Regulations</title>
+
+  <defs>
+    <marker id="pu-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1d5c63" />
+    </marker>
+    <marker id="pu-arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#58606b" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="660" fill="#ffffff" />
+
+  <!-- Root -->
+  <rect x="395" y="16" width="210" height="40" rx="20" fill="#eef2f3" stroke="#d5dbdf" />
+  <text x="500" y="41" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1e23">Higher Education</text>
+
+  <!-- Root to axes connectors -->
+  <path d="M500 56 V80 M170 80 H830 M170 80 V110 M500 80 V110 M830 80 V110" fill="none" stroke="#d5dbdf" stroke-width="2" />
+
+  <!-- Axis: Countries -->
+  <rect x="50" y="110" width="240" height="48" rx="8" fill="#1d5c63" />
+  <text x="170" y="131" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Countries</text>
+  <text x="170" y="148" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#ffffff" fill-opacity="0.8">29 pages · geographic intent</text>
+
+  <!-- Axis: Subjects -->
+  <rect x="380" y="110" width="240" height="48" rx="8" fill="#1d5c63" />
+  <text x="500" y="131" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Subjects</text>
+  <text x="500" y="148" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#ffffff" fill-opacity="0.8">19 pages · topical intent</text>
+
+  <!-- Axis: EU Regulations -->
+  <rect x="710" y="110" width="240" height="48" rx="8" fill="#1d5c63" />
+  <text x="830" y="131" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">EU Regulations</text>
+  <text x="830" y="148" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#ffffff" fill-opacity="0.8">4 pages · recognition intent</text>
+
+  <!-- Countries sub-groups (4) -->
+  <path d="M170 158 V190 M170 220 V230 M170 260 V270 M170 300 V310" fill="none" stroke="#d5dbdf" stroke-width="2" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#1a1e23">
+    <rect x="60" y="190" width="220" height="30" rx="6" fill="#ffffff" stroke="#d5dbdf" />
+    <text x="170" y="209" text-anchor="middle">Northern Europe (9)</text>
+    <rect x="60" y="230" width="220" height="30" rx="6" fill="#ffffff" stroke="#d5dbdf" />
+    <text x="170" y="249" text-anchor="middle">Western &amp; Central Europe (6)</text>
+    <rect x="60" y="270" width="220" height="30" rx="6" fill="#ffffff" stroke="#d5dbdf" />
+    <text x="170" y="289" text-anchor="middle">Southern Europe (8)</text>
+    <rect x="60" y="310" width="220" height="30" rx="6" fill="#ffffff" stroke="#d5dbdf" />
+    <text x="170" y="329" text-anchor="middle">Eastern Europe (6)</text>
+  </g>
+
+  <!-- Subjects sub-groups (4) -->
+  <path d="M500 158 V190 M500 220 V230 M500 260 V270 M500 300 V310" fill="none" stroke="#d5dbdf" stroke-width="2" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#1a1e23">
+    <rect x="370" y="190" width="260" height="30" rx="6" fill="#ffffff" stroke="#d5dbdf" />
+    <text x="500" y="209" text-anchor="middle">Basic Sciences (3)</text>
+    <rect x="370" y="230" width="260" height="30" rx="6" fill="#ffffff" stroke="#d5dbdf" />
+    <text x="500" y="249" text-anchor="middle">Clinical Sciences (11)</text>
+    <rect x="370" y="270" width="260" height="30" rx="6" fill="#ffffff" stroke="#d5dbdf" />
+    <text x="500" y="289" text-anchor="middle">Physiotherapy Interventions (4)</text>
+    <rect x="370" y="310" width="260" height="30" rx="6" fill="#ffffff" stroke="#d5dbdf" />
+    <text x="500" y="329" text-anchor="middle">Research &amp; Professional Practice (1)</text>
+  </g>
+
+  <!-- EU Regulations sub-groups (2, centred in the same band) -->
+  <path d="M830 158 V220 M830 250 V280" fill="none" stroke="#d5dbdf" stroke-width="2" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#1a1e23">
+    <rect x="700" y="220" width="260" height="30" rx="6" fill="#ffffff" stroke="#d5dbdf" />
+    <text x="830" y="239" text-anchor="middle">Recognition of Qualifications (2)</text>
+    <rect x="700" y="280" width="260" height="30" rx="6" fill="#ffffff" stroke="#d5dbdf" />
+    <text x="830" y="299" text-anchor="middle">Qualification Standards (2)</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="40" y1="375" x2="960" y2="375" stroke="#d5dbdf" stroke-width="1" />
+
+  <!-- Cross-linking example -->
+  <text x="500" y="400" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="0.04em" fill="#58606b">HOW ONE COUNTRY PAGE LINKS OUT</text>
+
+  <!-- Hub nodes either side -->
+  <rect x="50" y="448" width="280" height="46" rx="8" fill="#eef2f3" stroke="#1d5c63" />
+  <text x="190" y="467" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="700" fill="#1a1e23">Subject hub</text>
+  <text x="190" y="483" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#58606b">e.g. Musculoskeletal Sciences</text>
+
+  <rect x="670" y="448" width="280" height="46" rx="8" fill="#eef2f3" stroke="#1d5c63" />
+  <text x="810" y="467" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="700" fill="#1a1e23">EU Regulation hub</text>
+  <text x="810" y="483" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#58606b">e.g. Article 11 recognition guide</text>
+
+  <!-- Centre: the country page -->
+  <rect x="365" y="448" width="270" height="46" rx="8" fill="#133f44" />
+  <text x="500" y="467" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Country page</text>
+  <text x="500" y="483" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#ffffff" fill-opacity="0.85">e.g. Austria</text>
+
+  <!-- Arrows from country page to the two hubs -->
+  <line x1="365" y1="471" x2="335" y2="471" stroke="#1d5c63" stroke-width="2" marker-end="url(#pu-arrow)" />
+  <text x="350" y="436" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#58606b">topic mentions</text>
+
+  <line x1="635" y1="471" x2="665" y2="471" stroke="#1d5c63" stroke-width="2" marker-end="url(#pu-arrow)" />
+  <text x="650" y="436" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#58606b">recognition references</text>
+
+  <!-- Node → node: other country pages -->
+  <rect x="360" y="586" width="280" height="46" rx="8" fill="#ffffff" stroke="#d5dbdf" stroke-dasharray="4 3" />
+  <text x="500" y="605" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="700" fill="#1a1e23">Other 28 country pages</text>
+  <text x="500" y="621" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#58606b">grouped by recognition level</text>
+
+  <line x1="500" y1="494" x2="500" y2="583" stroke="#58606b" stroke-width="2" marker-end="url(#pu-arrow-muted)" marker-start="url(#pu-arrow-muted)" />
+  <rect x="512" y="528" width="188" height="22" fill="#ffffff" />
+  <text x="606" y="544" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#58606b">Article 11 table, both ways</text>
+</svg>
