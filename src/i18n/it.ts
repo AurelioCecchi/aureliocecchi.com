@@ -68,7 +68,7 @@ const it = {
 
   // Il mestiere in poche parole. Compare sopra il titolo della home,
   // nel footer e nei dati strutturati (jobTitle).
-  ruolo: 'Salesforce e automazione',
+  ruolo: 'Sistemi CRM e automazione',
 
   interfaccia: {
     saltaAlContenuto: 'Vai al contenuto',
@@ -214,10 +214,7 @@ const it = {
       },
 
       link: { url: 'https://physiotherapist.university/', testo: 'Visita physiotherapist.university' },
-      linkAutore: {
-        url: 'https://physiotherapist.university/author/aurelio-cecchi/',
-        testo: 'La mia pagina autore su physiotherapist.university',
-      },
+      linkAutore: null,
     },
   ] as CaseStudy[],
 

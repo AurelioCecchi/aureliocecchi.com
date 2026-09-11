@@ -17,7 +17,7 @@ const es: Testi = {
     },
   },
 
-  ruolo: 'Salesforce y automatización',
+  ruolo: 'Sistemas CRM y automatización',
 
   interfaccia: {
     saltaAlContenuto: 'Saltar al contenido',
@@ -157,10 +157,7 @@ const es: Testi = {
       },
 
       link: { url: 'https://physiotherapist.university/', testo: 'Visitar physiotherapist.university' },
-      linkAutore: {
-        url: 'https://physiotherapist.university/author/aurelio-cecchi/',
-        testo: 'Mi página de autor en physiotherapist.university',
-      },
+      linkAutore: null,
     },
   ],
 
