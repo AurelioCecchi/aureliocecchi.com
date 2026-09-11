@@ -92,6 +92,7 @@ const es: Testi = {
         paragrafi: [
           'Definí una taxonomía jerárquica en tres ejes — tema, área geográfica, tipo de contenido — y reorganicé los contenidos existentes en torno a tres clústeres temáticos, cada uno con una página pilar y artículos de apoyo enlazados en ambas direcciones.',
           'La estructura de URL y el enlazado interno siguen la jerarquía de la taxonomía, de modo que los rastreadores y los lectores puedan pasar del contenido específico al tema general en un solo paso.',
+          'Durante la implementación también tuve que resolver dos problemas ajenos al contenido: un filtro antibots del lado del hosting que bloqueaba la conexión programática, aislado con pruebas específicas y resuelto mediante un ticket de soporte; y una capa de caché que no se invalidaba de forma predecible tras cada cambio, reconstruida y estabilizada antes de continuar la producción.',
         ],
         immagine: {
           src: null,
@@ -116,6 +117,11 @@ const es: Testi = {
           perche: 'La home es la página con más tráfico y debía mantenerse ligera: sin los scripts de un editor visual por bloques, con mejores tiempos de respuesta y un impacto directo en el Core Web Vitals.',
           alternativa: 'El editor visual ya instalado en el tema: más cómodo de modificar sin tocar código, pero con un peso de scripts y CSS innecesario para una sola página estática.',
         },
+        {
+          scelta: 'Optimización SEO llevada a la puntuación máxima en las dos listas de Yoast',
+          perche: 'El público son fisioterapeutas en ejercicio: el texto debía sostener un registro técnico. Las reglas de legibilidad tiran en la dirección contraria, hacia frases cortas y un léxico llano — el trabajo real fue reescribir hasta satisfacer ambos requisitos sin banalizar el contenido. Unos 25 criterios por artículo, en 51 artículos, repetidos en cada ciclo de revisión: más de 1.250 intervenciones puntuales sobre el corpus.',
+          alternativa: 'Quedarse solo con la luz verde del análisis SEO y dejar el texto tal cual: una fracción del tiempo, pero un registro plano para un público que espera precisión técnica.',
+        },
       ],
 
       consegne: [
@@ -127,7 +133,8 @@ const es: Testi = {
         'Página de inicio escrita a mano',
         'Restyling de la plantilla',
         'Integración MCP a medida',
-        'Bloqueo antibots e invalidación de caché',
+        'Desbloqueo del filtro antibots del hosting',
+        'Diagnóstico y corrección de la invalidación de caché',
       ],
 
       risultati: {

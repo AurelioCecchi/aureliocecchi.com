@@ -92,6 +92,7 @@ const en: Testi = {
         paragrafi: [
           "I set up a hierarchical taxonomy along three axes — topic, geographic area, content type — and reorganised existing content around three topic clusters, each with a pillar page and supporting articles linked in both directions.",
           'URL structure and internal linking follow the taxonomy hierarchy, so both crawlers and readers can move from a specific piece of content up to the general topic in a single step.',
+          "During implementation I also had to solve two problems unrelated to the content itself: a hosting-side anti-bot filter blocking the programmatic connection, isolated through targeted testing and cleared via a support ticket; and a cache layer that wasn't invalidating predictably after each change, rebuilt and stabilised before production work could continue.",
         ],
         immagine: {
           src: null,
@@ -116,6 +117,11 @@ const en: Testi = {
           perche: 'The homepage gets the most traffic and needed to stay light: no block-builder scripts to load, better response times, and a direct effect on Core Web Vitals.',
           alternativa: "The visual page builder already installed on the theme: easier to edit without touching code, but with a script and CSS weight that's unnecessary for a single static page.",
         },
+        {
+          scelta: 'SEO optimisation pushed to a full score on both Yoast checklists',
+          perche: "The audience is practising physiotherapists: the text had to hold a technical register. Readability rules pull the other way, toward short sentences and plain language — the real work was rewriting until it satisfied both constraints without flattening the content. About 25 criteria per article, across 51 articles, repeated at every revision cycle: over 1,250 individual interventions on the corpus.",
+          alternativa: 'Stopping at a green light on the SEO analysis alone and leaving the text as it was: a fraction of the time, but a flat register for an audience that expects technical precision.',
+        },
       ],
 
       consegne: [
@@ -127,7 +133,8 @@ const en: Testi = {
         'Hand-coded homepage',
         'Theme restyling',
         'Custom MCP integration',
-        'Anti-bot block and cache invalidation',
+        'Hosting-side anti-bot filter unblocked',
+        'Cache invalidation diagnosed and fixed',
       ],
 
       risultati: {

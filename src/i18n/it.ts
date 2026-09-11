@@ -148,6 +148,7 @@ const it = {
         paragrafi: [
           'Ho impostato una tassonomia gerarchica a tre assi — argomento, area geografica, tipo di contenuto — e riorganizzato i contenuti esistenti attorno a tre cluster tematici, ciascuno con una pagina pillar e articoli di supporto collegati in entrambe le direzioni.',
           'La struttura degli URL e l’internal linking seguono la gerarchia della tassonomia, così che crawler e lettori possano risalire dal contenuto specifico al tema generale in un solo passaggio.',
+          'Durante l’implementazione ho dovuto risolvere anche due problemi indipendenti dal contenuto: un filtro anti-bot lato hosting che bloccava l’operatività del collegamento programmatico, isolato con test mirati e rimosso tramite un ticket con l’assistenza; e un layer di cache che non invalidava in modo prevedibile dopo ogni modifica, ricostruito e stabilizzato prima di continuare la produzione.',
         ],
         immagine: {
           src: null,
@@ -172,12 +173,17 @@ const it = {
           perche: 'La home è la pagina con più traffico e doveva restare leggera: nessuno script di un builder a blocchi da caricare, tempi di risposta migliori e un impatto diretto sul Core Web Vitals.',
           alternativa: 'Il page builder visuale già installato sul tema: più comodo da modificare senza toccare codice, ma con un peso di script e CSS superfluo per una singola pagina statica.',
         },
+        {
+          scelta: 'Ottimizzazione SEO fino al punteggio pieno su entrambe le checklist Yoast',
+          perche: 'Il pubblico sono fisioterapisti in esercizio: il testo doveva reggere un registro tecnico. Le regole di leggibilità spingono nella direzione opposta, verso frasi brevi e lessico piano — il lavoro vero è stato riscrivere fino a soddisfare entrambi i vincoli senza banalizzare i contenuti. Circa 25 criteri per articolo, su 51 articoli, ripetuti a ogni ciclo di revisione: oltre 1.250 interventi puntuali sul corpus.',
+          alternativa: 'Fermarsi al solo semaforo verde sull’analisi SEO e lasciare il testo com’era: una frazione del tempo, ma un registro piatto per un pubblico che si aspetta precisione tecnica.',
+        },
       ],
 
       // Materiale dal brief: 26 articoli nuovi; 25 riscritti conservando URL e date;
       // 51 ottimizzati on-page (somma dei due); 29 tabelle Articolo 11; tassonomia a tre
-      // assi; home in HTML/CSS; restyling del tema; integrazione MCP; blocco anti-bot;
-      // invalidazione cache.
+      // assi; home in HTML/CSS; restyling del tema; integrazione MCP; blocco anti-bot
+      // (sblocco via ticket hosting); invalidazione cache.
       consegne: [
         '26 articoli nuovi',
         '25 articoli riscritti, URL e date conservate',
@@ -187,7 +193,8 @@ const it = {
         'Home page scritta a mano',
         'Restyling del tema',
         'Integrazione MCP su misura',
-        'Blocco anti-bot e invalidazione cache',
+        'Sblocco del filtro anti-bot lato hosting',
+        'Diagnosi e correzione dell’invalidazione cache',
       ],
 
       risultati: {
