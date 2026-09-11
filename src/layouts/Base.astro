@@ -81,7 +81,11 @@ const jsonLd = JSON.stringify(schema).replace(/</g, '\\u003c');
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={lingueSito[lang].og} />
     {lingue.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={lingueSito[l].og} />)}
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={assoluto('/og-image.png')} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={assoluto('/og-image.png')} />
 
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
