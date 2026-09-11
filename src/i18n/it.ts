@@ -34,13 +34,13 @@ const it = {
   home: {
     hero: {
       titolo: '', // h1 della pagina
-      testo: '',  // 1-2 frasi sotto il titolo
+      testo: 'Costruisco sistemi che tolgono il lavoro manuale dai processi. Lavoro principalmente su Salesforce, integrazioni tra strumenti che non si parlano e architetture di contenuti pensate per la ricerca organica.',
       bottoneContatti: 'Scrivimi',
       bottoneProgetto: 'Guarda i progetti',
     },
     // Scheda a lato del titolo. Le voci si possono togliere o aggiungere.
     scheda: [
-      { voce: 'Ambito', valore: 'Salesforce, automazioni, contenuti SEO' },
+      { voce: 'Ambito', valore: 'Salesforce, integrazioni, SEO' },
       { voce: 'Lingue', valore: 'Italiano, spagnolo, inglese' },
       { voce: 'Base', valore: 'Toscana · da remoto' },
     ],
@@ -60,8 +60,8 @@ const it = {
   // + nuova rotta in i18n/index.ts (rotte.progetto) + nuova pagina in src/pages.
   progetti: [
     {
-      titolo: '', // h1 della pagina del progetto, e titolo del quadrato in home
-      breve: '',  // 1 frase per il quadrato in home
+      titolo: 'Architettura SEO a cluster tematici su WordPress',
+      breve: 'Per Alma Mater Europaea, un portale di lead generation su 29 Stati UE/SEE: tre cluster tematici su tassonomia gerarchica, 51 articoli ottimizzati on-page.',
       paragrafi: [''],
       dettagli: [
         { voce: 'Cliente', valore: 'Alma Mater Europaea' },

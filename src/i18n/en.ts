@@ -29,12 +29,12 @@ const en: Testi = {
   home: {
     hero: {
       titolo: '',
-      testo: '',
+      testo: "I build systems that take manual work out of processes. My work centres on Salesforce, integrations between tools that don't talk to each other, and content architectures designed for organic search.",
       bottoneContatti: 'Get in touch',
       bottoneProgetto: 'See the projects',
     },
     scheda: [
-      { voce: 'Focus', valore: 'Salesforce, automation, SEO content' },
+      { voce: 'Focus', valore: 'Salesforce, integrations, SEO' },
       { voce: 'Languages', valore: 'Italian, Spanish, English' },
       { voce: 'Based in', valore: 'Tuscany, Italy · remote' },
     ],
@@ -44,8 +44,8 @@ const en: Testi = {
 
   progetti: [
     {
-      titolo: '',
-      breve: '',
+      titolo: 'Topic-cluster SEO architecture on WordPress',
+      breve: 'For Alma Mater Europaea, a lead-generation portal covering 29 EU/EEA states: three topic clusters on a hierarchical taxonomy, 51 articles optimised on-page.',
       paragrafi: [''],
       dettagli: [
         { voce: 'Client', valore: 'Alma Mater Europaea' },
