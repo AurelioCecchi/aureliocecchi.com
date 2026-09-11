@@ -247,7 +247,7 @@ main:focus { outline: none; }
 
 /* ---------- Hero ---------- */
 
-.hero { padding-block: clamp(3.5rem, 2rem + 7vw, 8.5rem) var(--sezione); }
+.hero { padding-block: clamp(2rem, 1.25rem + 3vw, 4rem) var(--sezione); }
 
 .hero__ruolo {
   margin-bottom: 1.5rem;
