@@ -120,8 +120,8 @@ const it = {
       paragrafi: [
         'Mi occupo di sistemi CRM, integrazioni e architettura dei contenuti per la ricerca organica. Le due metà sembrano mestieri diversi, ma sono lo stesso problema visto due volte: decidere come strutturare l’informazione perché un sistema — o una persona — riesca a orientarsi. Da una parte lo si fa con oggetti, permessi e automazioni; dall’altra con tassonomie, gerarchie e link interni.',
         {
-          prima: 'La maggior parte del mio lavoro è su Salesforce. Di recente ho progettato e costruito l’architettura dei contenuti dietro il portale di acquisizione internazionale di studenti di un’università europea — tassonomia a tre assi, 51 articoli ottimizzati, componenti su misura — consegnato a settembre 2026. Quando mi serve un’integrazione che non esiste ancora, la scrivo e la pubblico: ',
-          link: { url: 'https://github.com/AurelioCecchi/mcp-google-sheets', testo: 'mcp-google-sheets' },
+          prima: 'La maggior parte del mio lavoro è su Salesforce. Di recente ho progettato e costruito l’architettura dei contenuti dietro il portale di acquisizione internazionale di studenti di un’università europea — tassonomia a tre assi, 51 articoli ottimizzati, componenti su misura — consegnato a settembre 2026. Quando mi serve un’integrazione che non esiste ancora, la scrivo e la pubblico sul mio ',
+          link: { url: 'https://github.com/AurelioCecchi', testo: 'GitHub' },
           dopo: '.',
         },
         'Al momento sto costruendo competenza su Salesforce Administrator sul campo, in vista della certificazione nel 2027, e il prossimo lavoro in programma è un’implementazione Salesforce completa per un’organizzazione non profit.',

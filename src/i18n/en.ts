@@ -66,8 +66,8 @@ const en: Testi = {
       paragrafi: [
         "I work on CRM systems, integrations, and content architecture for organic search. Those two halves look unrelated, but they are the same problem seen twice: deciding how information should be structured so that a system — or a person — can find its way through it. One does it with objects, permissions and automations; the other with taxonomies, hierarchies and internal links.",
         {
-          prima: "Most of my work is on Salesforce. I recently designed and built the content architecture behind a European university's international student acquisition portal — a three-axis taxonomy, 51 optimised articles, custom components — delivered in September 2026. When an integration I need doesn't exist yet, I write it and publish it: ",
-          link: { url: 'https://github.com/AurelioCecchi/mcp-google-sheets', testo: 'mcp-google-sheets' },
+          prima: "Most of my work is on Salesforce. I recently designed and built the content architecture behind a European university's international student acquisition portal — a three-axis taxonomy, 51 optimised articles, custom components — delivered in September 2026. When an integration I need doesn't exist yet, I write it and publish it on my ",
+          link: { url: 'https://github.com/AurelioCecchi', testo: 'GitHub' },
           dopo: '.',
         },
         "Right now I'm building Salesforce Administrator competence hands-on, ahead of certification in 2027, and the next thing on my desk is a full Salesforce implementation for a non-profit.",
