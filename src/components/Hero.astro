@@ -1,5 +1,5 @@
 ---
-import { rotte, testi, type Lang } from '../i18n';
+import { testi, type Lang } from '../i18n';
 
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
@@ -9,14 +9,12 @@ const h = t.home.hero;
 
 <section class="hero" aria-labelledby="hero-titolo">
   <div class="contenitore">
-    <p class="hero__ruolo">{t.ruolo}</p>
     <h1 id="hero-titolo">{h.titolo}</h1>
     <div class="hero__base">
       <div>
         <p class="hero__lead">{h.testo}</p>
         <div class="azioni">
-          <a class="bottone" href={rotte.contatti[lang]}>{h.bottoneContatti}</a>
-          <a class="bottone bottone--secondario" href="#progetti">{h.bottoneProgetto}</a>
+          <a class="bottone" href="#progetti">{h.bottoneProgetto}</a>
         </div>
       </div>
       <dl class="scheda">

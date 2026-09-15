@@ -5,7 +5,7 @@ const en: Testi = {
   meta: {
     home: {
       titolo: 'Aurelio Cecchi — Salesforce, Integrations & Organic Growth',
-      descrizione: 'Freelance developer: CRM systems, integrations and content architectures designed for organic search. Salesforce specialist, working across Italy and Spain.',
+      descrizione: 'I work on Salesforce, integrations and content architectures, across Italy and Spain.',
     },
     contatti: {
       titolo: 'Contact — Aurelio Cecchi',
@@ -27,7 +27,6 @@ const en: Testi = {
     pagine: 'Pages',
     link: 'Links',
     tornaSu: 'Back to top',
-    diritti: 'All rights reserved.',
     partitaIva: 'VAT no.',
     paginaAutore: 'Author page on physiotherapist.university',
     oggettoEmail: 'Enquiry from aureliocecchi.com',
@@ -53,9 +52,8 @@ const en: Testi = {
   home: {
     hero: {
       titolo: 'CRM systems, integrations, and organic growth.',
-      testo: "I build systems that take manual work out of processes. My work centres on Salesforce, integrations between tools that don't talk to each other, and content architectures designed for organic search.",
-      bottoneContatti: 'Get in touch',
-      bottoneProgetto: 'See the projects',
+      testo: "I design Salesforce automations, integrations between systems, and content architectures for organic search. I work in Italian and Spanish.",
+      bottoneProgetto: 'The case study',
     },
     scheda: [
       { voce: 'Focus', valore: 'Salesforce, integrations, SEO' },
@@ -66,14 +64,13 @@ const en: Testi = {
     profilo: {
       titolo: 'Profile',
       paragrafi: [
-        "I'm a freelance developer working on CRM systems, integrations and content architecture.",
         "I've designed and built the content architecture behind a European university's international recruitment site, and I write MCP connectors — open source on GitHub — when the integration I need doesn't exist yet.",
-        "Right now I'm working toward the Salesforce Platform Administrator certification and building a full Salesforce implementation for a nonprofit organisation. Available for freelance work from May 2027.",
+        "I'm building Salesforce Administrator expertise by working in a developer org, focused on security and access. From October I'll be handling the full Salesforce implementation for a nonprofit organisation.",
       ],
     },
     invito: {
-      titolo: 'Get in touch',
-      testo: "Got a process that still runs by hand, a tool that doesn't talk to the others, or a Salesforce project you'd like to discuss? Get in touch. I reply to everyone.",
+      titolo: 'Contact',
+      testo: "For a process to automate, two systems to connect, or a Salesforce project to set up, get in touch.",
       bottone: 'Get in touch',
     },
   },
@@ -81,6 +78,7 @@ const en: Testi = {
   progetti: [
     {
       titolo: 'Content architecture for international student recruitment',
+      titoloBreve: 'Content architecture for a university portal',
       sottotitolo: 'Taxonomy, content and technical SEO for an international recruitment portal.',
       breve: 'For Alma Mater Europaea, a lead-generation portal covering 29 EU/EEA states: three topic clusters on a hierarchical taxonomy, 51 articles optimised on-page.',
 

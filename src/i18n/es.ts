@@ -5,7 +5,7 @@ const es: Testi = {
   meta: {
     home: {
       titolo: 'Aurelio Cecchi — Salesforce, integraciones y crecimiento orgánico',
-      descrizione: 'Desarrollador freelance: sistemas CRM, integraciones y arquitecturas de contenidos pensadas para la búsqueda orgánica. Especializado en Salesforce, entre Italia y España.',
+      descrizione: 'Trabajo con Salesforce, integraciones y arquitecturas de contenidos, entre Italia y España.',
     },
     contatti: {
       titolo: 'Contacto — Aurelio Cecchi',
@@ -27,7 +27,6 @@ const es: Testi = {
     pagine: 'Páginas',
     link: 'Enlaces',
     tornaSu: 'Volver arriba',
-    diritti: 'Todos los derechos reservados.',
     partitaIva: 'NIF-IVA',
     paginaAutore: 'Página de autor en physiotherapist.university',
     oggettoEmail: 'Contacto desde aureliocecchi.com',
@@ -53,9 +52,8 @@ const es: Testi = {
   home: {
     hero: {
       titolo: 'Sistemas CRM, integraciones y crecimiento orgánico.',
-      testo: 'Construyo sistemas que eliminan el trabajo manual de los procesos. Trabajo principalmente con Salesforce, integraciones entre herramientas que no se comunican entre sí y arquitecturas de contenidos pensadas para la búsqueda orgánica.',
-      bottoneContatti: 'Escríbeme',
-      bottoneProgetto: 'Ver los proyectos',
+      testo: 'Diseño automatizaciones en Salesforce, integraciones entre sistemas y arquitecturas de contenidos para la búsqueda orgánica. Trabajo en italiano y en español.',
+      bottoneProgetto: 'El caso de estudio',
     },
     scheda: [
       { voce: 'Ámbito', valore: 'Salesforce, integraciones, SEO' },
@@ -66,14 +64,13 @@ const es: Testi = {
     profilo: {
       titolo: 'Perfil',
       paragrafi: [
-        'Soy desarrollador freelance y trabajo con sistemas CRM, integraciones y arquitectura de contenidos.',
         'He diseñado y construido la arquitectura de contenidos detrás del sitio de captación internacional de estudiantes de una universidad europea, y escribo conectores MCP — de código abierto en GitHub — cuando la integración que necesito todavía no existe.',
-        'Ahora mismo estoy preparando la certificación Salesforce Platform Administrator y construyendo una implementación completa de Salesforce para una organización sin ánimo de lucro. Disponible para trabajos freelance a partir de mayo de 2027.',
+        'Estoy construyendo experiencia en Salesforce Administrator trabajando en una org de desarrollo, con prioridad en seguridad y accesos. Desde octubre me encargaré de la implementación completa de Salesforce para una organización sin ánimo de lucro.',
       ],
     },
     invito: {
-      titolo: 'Escríbeme',
-      testo: 'Si tienes un proceso que se hace a mano, una herramienta que no se comunica con las demás, o un proyecto de Salesforce del que te gustaría hablar, escríbeme. Respondo a todos.',
+      titolo: 'Contacto',
+      testo: 'Para un proceso que automatizar, dos sistemas que conectar o un proyecto de Salesforce que poner en marcha, escríbeme.',
       bottone: 'Escríbeme',
     },
   },
@@ -81,6 +78,7 @@ const es: Testi = {
   progetti: [
     {
       titolo: 'Arquitectura de contenidos para la captación de estudiantes internacionales',
+      titoloBreve: 'Arquitectura de contenidos para un portal universitario',
       sottotitolo: 'Taxonomía, contenidos y SEO técnico para un portal de captación internacional.',
       breve: 'Para Alma Mater Europaea, un portal de generación de leads con cobertura de 29 Estados UE/EEE: tres clústeres temáticos en una taxonomía jerárquica, 51 artículos optimizados on-page.',
 

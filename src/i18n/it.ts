@@ -14,7 +14,8 @@ interface Decisione {
 // un buco nel layout. Per aggiungerne uno: nuovo elemento in progetti + nuova rotta
 // in i18n/index.ts (rotte.progetto) + nuova pagina in src/pages.
 interface CaseStudy {
-  titolo: string;       // h1 della pagina, e titolo del quadrato in home. 4-6 parole.
+  titolo: string;       // h1 della pagina di dettaglio
+  titoloBreve: string;  // titolo del quadrato in home: più corto, stesso progetto
   sottotitolo: string | null; // una riga, sotto il titolo
   breve: string;         // 1 frase per il quadrato in home
 
@@ -54,7 +55,7 @@ const it = {
   meta: {
     home: {
       titolo: 'Aurelio Cecchi — Salesforce, integrazioni e crescita organica',
-      descrizione: 'Sviluppatore freelance: sistemi CRM, integrazioni e architetture di contenuti pensate per la ricerca organica. Specializzato in Salesforce, tra Italia e Spagna.',
+      descrizione: 'Lavoro su Salesforce, integrazioni e architetture di contenuti, tra Italia e Spagna.',
     },
     contatti: {
       titolo: 'Contatti — Aurelio Cecchi',
@@ -78,7 +79,6 @@ const it = {
     pagine: 'Pagine',
     link: 'Link',
     tornaSu: 'Torna su',
-    diritti: 'Tutti i diritti riservati.',
     partitaIva: 'P.IVA',
     paginaAutore: 'Pagina autore su physiotherapist.university',
     oggettoEmail: 'Contatto da aureliocecchi.com',
@@ -105,9 +105,8 @@ const it = {
   home: {
     hero: {
       titolo: 'Sistemi CRM, integrazioni e crescita organica.',
-      testo: 'Costruisco sistemi che tolgono il lavoro manuale dai processi. Lavoro principalmente su Salesforce, integrazioni tra strumenti che non si parlano e architetture di contenuti pensate per la ricerca organica.',
-      bottoneContatti: 'Scrivimi',
-      bottoneProgetto: 'Guarda i progetti',
+      testo: 'Progetto automazioni su Salesforce, integrazioni tra sistemi e architetture di contenuti per la ricerca organica. Lavoro in italiano e in spagnolo.',
+      bottoneProgetto: 'Il case study',
     },
     // Scheda a lato del titolo. Le voci si possono togliere o aggiungere.
     scheda: [
@@ -119,14 +118,13 @@ const it = {
     profilo: {
       titolo: 'Profilo',
       paragrafi: [
-        'Sono uno sviluppatore freelance che si occupa di sistemi CRM, integrazioni e architettura dei contenuti.',
         'Ho progettato e costruito l’architettura dei contenuti dietro il sito di acquisizione internazionale di studenti di un’università europea, e scrivo connettori MCP — open source su GitHub — quando l’integrazione di cui ho bisogno non esiste ancora.',
-        'Al momento sto preparando la certificazione Salesforce Platform Administrator e sto costruendo un’implementazione Salesforce completa per un’organizzazione non profit. Disponibile per lavori freelance da maggio 2027.',
+        'Sto costruendo competenza su Salesforce Administrator lavorando su un’org di sviluppo, con priorità a sicurezza e accessi. Da ottobre curerò l’implementazione completa di Salesforce per un’organizzazione non profit.',
       ],
     },
     invito: {
-      titolo: 'Scrivimi',
-      testo: 'Se hai un processo che gira a mano, uno strumento che non si parla con gli altri, o un progetto Salesforce di cui vorresti discutere — scrivimi. Rispondo a tutti.',
+      titolo: 'Contatti',
+      testo: 'Per un processo da automatizzare, due sistemi da collegare o un progetto Salesforce da impostare, scrivimi.',
       bottone: 'Scrivimi',
     },
   },
@@ -134,6 +132,7 @@ const it = {
   progetti: [
     {
       titolo: 'Architettura dei contenuti per l’acquisizione di studenti internazionali',
+      titoloBreve: 'Architettura dei contenuti per un portale universitario',
       sottotitolo: 'Tassonomia, contenuti e SEO tecnica per un portale di recruiting internazionale.',
       breve: 'Per Alma Mater Europaea, un portale di lead generation su 29 Stati UE/SEE: tre cluster tematici su tassonomia gerarchica, 51 articoli ottimizzati on-page.',
 
