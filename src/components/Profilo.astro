@@ -10,7 +10,11 @@ const p = testi[lang].home.profilo;
   <div class="contenitore binario">
     <h2 class="binario__lato" id="profilo-titolo">{p.titolo}</h2>
     <div class="binario__corpo testo-lungo">
-      {p.paragrafi.map((paragrafo) => <p>{paragrafo}</p>)}
+      {p.paragrafi.map((paragrafo) => (
+        typeof paragrafo === 'string'
+          ? <p>{paragrafo}</p>
+          : <p>{paragrafo.prima}<a href={paragrafo.link.url}>{paragrafo.link.testo}</a>{paragrafo.dopo}</p>
+      ))}
     </div>
   </div>
 </section>
