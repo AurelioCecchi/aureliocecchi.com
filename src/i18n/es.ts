@@ -52,7 +52,7 @@ const es: Testi = {
   home: {
     hero: {
       titolo: 'Sistemas CRM, integraciones y crecimiento orgánico.',
-      testo: 'Diseño automatizaciones en Salesforce, integraciones entre sistemas y arquitecturas de contenidos para la búsqueda orgánica. Trabajo en italiano y en español.',
+      testo: 'Diseño automatizaciones en Salesforce, integraciones entre sistemas y arquitecturas de contenidos para la búsqueda orgánica. Trabajo en italiano, español e inglés.',
       bottoneProgetto: 'El caso de estudio',
     },
     scheda: [
@@ -64,8 +64,9 @@ const es: Testi = {
     profilo: {
       titolo: 'Perfil',
       paragrafi: [
-        'He diseñado y construido la arquitectura de contenidos detrás del sitio de captación internacional de estudiantes de una universidad europea, y escribo conectores MCP — de código abierto en GitHub — cuando la integración que necesito todavía no existe.',
-        'Estoy construyendo experiencia en Salesforce Administrator trabajando en una org de desarrollo, con prioridad en seguridad y accesos. Desde octubre me encargaré de la implementación completa de Salesforce para una organización sin ánimo de lucro.',
+        'Trabajo con sistemas CRM, integraciones y arquitectura de contenidos para la búsqueda orgánica. Las dos mitades parecen oficios distintos, pero son el mismo problema visto dos veces: decidir cómo estructurar la información para que un sistema — o una persona — pueda orientarse. Una parte se resuelve con objetos, permisos y automatizaciones; la otra con taxonomías, jerarquías y enlaces internos.',
+        'La mayor parte de mi trabajo es en Salesforce. Hace poco diseñé y construí la arquitectura de contenidos detrás del portal de captación internacional de estudiantes de una universidad europea — una taxonomía en tres ejes, 51 artículos optimizados, componentes a medida — entregado en septiembre de 2026. Cuando necesito una integración que todavía no existe, la escribo y la publico: https://github.com/AurelioCecchi/mcp-google-sheets.',
+        'Ahora mismo estoy construyendo experiencia en Salesforce Administrator sobre el terreno, de cara a la certificación en 2027, y lo próximo en mi agenda es una implementación completa de Salesforce para una organización sin ánimo de lucro.',
       ],
     },
     invito: {

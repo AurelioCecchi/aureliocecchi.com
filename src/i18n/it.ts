@@ -105,7 +105,7 @@ const it = {
   home: {
     hero: {
       titolo: 'Sistemi CRM, integrazioni e crescita organica.',
-      testo: 'Progetto automazioni su Salesforce, integrazioni tra sistemi e architetture di contenuti per la ricerca organica. Lavoro in italiano e in spagnolo.',
+      testo: 'Progetto automazioni su Salesforce, integrazioni tra sistemi e architetture di contenuti per la ricerca organica. Lavoro in italiano, spagnolo e inglese.',
       bottoneProgetto: 'Il case study',
     },
     // Scheda a lato del titolo. Le voci si possono togliere o aggiungere.
@@ -118,8 +118,9 @@ const it = {
     profilo: {
       titolo: 'Profilo',
       paragrafi: [
-        'Ho progettato e costruito l’architettura dei contenuti dietro il sito di acquisizione internazionale di studenti di un’università europea, e scrivo connettori MCP — open source su GitHub — quando l’integrazione di cui ho bisogno non esiste ancora.',
-        'Sto costruendo competenza su Salesforce Administrator lavorando su un’org di sviluppo, con priorità a sicurezza e accessi. Da ottobre curerò l’implementazione completa di Salesforce per un’organizzazione non profit.',
+        'Mi occupo di sistemi CRM, integrazioni e architettura dei contenuti per la ricerca organica. Le due metà sembrano mestieri diversi, ma sono lo stesso problema visto due volte: decidere come strutturare l’informazione perché un sistema — o una persona — riesca a orientarsi. Da una parte lo si fa con oggetti, permessi e automazioni; dall’altra con tassonomie, gerarchie e link interni.',
+        'La maggior parte del mio lavoro è su Salesforce. Di recente ho progettato e costruito l’architettura dei contenuti dietro il portale di acquisizione internazionale di studenti di un’università europea — tassonomia a tre assi, 51 articoli ottimizzati, componenti su misura — consegnato a settembre 2026. Quando mi serve un’integrazione che non esiste ancora, la scrivo e la pubblico: https://github.com/AurelioCecchi/mcp-google-sheets.',
+        'Al momento sto costruendo competenza su Salesforce Administrator sul campo, in vista della certificazione nel 2027, e il prossimo lavoro in programma è un’implementazione Salesforce completa per un’organizzazione non profit.',
       ],
     },
     invito: {
