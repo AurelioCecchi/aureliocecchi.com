@@ -4,7 +4,7 @@ import type { Testi } from './it';
 const es: Testi = {
   meta: {
     home: {
-      titolo: 'Aurelio Cecchi — Salesforce, integraciones y crecimiento orgánico',
+      titolo: 'Aurelio Cecchi — Automatización, CRM y crecimiento orgánico',
       descrizione: 'Trabajo con Salesforce, integraciones y arquitecturas de contenidos, entre Italia y España.',
     },
     contatti: {
@@ -13,7 +13,7 @@ const es: Testi = {
     },
     progetto: {
       titolo: 'Caso de estudio: arquitectura de contenidos para captación internacional',
-      descrizione: 'Cómo diseñé la taxonomía y los contenidos de un portal de generación de leads para estudiantes internacionales, para Alma Mater Europaea: 51 artículos, 29 Estados UE/EEE.',
+      descrizione: 'Cómo diseñé la taxonomía y los contenidos de un portal de generación de leads para estudiantes internacionales, para una universidad europea: 51 artículos, 29 Estados UE/EEE.',
     },
   },
 
@@ -51,7 +51,7 @@ const es: Testi = {
 
   home: {
     hero: {
-      titolo: 'Sistemas CRM, integraciones y crecimiento orgánico.',
+      titolo: 'Automatización, sistemas CRM, integraciones y crecimiento orgánico.',
       testo: 'Diseño automatizaciones en Salesforce, integraciones entre sistemas y arquitecturas de contenidos para la búsqueda orgánica. Trabajo en italiano, español e inglés.',
       bottoneProgetto: 'El caso de estudio',
     },
@@ -85,10 +85,10 @@ const es: Testi = {
       titolo: 'Arquitectura de contenidos para la captación de estudiantes internacionales',
       titoloBreve: 'Arquitectura de contenidos para un portal universitario',
       sottotitolo: 'Taxonomía, contenidos y SEO técnico para un portal de captación internacional.',
-      breve: 'Para Alma Mater Europaea, un portal de generación de leads con cobertura de 29 Estados UE/EEE: tres clústeres temáticos en una taxonomía jerárquica, 51 artículos optimizados on-page.',
+      breve: 'Para una universidad europea, un portal de generación de leads con cobertura de 29 Estados UE/EEE: tres clústeres temáticos en una taxonomía jerárquica, 51 artículos optimizados on-page.',
 
       metadati: {
-        cliente: 'Alma Mater Europaea',
+        cliente: 'Universidad europea',
         settore: 'Educación superior',
         periodo: 'Julio – septiembre de 2026',
         ruolo: 'Arquitectura de contenidos, implementación',
@@ -96,7 +96,7 @@ const es: Testi = {
       },
 
       problema: [
-        'Alma Mater Europaea necesitaba un portal capaz de captar la búsqueda orgánica de estudiantes internacionales interesados en cursar sus estudios, en un mercado cubierto por universidades en 29 Estados de la UE y el EEE.',
+        'La universidad necesitaba un portal capaz de captar la búsqueda orgánica de estudiantes internacionales interesados en cursar sus estudios, en un mercado cubierto por universidades en 29 Estados de la UE y el EEE.',
         'Los contenidos existentes estaban fragmentados: páginas aisladas, sin jerarquía temática, con enlazado interno casi inexistente. El sitio no comunicaba a Google, ni a los lectores, sobre qué temas construía autoridad.',
         'El riesgo principal era la canibalización: páginas distintas compitiendo por las mismas búsquedas, sin un plan de enlazado entre contenidos pilares y contenidos de apoyo.',
       ],

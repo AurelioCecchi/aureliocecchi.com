@@ -4,7 +4,7 @@ import type { Testi } from './it';
 const en: Testi = {
   meta: {
     home: {
-      titolo: 'Aurelio Cecchi — Salesforce, Integrations & Organic Growth',
+      titolo: 'Aurelio Cecchi — Automation, CRM & Organic Growth',
       descrizione: 'I work on Salesforce, integrations and content architectures, across Italy and Spain.',
     },
     contatti: {
@@ -13,7 +13,7 @@ const en: Testi = {
     },
     progetto: {
       titolo: 'Case study: content architecture for international recruitment',
-      descrizione: 'How I designed the taxonomy and content for a lead-generation portal aimed at international students, for Alma Mater Europaea: 51 articles, 29 EU/EEA states.',
+      descrizione: 'How I designed the taxonomy and content for a lead-generation portal aimed at international students, for a European university: 51 articles, 29 EU/EEA states.',
     },
   },
 
@@ -51,7 +51,7 @@ const en: Testi = {
 
   home: {
     hero: {
-      titolo: 'CRM systems, integrations, and organic growth.',
+      titolo: 'Automation, CRM systems, integrations, and organic growth.',
       testo: "I design Salesforce automations, integrations between systems, and content architectures for organic search. I work in Italian, Spanish and English.",
       bottoneProgetto: 'The case study',
     },
@@ -85,10 +85,10 @@ const en: Testi = {
       titolo: 'Content architecture for international student recruitment',
       titoloBreve: 'Content architecture for a university portal',
       sottotitolo: 'Taxonomy, content and technical SEO for an international recruitment portal.',
-      breve: 'For Alma Mater Europaea, a lead-generation portal covering 29 EU/EEA states: three topic clusters on a hierarchical taxonomy, 51 articles optimised on-page.',
+      breve: 'For a European university, a lead-generation portal covering 29 EU/EEA states: three topic clusters on a hierarchical taxonomy, 51 articles optimised on-page.',
 
       metadati: {
-        cliente: 'Alma Mater Europaea',
+        cliente: 'European university',
         settore: 'Higher education',
         periodo: 'July – September 2026',
         ruolo: 'Content architecture, implementation',
@@ -96,7 +96,7 @@ const en: Testi = {
       },
 
       problema: [
-        'Alma Mater Europaea needed a portal able to capture organic search from international students interested in enrolling, in a market covered by universities across 29 EU and EEA states.',
+        'The university needed a portal able to capture organic search from international students interested in enrolling, in a market covered by universities across 29 EU and EEA states.',
         "Existing content was fragmented: isolated pages, no topical hierarchy, almost no internal linking. The site told neither Google nor readers which topics it was building authority on.",
         'The main risk was cannibalisation: different pages competing for the same queries, with no plan linking pillar content to supporting content.',
       ],

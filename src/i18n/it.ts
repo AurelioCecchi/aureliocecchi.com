@@ -54,7 +54,7 @@ interface CaseStudy {
 const it = {
   meta: {
     home: {
-      titolo: 'Aurelio Cecchi — Salesforce, integrazioni e crescita organica',
+      titolo: 'Aurelio Cecchi — Automazione, CRM e crescita organica',
       descrizione: 'Lavoro su Salesforce, integrazioni e architetture di contenuti, tra Italia e Spagna.',
     },
     contatti: {
@@ -63,7 +63,7 @@ const it = {
     },
     progetto: {
       titolo: 'Case study: architettura di contenuti per il recruiting internazionale',
-      descrizione: 'Come ho progettato la tassonomia e i contenuti di un portale di lead generation per studenti internazionali, per Alma Mater Europaea: 51 articoli, 29 Stati UE/SEE.',
+      descrizione: 'Come ho progettato la tassonomia e i contenuti di un portale di lead generation per studenti internazionali, per un’università europea: 51 articoli, 29 Stati UE/SEE.',
     },
   },
 
@@ -104,7 +104,7 @@ const it = {
 
   home: {
     hero: {
-      titolo: 'Sistemi CRM, integrazioni e crescita organica.',
+      titolo: 'Automazione, sistemi CRM, integrazioni e crescita organica.',
       testo: 'Progetto automazioni su Salesforce, integrazioni tra sistemi e architetture di contenuti per la ricerca organica. Lavoro in italiano, spagnolo e inglese.',
       bottoneProgetto: 'Il case study',
     },
@@ -139,10 +139,10 @@ const it = {
       titolo: 'Architettura dei contenuti per l’acquisizione di studenti internazionali',
       titoloBreve: 'Architettura dei contenuti per un portale universitario',
       sottotitolo: 'Tassonomia, contenuti e SEO tecnica per un portale di recruiting internazionale.',
-      breve: 'Per Alma Mater Europaea, un portale di lead generation su 29 Stati UE/SEE: tre cluster tematici su tassonomia gerarchica, 51 articoli ottimizzati on-page.',
+      breve: 'Per un’università europea, un portale di lead generation su 29 Stati UE/SEE: tre cluster tematici su tassonomia gerarchica, 51 articoli ottimizzati on-page.',
 
       metadati: {
-        cliente: 'Alma Mater Europaea',
+        cliente: 'Università europea',
         settore: 'Istruzione superiore',
         periodo: 'Luglio – settembre 2026',
         ruolo: 'Architettura dei contenuti, implementazione',
@@ -150,7 +150,7 @@ const it = {
       },
 
       problema: [
-        'Alma Mater Europaea aveva bisogno di un portale in grado di intercettare la ricerca organica di studenti internazionali interessati a un percorso di studi, in un mercato coperto da università in 29 Stati tra UE e SEE.',
+        'L’università aveva bisogno di un portale in grado di intercettare la ricerca organica di studenti internazionali interessati a un percorso di studi, in un mercato coperto da università in 29 Stati tra UE e SEE.',
         'I contenuti esistenti erano frammentati: pagine isolate, nessuna gerarchia tematica, link interni quasi assenti. Il sito non comunicava a Google, né ai lettori, quali fossero i temi su cui costruiva autorevolezza.',
         'Il rischio principale era la cannibalizzazione: pagine diverse in competizione per le stesse query, senza un piano di collegamento tra contenuti pillar e contenuti di supporto.',
       ],
