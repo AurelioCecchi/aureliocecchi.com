@@ -54,7 +54,7 @@ interface CaseStudy {
 const it = {
   meta: {
     home: {
-      titolo: 'Aurelio Cecchi — Automazione, CRM e crescita organica',
+      titolo: 'Aurelio Cecchi — Automazione, integrazioni e crescita organica',
       descrizione: 'Lavoro su Salesforce, integrazioni e architetture di contenuti, tra Italia e Spagna.',
     },
     contatti: {
@@ -104,7 +104,7 @@ const it = {
 
   home: {
     hero: {
-      titolo: 'Automazione, sistemi CRM, integrazioni e crescita organica.',
+      titolo: 'Automazione, integrazioni e crescita organica.',
       testo: 'Progetto automazioni su Salesforce, integrazioni tra sistemi e architetture di contenuti per la ricerca organica. Lavoro in italiano, spagnolo e inglese.',
       bottoneProgetto: 'Il case study',
     },

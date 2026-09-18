@@ -4,7 +4,7 @@ import type { Testi } from './it';
 const es: Testi = {
   meta: {
     home: {
-      titolo: 'Aurelio Cecchi — Automatización, CRM y crecimiento orgánico',
+      titolo: 'Aurelio Cecchi — Automatización, integraciones y crecimiento orgánico',
       descrizione: 'Trabajo con Salesforce, integraciones y arquitecturas de contenidos, entre Italia y España.',
     },
     contatti: {
@@ -51,7 +51,7 @@ const es: Testi = {
 
   home: {
     hero: {
-      titolo: 'Automatización, sistemas CRM, integraciones y crecimiento orgánico.',
+      titolo: 'Automatización, integraciones y crecimiento orgánico.',
       testo: 'Diseño automatizaciones en Salesforce, integraciones entre sistemas y arquitecturas de contenidos para la búsqueda orgánica. Trabajo en italiano, español e inglés.',
       bottoneProgetto: 'El caso de estudio',
     },
