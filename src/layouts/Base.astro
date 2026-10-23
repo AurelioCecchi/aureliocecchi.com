@@ -33,7 +33,7 @@ const persona = {
   email: `mailto:${sito.email}`,
   knowsLanguage: [...lingue],
   address: { '@type': 'PostalAddress', addressRegion: sito.regione, addressCountry: sito.paese },
-  sameAs: [sito.github, sito.paginaAutore].filter(Boolean),
+  sameAs: [sito.github, sito.linkedin, sito.paginaAutore].filter(Boolean),
 };
 
 const schema = {

@@ -6,6 +6,7 @@ export const sito = {
   url: 'https://aureliocecchi.com',
   email: 'aurelio@aureliocecchi.com',
   github: 'https://github.com/AurelioCecchi',
+  linkedin: 'https://www.linkedin.com/in/aureliocecchi/',
   paginaAutore: '', // URL della pagina autore su physiotherapist.university
   partitaIva: '',   // da maggio 2027: obbligatoria nel footer di un sito professionale
   regione: 'Toscana',
