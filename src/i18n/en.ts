@@ -46,6 +46,7 @@ const en: Testi = {
       alternativaScartata: 'Alternative considered',
       consegne: 'What I delivered',
       risultati: 'Results',
+      aggiornamentoAl: 'Updated',
     },
   },
 
@@ -152,11 +153,16 @@ const en: Testi = {
 
       risultati: {
         strutturali: [
-          'Three topic clusters published and linked to each other',
+          'Three topic clusters published and interlinked',
           'Taxonomy live across every page of the portal',
-          'Site currently being indexed in Google Search Console',
+          '60 pages receiving organic traffic',
+          '561 visitors and 758 page views between 29 September and 28 October 2026, 30% more visitors than the previous thirty days',
+          '9 qualified enquiries over the same period',
         ],
-        aggiornamento: null,
+        aggiornamento: {
+          data: '2026-10-28',
+          testo: "Figures from the portal's analytics. The measurement period starts after delivery, so they describe the portal in steady state, not a before/after comparison.",
+        },
       },
 
       link: { url: 'https://physiotherapist.university/', testo: 'Visit physiotherapist.university' },

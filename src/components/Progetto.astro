@@ -1,11 +1,19 @@
 ---
-import { rotte, testi, type Lang } from '../i18n';
+import { lingueSito, rotte, testi, type Lang } from '../i18n';
 
 interface Props { lang: Lang; indice?: number; }
 const { lang, indice = 0 } = Astro.props;
 const t = testi[lang];
 const p = t.progetti[indice];
 const s = t.interfaccia.caseStudio;
+
+// La data è ISO (AAAA-MM-GG) nei dati; qui la scrivo per esteso nella lingua della pagina.
+const agg = p.risultati?.aggiornamento ?? null;
+const dataAgg = agg
+  ? new Intl.DateTimeFormat(lingueSito[lang].og.replace('_', '-'), {
+      day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+    }).format(new Date(agg.data))
+  : '';
 ---
 
 <section class="sezione sezione--nebbia" id="progetto">
@@ -101,10 +109,10 @@ const s = t.interfaccia.caseStudio;
           <ul class="risultati__strutturali">
             {p.risultati.strutturali.map((voce) => <li>{voce}</li>)}
           </ul>
-          {p.risultati.aggiornamento && (
+          {agg && (
             <p class="risultati__aggiornamento">
-              <time datetime={p.risultati.aggiornamento.data}>{p.risultati.aggiornamento.data}</time>
-              {p.risultati.aggiornamento.testo}
+              <time datetime={agg.data}>{s.aggiornamentoAl} {dataAgg}</time>
+              {agg.testo}
             </p>
           )}
         </section>

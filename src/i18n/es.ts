@@ -46,6 +46,7 @@ const es: Testi = {
       alternativaScartata: 'Alternativa descartada',
       consegne: 'Qué entregué',
       risultati: 'Resultados',
+      aggiornamentoAl: 'Actualizado a',
     },
   },
 
@@ -154,9 +155,14 @@ const es: Testi = {
         strutturali: [
           'Tres clústeres temáticos publicados y enlazados entre sí',
           'Taxonomía activa en todas las páginas del portal',
-          'Sitio en proceso de indexación en Google Search Console',
+          '60 páginas que reciben tráfico orgánico',
+          '561 visitantes y 758 páginas vistas entre el 29 de septiembre y el 28 de octubre de 2026, un 30 % más de visitantes que en los treinta días anteriores',
+          '9 solicitudes de información cualificadas en el mismo periodo',
         ],
-        aggiornamento: null,
+        aggiornamento: {
+          data: '2026-10-28',
+          testo: 'Datos obtenidos del analytics del portal. El periodo de medición empieza después de la entrega, por lo que las cifras describen el portal ya en funcionamiento, no una comparación antes/después.',
+        },
       },
 
       link: { url: 'https://physiotherapist.university/', testo: 'Visitar physiotherapist.university' },

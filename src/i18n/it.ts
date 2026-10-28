@@ -44,7 +44,7 @@ interface CaseStudy {
 
   risultati: {
     strutturali: string[];
-    aggiornamento: { data: string; testo: string } | null;
+    aggiornamento: { data: string; testo: string } | null; // data ISO (AAAA-MM-GG): la pagina la scrive per esteso
   } | null;
 
   link: { url: string; testo: string };            // primario, verso il sito del progetto
@@ -99,6 +99,7 @@ const it = {
       alternativaScartata: 'Alternativa scartata',
       consegne: 'Cosa ho consegnato',
       risultati: 'Risultati',
+      aggiornamentoAl: 'Aggiornato al',
     },
   },
 
@@ -212,9 +213,14 @@ const it = {
         strutturali: [
           'Tre cluster tematici pubblicati e collegati tra loro',
           'Tassonomia attiva su tutte le pagine del portale',
-          'Sito in fase di indicizzazione su Google Search Console',
+          '60 pagine che ricevono traffico organico',
+          '561 visitatori e 758 visualizzazioni nel periodo 29 settembre – 28 ottobre 2026, +30% di visitatori rispetto ai trenta giorni precedenti',
+          '9 richieste di informazioni qualificate nello stesso periodo',
         ],
-        aggiornamento: null, // niente metriche ancora: il blocco datato resta assente finché non arrivano
+        aggiornamento: {
+          data: '2026-10-28', // fine del periodo di misurazione
+          testo: 'Dati rilevati sull’analytics del portale. Il periodo di misurazione inizia dopo la consegna, quindi i numeri descrivono il portale a regime, non un confronto prima/dopo.',
+        },
       },
 
       link: { url: 'https://physiotherapist.university/', testo: 'Visita physiotherapist.university' },
