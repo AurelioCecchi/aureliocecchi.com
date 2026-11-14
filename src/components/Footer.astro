@@ -20,7 +20,7 @@ const anno = new Date().getFullYear();
         <p class="piede__titolo" id="piede-pagine">{t.interfaccia.pagine}</p>
         <ul class="piede__elenco">
           <li><a href={rotte.home[lang]}>{t.interfaccia.home}</a></li>
-          <li><a href={rotte.progetto[lang]}>{t.interfaccia.progetti}</a></li>
+          <li><a href={`${rotte.home[lang]}#progetti`}>{t.interfaccia.progetti}</a></li>
           <li><a href={rotte.contatti[lang]}>{t.interfaccia.contatti}</a></li>
         </ul>
       </nav>

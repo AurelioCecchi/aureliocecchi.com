@@ -37,5 +37,5 @@ const t = testi[lang].interfaccia;
       >{t.contatti}</a>
     </div>
   </div>
-  {pagina === 'progetto' && <span class="testata__progresso" aria-hidden="true"></span>}
+  {pagina.startsWith('progetto') && <span class="testata__progresso" aria-hidden="true"></span>}
 </header>

@@ -126,7 +126,11 @@ const dataAgg = agg
       )}
 
       <div class="azioni progetto__chiusura">
-        <a class="bottone bottone--esterno" href={p.link.url}>{p.link.testo}</a>
+        {p.link ? (
+          <a class="bottone bottone--esterno" href={p.link.url}>{p.link.testo}</a>
+        ) : (
+          <a class="bottone bottone--freccia" href={rotte.contatti[lang]}>{t.home.invito.bottone}</a>
+        )}
         {p.linkAutore && (
           <a class="bottone bottone--secondario" href={p.linkAutore.url}>{p.linkAutore.testo}</a>
         )}

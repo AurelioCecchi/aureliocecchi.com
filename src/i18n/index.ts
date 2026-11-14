@@ -6,7 +6,7 @@ export const lingue = ['it', 'es', 'en'] as const;
 export type Lang = (typeof lingue)[number];
 
 // Percorso di ogni pagina in ogni lingua. Nuova pagina = nuova riga qui.
-// Un secondo case study avrà una sua chiave (es. "progetto2") e le sue rotte.
+// Ogni case study ha la sua chiave (progetto, progetto2, ...) e le sue rotte.
 export const rotte = {
   home: { it: '/', es: '/es/', en: '/en/' },
   contatti: { it: '/contatti/', es: '/es/contacto/', en: '/en/contact/' },
@@ -14,6 +14,11 @@ export const rotte = {
     it: '/progetti/physiotherapist-university/',
     es: '/es/proyectos/physiotherapist-university/',
     en: '/en/projects/physiotherapist-university/',
+  },
+  progetto2: {
+    it: '/progetti/local-rag-admissions-assistant/',
+    es: '/es/proyectos/local-rag-admissions-assistant/',
+    en: '/en/projects/local-rag-admissions-assistant/',
   },
 } as const;
 export type Pagina = keyof typeof rotte;
