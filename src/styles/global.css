@@ -1,12 +1,12 @@
 /* aureliocecchi.com
-   Tre caratteri auto-ospitati: Instrument Serif (titoli), IBM Plex Sans (testo, 400 e 600),
-   IBM Plex Mono (etichette). Il fondo della pagina è scuro ("notte"); i contenuti
-   stanno su fogli color avorio con gli angoli arrotondati. */
+   Due caratteri auto-ospitati, come su un biglietto da visita: EB Garamond per titoli e nome,
+   IBM Plex Sans (400 e 600) per il testo e per le etichette in maiuscolo spaziato.
+   Il fondo della pagina è scuro ("notte"); i contenuti stanno su fogli color avorio
+   con gli angoli arrotondati. */
 
 :root {
-  --serif: 'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --serif: 'EB Garamond', Garamond, 'Adobe Garamond Pro', 'Times New Roman', serif;
   --carattere: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
   --normale: 400;
   --forte: 600;
 
@@ -28,13 +28,13 @@
   --linea: #dedad0;
 
   /* Scala tipografica */
-  --t-etichetta: 0.72rem;
+  --t-etichetta: 0.6875rem;
   --t-piccolo: 0.875rem;
   --t-base: 1.0625rem;
   --t-medio: 1.1875rem;
   --t-h3: 1.25rem;
-  --t-h2: clamp(2.1rem, 1.5rem + 2.6vw, 3.5rem);
-  --t-h1: clamp(2.9rem, 1.3rem + 6vw, 6.25rem);
+  --t-h2: clamp(2rem, 1.45rem + 2.3vw, 3.125rem);
+  --t-h1: clamp(2.7rem, 1.3rem + 5.2vw, 5.5rem);
 
   /* Spazio e forma */
   --margine: clamp(1.25rem, 0.75rem + 2.2vw, 2.5rem);
@@ -90,8 +90,8 @@ h1, h2, h3, p, ul, dl, dd, figure { margin: 0; }
 h1, h2 {
   font-family: var(--serif);
   font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: -0.015em;
+  line-height: 1.06;
+  letter-spacing: -0.012em;
   text-wrap: balance;
 }
 h2 { font-size: var(--t-h2); }
@@ -208,9 +208,10 @@ main:focus { outline: none; }
 .dettagli dt,
 .contatti__etichetta,
 .piede__titolo {
-  font-family: var(--mono);
+  font-family: var(--carattere);
+  font-weight: var(--forte);
   font-size: var(--t-etichetta);
-  letter-spacing: 0.09em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -336,10 +337,12 @@ main:focus { outline: none; }
 .testata__nome {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
-  font-size: 1.0625rem;
-  font-weight: var(--forte);
-  letter-spacing: -0.005em;
+  gap: 0.7rem;
+  font-family: var(--serif);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -365,9 +368,11 @@ main:focus { outline: none; }
   min-width: 2.25rem;
   min-height: 2.75rem;
   color: var(--chiaro-2);
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
+  font-family: var(--carattere);
+  font-weight: var(--forte);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-indent: 0.1em;
   text-decoration: none;
 }
 .lingue a:hover { color: var(--chiaro); }
@@ -418,12 +423,16 @@ main:focus { outline: none; }
 }
 @keyframes progresso { to { transform: scaleX(1); } }
 
-@media (max-width: 24rem) {
-  .testata__nome { font-size: 0.9375rem; gap: 0.45rem; }
+@media (max-width: 30rem) {
+  .testata__nome { font-size: 0.8125rem; letter-spacing: 0.12em; gap: 0.5rem; }
   .testata__marchio { width: 1.375rem; height: 1.375rem; }
   .testata__azioni { gap: 0.15rem; }
   .lingue a { min-width: 1.75rem; }
   .bottone.bottone--testata { padding-inline: 0.75rem; }
+}
+/* Schermi stretti: il nome basta, il marchio lascia il posto. */
+@media (min-width: 21.51rem) and (max-width: 24.5rem) {
+  .testata__marchio { display: none; }
 }
 /* Schermi strettissimi: resta il marchio, il nome è solo per i lettori di schermo. */
 @media (max-width: 21.5rem) {
@@ -501,8 +510,8 @@ main:focus { outline: none; }
 .hero h1 {
   max-width: 9.4em;
   font-size: var(--t-h1);
-  line-height: 0.98;
-  letter-spacing: -0.022em;
+  line-height: 1.02;
+  letter-spacing: -0.015em;
 }
 .parola { display: inline-block; }
 
@@ -561,9 +570,9 @@ main:focus { outline: none; }
 .profilo .testo-lungo { max-width: 44rem; }
 .profilo .testo-lungo p:first-child {
   font-family: var(--serif);
-  font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2.125rem);
-  line-height: 1.28;
-  letter-spacing: -0.01em;
+  font-size: clamp(1.4rem, 1.15rem + 1.1vw, 1.9rem);
+  line-height: 1.34;
+  letter-spacing: -0.004em;
   color: var(--inchiostro);
 }
 .profilo .testo-lungo p:first-child + p { margin-top: 1.6em; }
@@ -618,17 +627,18 @@ main:focus { outline: none; }
 }
 .progetto-riga__indice {
   padding-top: 0.55rem;
-  font-family: var(--mono);
+  font-family: var(--carattere);
+  font-weight: var(--forte);
   font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   color: var(--tevere);
   transition: color 0.5s var(--curva);
 }
 .progetto-riga h3 {
   font-family: var(--serif);
-  font-size: clamp(1.75rem, 1.3rem + 1.9vw, 2.875rem);
+  font-size: clamp(1.6rem, 1.25rem + 1.6vw, 2.5rem);
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: -0.015em;
 }
 .progetto-riga p { color: var(--grafite); transition: color 0.5s var(--curva); }
@@ -669,9 +679,10 @@ main:focus { outline: none; }
   gap: 0.6em;
   margin-bottom: clamp(1.75rem, 1.25rem + 2vw, 3rem);
   color: var(--chiaro-2);
-  font-family: var(--mono);
+  font-family: var(--carattere);
+  font-weight: var(--forte);
   font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -681,9 +692,9 @@ main:focus { outline: none; }
 
 .progetto__testa h1 {
   max-width: 20ch;
-  font-size: clamp(2.4rem, 1.5rem + 4vw, 4.75rem);
-  line-height: 1;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.2rem, 1.4rem + 3.4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.014em;
 }
 
 .progetto__sottotitolo {
@@ -736,15 +747,16 @@ main:focus { outline: none; }
   margin-bottom: 1.6rem;
   padding-top: 1.1rem;
   border-top: 1px solid var(--linea);
-  font-size: clamp(2rem, 1.6rem + 1.6vw, 2.875rem);
+  font-size: clamp(1.85rem, 1.5rem + 1.4vw, 2.5rem);
 }
 .progetto__sezione > h2::before {
   content: counter(sezione, decimal-leading-zero);
   content: counter(sezione, decimal-leading-zero) / '';
-  font-family: var(--mono);
+  font-family: var(--carattere);
+  font-weight: var(--forte);
   font-size: 0.78rem;
   line-height: 1;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.14em;
   color: var(--tevere);
 }
 
@@ -797,7 +809,8 @@ main:focus { outline: none; }
   border: 1px solid var(--linea);
   border-radius: 50%;
   background: var(--avorio);
-  font-family: var(--mono);
+  font-family: var(--carattere);
+  font-weight: var(--forte);
   font-size: 0.8rem;
   color: var(--tevere);
 }
@@ -810,9 +823,10 @@ main:focus { outline: none; }
   padding-top: 1rem;
   border-top: 1px dashed var(--linea);
   color: var(--grafite);
-  font-family: var(--mono);
+  font-family: var(--carattere);
+  font-weight: var(--forte);
   font-size: 0.68rem;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 .decisione__alternativa { margin-top: 0.35rem; color: var(--grafite); font-size: 0.9375rem; }
@@ -885,9 +899,10 @@ main:focus { outline: none; }
   display: block;
   margin-bottom: 0.4rem;
   color: var(--tevere);
-  font-family: var(--mono);
+  font-family: var(--carattere);
+  font-weight: var(--forte);
   font-size: 0.68rem;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -919,21 +934,21 @@ main:focus { outline: none; }
   border-bottom: 1px solid var(--linea-scura);
 }
 .invito__testo { max-width: 44rem; }
-.invito h2 { font-size: clamp(2.75rem, 1.6rem + 5vw, 5.5rem); line-height: 0.98; letter-spacing: -0.02em; }
+.invito h2 { font-size: clamp(2.5rem, 1.5rem + 4.2vw, 4.75rem); line-height: 1.02; letter-spacing: -0.015em; }
 .invito p { margin-top: 1.35rem; font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); line-height: 1.5; color: rgb(242 239 232 / 0.78); }
 
 /* ---------- Contatti ---------- */
 
 .contatti { flex: 1; padding-block: clamp(3.5rem, 2rem + 7vw, 8rem) var(--sezione); }
-.contatti h1 { font-size: clamp(3rem, 1.8rem + 5vw, 5.75rem); line-height: 0.98; letter-spacing: -0.022em; }
+.contatti h1 { font-size: clamp(2.7rem, 1.6rem + 4.4vw, 5rem); line-height: 1.02; letter-spacing: -0.015em; }
 .contatti__intro { max-width: var(--misura); font-size: clamp(1.125rem, 1rem + 0.45vw, 1.3125rem); line-height: 1.55; color: var(--testo); }
 .contatti__etichetta { margin-top: 3rem; color: var(--grafite); }
 .contatti__email {
   margin-top: 0.6rem;
   font-family: var(--serif);
-  font-size: clamp(1.75rem, 1rem + 3.6vw, 3.75rem);
-  line-height: 1.1;
-  letter-spacing: -0.015em;
+  font-size: clamp(1.5rem, 0.9rem + 3vw, 3.125rem);
+  line-height: 1.15;
+  letter-spacing: -0.008em;
   overflow-wrap: anywhere;
 }
 .contatti__email a {
@@ -964,7 +979,7 @@ main:focus { outline: none; }
   .piede__griglia { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1.25fr); gap: 3rem; }
 }
 
-.piede__nome { color: var(--chiaro); font-family: var(--serif); font-size: 2rem; line-height: 1.1; letter-spacing: -0.01em; }
+.piede__nome { color: var(--chiaro); font-family: var(--serif); font-size: 1.125rem; font-weight: 500; line-height: 1.3; letter-spacing: 0.22em; text-transform: uppercase; }
 .piede__firma p + p { margin-top: 0.5rem; }
 
 .piede__titolo { margin-bottom: 1rem; color: rgb(242 239 232 / 0.5); }
