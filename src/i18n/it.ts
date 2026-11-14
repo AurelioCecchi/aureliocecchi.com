@@ -54,8 +54,8 @@ interface CaseStudy {
 const it = {
   meta: {
     home: {
-      titolo: 'Aurelio Cecchi — Automazione, integrazioni e crescita organica',
-      descrizione: 'Lavoro su Salesforce, integrazioni e architetture di contenuti, tra Italia e Spagna.',
+      titolo: 'Aurelio Cecchi — Automazione AI, Salesforce e CRM',
+      descrizione: 'Progetto automazioni AI che girano in locale, processi su Salesforce e integrazioni tra sistemi CRM, tra Italia e Spagna.',
     },
     contatti: {
       titolo: 'Contatti — Aurelio Cecchi',
@@ -73,7 +73,7 @@ const it = {
 
   // Il mestiere in poche parole. Compare sopra il titolo della home,
   // nel footer e nei dati strutturati (jobTitle).
-  ruolo: 'Sistemi CRM e automazione',
+  ruolo: 'Automazione AI e sistemi CRM',
 
   interfaccia: {
     saltaAlContenuto: 'Vai al contenuto',
@@ -109,13 +109,13 @@ const it = {
 
   home: {
     hero: {
-      titolo: 'Automazione, integrazioni e crescita organica.',
-      testo: 'Progetto automazioni su Salesforce, integrazioni tra sistemi e architetture di contenuti per la ricerca organica. Lavoro in italiano, spagnolo e inglese.',
+      titolo: 'Automazione AI per CRM e Salesforce.',
+      testo: 'Progetto automazioni AI che girano sull’infrastruttura del cliente, processi su Salesforce e integrazioni tra il CRM e i sistemi che gli stanno intorno. Lavoro in italiano, spagnolo e inglese.',
       bottoneProgetto: 'I case study',
     },
     // Scheda a lato del titolo. Le voci si possono togliere o aggiungere.
     scheda: [
-      { voce: 'Ambito', valore: 'Salesforce, integrazioni, SEO' },
+      { voce: 'Ambito', valore: 'Automazione AI, Salesforce, CRM' },
       { voce: 'Lingue', valore: 'Italiano, spagnolo, inglese' },
       { voce: 'Base', valore: 'Toscana · da remoto' },
       { voce: 'Disponibilità', valore: 'Da maggio 2027' },
@@ -123,18 +123,18 @@ const it = {
     profilo: {
       titolo: 'Profilo',
       paragrafi: [
-        'Mi occupo di sistemi CRM, integrazioni e architettura dei contenuti per la ricerca organica. Le due metà sembrano mestieri diversi, ma sono lo stesso problema visto due volte: decidere come strutturare l’informazione perché un sistema — o una persona — riesca a orientarsi. Da una parte lo si fa con oggetti, permessi e automazioni; dall’altra con tassonomie, gerarchie e link interni.',
+        'Mi occupo di automazione AI e di sistemi CRM. Mi interessa un punto preciso: far lavorare un modello dentro un processo reale senza che i dati escano dall’azienda e senza che una risposta sbagliata arrivi al cliente. Per questo progetto prima i controlli e poi l’automazione: cosa può partire da solo, cosa passa da una persona, cosa resta registrato.',
         {
-          prima: 'La maggior parte del mio lavoro è su Salesforce. Di recente ho progettato e costruito l’architettura dei contenuti dietro il portale di acquisizione internazionale di studenti di un’università europea — tassonomia a tre assi, 51 articoli ottimizzati, componenti su misura — consegnato a settembre 2026. Quando mi serve un’integrazione che non esiste ancora, la scrivo e la pubblico sul mio ',
+          prima: 'Nel 2026 ho messo in produzione un assistente AI che gira per intero su un server locale e risponde su WhatsApp solo con frasi verificate, e ho costruito l’architettura dei contenuti del portale internazionale di un’università europea. Quando mi serve un’integrazione che non esiste ancora, la scrivo e la pubblico sul mio ',
           link: { url: 'https://github.com/AurelioCecchi', testo: 'GitHub' },
           dopo: '.',
         },
-        'Al momento sto costruendo competenza su Salesforce Administrator sul campo, in vista della certificazione nel 2027, e il prossimo lavoro in programma è un’implementazione Salesforce completa per un’organizzazione non profit.',
+        'Su Salesforce sto costruendo competenza da Administrator sul campo, in vista della certificazione nel 2027, e il prossimo lavoro in programma è un’implementazione completa per un’organizzazione non profit. È lì che le due metà si incontrano: il CRM come luogo in cui vivono i dati, l’automazione AI come lavoro che gli gira sopra.',
       ],
     },
     invito: {
       titolo: 'Contatti',
-      testo: 'Per un processo da automatizzare, due sistemi da collegare o un progetto Salesforce da impostare, scrivimi.',
+      testo: 'Per un processo da automatizzare con l’AI, un CRM da mettere in ordine o un progetto Salesforce da impostare, scrivimi.',
       bottone: 'Scrivimi',
     },
   },

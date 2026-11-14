@@ -4,8 +4,8 @@ import type { Testi } from './it';
 const en: Testi = {
   meta: {
     home: {
-      titolo: 'Aurelio Cecchi — Automation, Integrations & Organic Growth',
-      descrizione: 'I work on Salesforce, integrations and content architectures, across Italy and Spain.',
+      titolo: 'Aurelio Cecchi — AI Automation, Salesforce & CRM',
+      descrizione: 'I design AI automations that run locally, Salesforce processes and integrations between CRM systems, across Italy and Spain.',
     },
     contatti: {
       titolo: 'Contact — Aurelio Cecchi',
@@ -21,7 +21,7 @@ const en: Testi = {
     },
   },
 
-  ruolo: 'CRM systems & automation',
+  ruolo: 'AI automation & CRM systems',
 
   interfaccia: {
     saltaAlContenuto: 'Skip to content',
@@ -56,12 +56,12 @@ const en: Testi = {
 
   home: {
     hero: {
-      titolo: 'Automation, integrations, and organic growth.',
-      testo: "I design Salesforce automations, integrations between systems, and content architectures for organic search. I work in Italian, Spanish and English.",
+      titolo: 'AI automation for CRM and Salesforce.',
+      testo: 'I design AI automations that run on the client’s own infrastructure, Salesforce processes, and integrations between the CRM and the systems around it. I work in Italian, Spanish and English.',
       bottoneProgetto: 'The case studies',
     },
     scheda: [
-      { voce: 'Focus', valore: 'Salesforce, integrations, SEO' },
+      { voce: 'Focus', valore: 'AI automation, Salesforce, CRM' },
       { voce: 'Languages', valore: 'Italian, Spanish, English' },
       { voce: 'Based in', valore: 'Tuscany, Italy · remote' },
       { voce: 'Availability', valore: 'From May 2027' },
@@ -69,18 +69,18 @@ const en: Testi = {
     profilo: {
       titolo: 'Profile',
       paragrafi: [
-        "I work on CRM systems, integrations, and content architecture for organic search. Those two halves look unrelated, but they are the same problem seen twice: deciding how information should be structured so that a system — or a person — can find its way through it. One does it with objects, permissions and automations; the other with taxonomies, hierarchies and internal links.",
+        'I work on AI automation and CRM systems. One point interests me most: putting a model to work inside a real process without the data leaving the company and without a wrong answer reaching the customer. That is why I design the checks first and the automation second: what can go out on its own, what goes through a person, what gets logged.',
         {
-          prima: "Most of my work is on Salesforce. I recently designed and built the content architecture behind a European university's international student acquisition portal — a three-axis taxonomy, 51 optimised articles, custom components — delivered in September 2026. When an integration I need doesn't exist yet, I write it and publish it on my ",
+          prima: 'In 2026 I put into production an AI assistant that runs entirely on a local server and answers on WhatsApp only with verified sentences, and I built the content architecture behind a European university’s international portal. When an integration I need doesn’t exist yet, I write it and publish it on my ',
           link: { url: 'https://github.com/AurelioCecchi', testo: 'GitHub' },
           dopo: '.',
         },
-        "Right now I'm building Salesforce Administrator competence hands-on, ahead of certification in 2027, and the next thing on my desk is a full Salesforce implementation for a non-profit.",
+        'On Salesforce I’m building Administrator competence hands-on, ahead of certification in 2027, and the next thing on my desk is a full implementation for a non-profit. That is where the two halves meet: the CRM as the place where the data lives, AI automation as the work that runs on top of it.',
       ],
     },
     invito: {
       titolo: 'Contact',
-      testo: "For a process to automate, two systems to connect, or a Salesforce project to set up, get in touch.",
+      testo: 'For a process to automate with AI, a CRM to put in order, or a Salesforce project to set up, get in touch.',
       bottone: 'Get in touch',
     },
   },

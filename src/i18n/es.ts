@@ -4,8 +4,8 @@ import type { Testi } from './it';
 const es: Testi = {
   meta: {
     home: {
-      titolo: 'Aurelio Cecchi — Automatización, integraciones y crecimiento orgánico',
-      descrizione: 'Trabajo con Salesforce, integraciones y arquitecturas de contenidos, entre Italia y España.',
+      titolo: 'Aurelio Cecchi — Automatización con IA, Salesforce y CRM',
+      descrizione: 'Diseño automatizaciones con IA que funcionan en local, procesos en Salesforce e integraciones entre sistemas CRM, entre Italia y España.',
     },
     contatti: {
       titolo: 'Contacto — Aurelio Cecchi',
@@ -21,7 +21,7 @@ const es: Testi = {
     },
   },
 
-  ruolo: 'Sistemas CRM y automatización',
+  ruolo: 'Automatización con IA y sistemas CRM',
 
   interfaccia: {
     saltaAlContenuto: 'Saltar al contenido',
@@ -56,12 +56,12 @@ const es: Testi = {
 
   home: {
     hero: {
-      titolo: 'Automatización, integraciones y crecimiento orgánico.',
-      testo: 'Diseño automatizaciones en Salesforce, integraciones entre sistemas y arquitecturas de contenidos para la búsqueda orgánica. Trabajo en italiano, español e inglés.',
+      titolo: 'Automatización con IA para CRM y Salesforce.',
+      testo: 'Diseño automatizaciones con IA que funcionan en la infraestructura del cliente, procesos en Salesforce e integraciones entre el CRM y los sistemas que lo rodean. Trabajo en italiano, español e inglés.',
       bottoneProgetto: 'Los casos de estudio',
     },
     scheda: [
-      { voce: 'Ámbito', valore: 'Salesforce, integraciones, SEO' },
+      { voce: 'Ámbito', valore: 'Automatización con IA, Salesforce, CRM' },
       { voce: 'Idiomas', valore: 'Italiano, español, inglés' },
       { voce: 'Ubicación', valore: 'Toscana (Italia) · en remoto' },
       { voce: 'Disponibilidad', valore: 'A partir de mayo de 2027' },
@@ -69,18 +69,18 @@ const es: Testi = {
     profilo: {
       titolo: 'Perfil',
       paragrafi: [
-        'Trabajo con sistemas CRM, integraciones y arquitectura de contenidos para la búsqueda orgánica. Las dos mitades parecen oficios distintos, pero son el mismo problema visto dos veces: decidir cómo estructurar la información para que un sistema — o una persona — pueda orientarse. Una parte se resuelve con objetos, permisos y automatizaciones; la otra con taxonomías, jerarquías y enlaces internos.',
+        'Trabajo en automatización con IA y sistemas CRM. Me interesa un punto concreto: poner un modelo a trabajar dentro de un proceso real sin que los datos salgan de la empresa y sin que una respuesta equivocada llegue al cliente. Por eso diseño primero los controles y después la automatización: qué puede salir solo, qué pasa por una persona, qué queda registrado.',
         {
-          prima: 'La mayor parte de mi trabajo es en Salesforce. Hace poco diseñé y construí la arquitectura de contenidos detrás del portal de captación internacional de estudiantes de una universidad europea — una taxonomía en tres ejes, 51 artículos optimizados, componentes a medida — entregado en septiembre de 2026. Cuando necesito una integración que todavía no existe, la escribo y la publico en mi ',
+          prima: 'En 2026 puse en producción un asistente de IA que funciona por completo en un servidor local y responde por WhatsApp solo con frases verificadas, y construí la arquitectura de contenidos del portal internacional de una universidad europea. Cuando necesito una integración que todavía no existe, la escribo y la publico en mi ',
           link: { url: 'https://github.com/AurelioCecchi', testo: 'GitHub' },
           dopo: '.',
         },
-        'Ahora mismo estoy construyendo experiencia en Salesforce Administrator sobre el terreno, de cara a la certificación en 2027, y lo próximo en mi agenda es una implementación completa de Salesforce para una organización sin ánimo de lucro.',
+        'En Salesforce estoy construyendo experiencia de Administrator sobre el terreno, de cara a la certificación en 2027, y lo próximo en mi agenda es una implementación completa para una organización sin ánimo de lucro. Ahí se encuentran las dos mitades: el CRM como el lugar donde viven los datos, y la automatización con IA como el trabajo que funciona por encima.',
       ],
     },
     invito: {
       titolo: 'Contacto',
-      testo: 'Para un proceso que automatizar, dos sistemas que conectar o un proyecto de Salesforce que poner en marcha, escríbeme.',
+      testo: 'Para un proceso que automatizar con IA, un CRM que poner en orden o un proyecto de Salesforce que poner en marcha, escríbeme.',
       bottone: 'Escríbeme',
     },
   },
