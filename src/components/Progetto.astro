@@ -1,4 +1,5 @@
 ---
+import Sfondo from './Sfondo.astro';
 import { lingueSito, rotte, testi, type Lang } from '../i18n';
 
 interface Props { lang: Lang; indice?: number; }
@@ -16,18 +17,22 @@ const dataAgg = agg
   : '';
 ---
 
-<section class="sezione sezione--nebbia" id="progetto">
-  <div class="contenitore progetto__intestazione">
+<header class="progetto__testa scuro scuro--sfondo">
+  <Sfondo />
+  <div class="contenitore">
     <a class="progetto__indietro" href={`${rotte.home[lang]}#progetti`}>
       <span aria-hidden="true">←</span> {t.interfaccia.progetti}
     </a>
-    <h1 id="progetto-titolo">{p.titolo}</h1>
+    {/* Stesso nome di transizione del titolo nella scheda in home. */}
+    <h1 id="progetto-titolo" style={`view-transition-name:progetto-titolo-${indice}`}>{p.titolo}</h1>
     {p.sottotitolo && <p class="progetto__sottotitolo">{p.sottotitolo}</p>}
   </div>
+</header>
 
+<section class="sezione foglio foglio--inizio foglio--fine" id="progetto" aria-labelledby="progetto-titolo">
   <div class="contenitore binario progetto__corpo">
-    <div class="binario__lato">
-      <dl class="dettagli">
+    <div class="binario__lato binario__lato--fisso" data-rivela>
+      <dl class="dettagli dettagli--scheda">
         <div>
           <dt>{s.cliente}</dt>
           <dd>{p.metadati.cliente}</dd>
@@ -57,36 +62,38 @@ const dataAgg = agg
 
     <div class="binario__corpo">
       <section class="progetto__sezione" aria-labelledby="progetto-problema">
-        <h2 id="progetto-problema">{s.problema}</h2>
-        <div class="testo-lungo">
+        <h2 id="progetto-problema" data-rivela>{s.problema}</h2>
+        <div class="testo-lungo" data-rivela>
           {p.problema.map((paragrafo) => <p>{paragrafo}</p>)}
         </div>
       </section>
 
       {p.architettura && (
         <section class="progetto__sezione" aria-labelledby="progetto-architettura">
-          <h2 id="progetto-architettura">{s.architettura}</h2>
-          <div class="testo-lungo">
+          <h2 id="progetto-architettura" data-rivela>{s.architettura}</h2>
+          <div class="testo-lungo" data-rivela>
             {p.architettura.paragrafi.map((paragrafo) => <p>{paragrafo}</p>)}
           </div>
-          <figure class="progetto__figura">
-            {p.architettura.immagine.src ? (
-              <img src={p.architettura.immagine.src} alt={p.architettura.immagine.alt} />
-            ) : (
-              <div class="progetto__placeholder" role="img" aria-label={p.architettura.immagine.alt}>
-                {s.immagineInArrivo}
-              </div>
-            )}
+          <figure class="progetto__figura" data-rivela>
+            <div class="progetto__cornice">
+              {p.architettura.immagine.src ? (
+                <img src={p.architettura.immagine.src} alt={p.architettura.immagine.alt} width="1000" height="660" loading="lazy" decoding="async" />
+              ) : (
+                <div class="progetto__placeholder" role="img" aria-label={p.architettura.immagine.alt}>
+                  {s.immagineInArrivo}
+                </div>
+              )}
+            </div>
             <figcaption class="progetto__didascalia">{p.architettura.immagine.didascalia}</figcaption>
           </figure>
         </section>
       )}
 
       <section class="progetto__sezione" aria-labelledby="progetto-decisioni">
-        <h2 id="progetto-decisioni">{s.decisioni}</h2>
+        <h2 id="progetto-decisioni" data-rivela>{s.decisioni}</h2>
         <div class="decisioni">
           {p.decisioni.map((d) => (
-            <article class="decisione">
+            <article class="decisione" data-rivela>
               <p class="decisione__scelta">{d.scelta}</p>
               <p class="decisione__perche">{d.perche}</p>
               <span class="decisione__alternativa-etichetta">{s.alternativaScartata}</span>
@@ -97,20 +104,20 @@ const dataAgg = agg
       </section>
 
       <section class="progetto__sezione" aria-labelledby="progetto-consegne">
-        <h2 id="progetto-consegne" class="consegne__titolo">{s.consegne}</h2>
-        <ul class="consegne">
+        <h2 id="progetto-consegne" data-rivela>{s.consegne}</h2>
+        <ul class="consegne" data-rivela>
           {p.consegne.map((voce) => <li>{voce}</li>)}
         </ul>
       </section>
 
       {p.risultati && (
         <section class="progetto__sezione" aria-labelledby="progetto-risultati">
-          <h2 id="progetto-risultati">{s.risultati}</h2>
+          <h2 id="progetto-risultati" data-rivela>{s.risultati}</h2>
           <ul class="risultati__strutturali">
-            {p.risultati.strutturali.map((voce) => <li>{voce}</li>)}
+            {p.risultati.strutturali.map((voce, i) => <li data-rivela style={`--ritardo:${i * 0.06}s`}>{voce}</li>)}
           </ul>
           {agg && (
-            <p class="risultati__aggiornamento">
+            <p class="risultati__aggiornamento" data-rivela>
               <time datetime={agg.data}>{s.aggiornamentoAl} {dataAgg}</time>
               {agg.testo}
             </p>
@@ -119,7 +126,7 @@ const dataAgg = agg
       )}
 
       <div class="azioni progetto__chiusura">
-        <a class="bottone" href={p.link.url}>{p.link.testo}</a>
+        <a class="bottone bottone--esterno" href={p.link.url}>{p.link.testo}</a>
         {p.linkAutore && (
           <a class="bottone bottone--secondario" href={p.linkAutore.url}>{p.linkAutore.testo}</a>
         )}

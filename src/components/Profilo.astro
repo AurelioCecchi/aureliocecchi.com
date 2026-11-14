@@ -6,14 +6,14 @@ const { lang } = Astro.props;
 const p = testi[lang].home.profilo;
 ---
 
-<section class="sezione" id="profilo" aria-labelledby="profilo-titolo">
+<section class="sezione foglio foglio--inizio profilo" id="profilo" aria-labelledby="profilo-titolo">
   <div class="contenitore binario">
-    <h2 class="binario__lato" id="profilo-titolo">{p.titolo}</h2>
+    <h2 class="binario__lato binario__lato--fisso" id="profilo-titolo" data-rivela>{p.titolo}</h2>
     <div class="binario__corpo testo-lungo">
-      {p.paragrafi.map((paragrafo) => (
+      {p.paragrafi.map((paragrafo, i) => (
         typeof paragrafo === 'string'
-          ? <p>{paragrafo}</p>
-          : <p>{paragrafo.prima}<a href={paragrafo.link.url}>{paragrafo.link.testo}</a>{paragrafo.dopo}</p>
+          ? <p data-rivela style={`--ritardo:${i * 0.08}s`}>{paragrafo}</p>
+          : <p data-rivela style={`--ritardo:${i * 0.08}s`}>{paragrafo.prima}<a href={paragrafo.link.url}>{paragrafo.link.testo}</a>{paragrafo.dopo}</p>
       ))}
     </div>
   </div>

@@ -1,4 +1,5 @@
 ---
+import Sfondo from './Sfondo.astro';
 import { rotte, testi, type Lang } from '../i18n';
 
 interface Props { lang: Lang; }
@@ -6,12 +7,17 @@ const { lang } = Astro.props;
 const i = testi[lang].home.invito;
 ---
 
-<section class="invito" aria-labelledby="invito-titolo">
-  <div class="contenitore invito__riga">
-    <div class="invito__testo">
-      <h2 id="invito-titolo">{i.titolo}</h2>
-      <p>{i.testo}</p>
+<section class="invito scuro scuro--sfondo" aria-labelledby="invito-titolo">
+  <Sfondo />
+  <div class="contenitore">
+    <div class="invito__riga">
+      <div class="invito__testo">
+        <h2 id="invito-titolo" data-rivela>{i.titolo}</h2>
+        <p data-rivela style="--ritardo:0.08s">{i.testo}</p>
+      </div>
+      <div data-rivela style="--ritardo:0.16s">
+        <a class="bottone bottone--freccia" href={rotte.contatti[lang]}>{i.bottone}</a>
+      </div>
     </div>
-    <a class="bottone bottone--chiaro" href={rotte.contatti[lang]}>{i.bottone}</a>
   </div>
 </section>

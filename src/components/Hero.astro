@@ -1,30 +1,86 @@
 ---
+import Sfondo from './Sfondo.astro';
 import { testi, type Lang } from '../i18n';
 
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const t = testi[lang];
 const h = t.home.hero;
+
+// Il titolo entra parola per parola: ogni parola è uno span con il proprio ritardo.
+const parole = h.titolo.split(' ');
 ---
 
-<section class="hero" aria-labelledby="hero-titolo">
-  <div class="contenitore">
-    <h1 id="hero-titolo">{h.titolo}</h1>
-    <div class="hero__base">
-      <div>
-        <p class="hero__lead">{h.testo}</p>
-        <div class="azioni">
-          <a class="bottone" href="#progetti">{h.bottoneProgetto}</a>
-        </div>
-      </div>
-      <dl class="scheda">
-        {t.home.scheda.map(({ voce, valore }) => (
-          <div>
-            <dt>{voce}</dt>
-            <dd>{valore}</dd>
-          </div>
-        ))}
-      </dl>
+<section class="hero scuro scuro--sfondo" aria-labelledby="hero-titolo">
+  <Sfondo />
+
+  <div class="contenitore hero__contenuto">
+    <svg class="flusso" viewBox="0 0 560 520" fill="none" aria-hidden="true">
+      <defs>
+        <radialGradient id="flusso-alone">
+          <stop offset="0" stop-color="#8fdccd" stop-opacity="0.3"></stop>
+          <stop offset="1" stop-color="#8fdccd" stop-opacity="0"></stop>
+        </radialGradient>
+      </defs>
+
+      <g class="flusso__linee">
+        <path d="M80 96C170 96 150 260 234 260"></path>
+        <path d="M80 260H234"></path>
+        <path d="M80 424C170 424 150 260 234 260"></path>
+        <path d="M326 260C410 260 390 96 480 96"></path>
+        <path d="M326 260H480"></path>
+        <path d="M326 260C410 260 390 424 480 424"></path>
+      </g>
+      <g class="flusso__impulsi">
+        <path pathLength="100" style="--d:0s" d="M80 96C170 96 150 260 234 260"></path>
+        <path pathLength="100" style="--d:1.4s" d="M80 260H234"></path>
+        <path pathLength="100" style="--d:2.8s" d="M80 424C170 424 150 260 234 260"></path>
+        <path pathLength="100" style="--d:0.9s" d="M326 260C410 260 390 96 480 96"></path>
+        <path pathLength="100" style="--d:2.3s" d="M326 260H480"></path>
+        <path pathLength="100" style="--d:3.7s" d="M326 260C410 260 390 424 480 424"></path>
+      </g>
+
+      <circle class="flusso__alone" cx="280" cy="260" r="140" fill="url(#flusso-alone)"></circle>
+      <circle class="flusso__anello" cx="280" cy="260" r="70"></circle>
+      <circle class="flusso__centro" cx="280" cy="260" r="46"></circle>
+      <path class="flusso__segno" d="M267 275 280 245l13 30M271.6 264.4h16.8"></path>
+      <circle class="flusso__punto" cx="280" cy="245" r="4.4"></circle>
+
+      <g class="flusso__nodo">
+        <rect x="24" y="68" width="56" height="56" rx="14"></rect>
+        <path d="M40 87h24M40 96h24M40 105h15"></path>
+        <rect x="24" y="232" width="56" height="56" rx="14"></rect>
+        <path d="M41 251h22v18H41zM41 260h22M52 251v18"></path>
+        <rect x="24" y="396" width="56" height="56" rx="14"></rect>
+        <circle cx="52" cy="418" r="5"></circle>
+        <path d="M42 435c0-8 20-8 20 0"></path>
+
+        <rect x="480" y="68" width="56" height="56" rx="14"></rect>
+        <path d="M498 97l7 7 13-14"></path>
+        <rect x="480" y="232" width="56" height="56" rx="14"></rect>
+        <path d="M498 270v-8M508 270v-19M518 270v-13"></path>
+        <rect x="480" y="396" width="56" height="56" rx="14"></rect>
+        <path d="M496 415h24v18h-24zM496 416l12 9 12-9"></path>
+      </g>
+    </svg>
+
+    <h1 id="hero-titolo">{parole.map((parola, i) => (
+      <><span class="parola" style={`--i:${i}`}>{parola}</span>{i < parole.length - 1 ? ' ' : ''}</>
+    ))}</h1>
+    <p class="hero__lead">{h.testo}</p>
+    <div class="azioni">
+      <a class="bottone bottone--giu" href="#progetti">{h.bottoneProgetto}</a>
     </div>
+  </div>
+
+  <div class="contenitore">
+    <dl class="scheda hero__scheda">
+      {t.home.scheda.map(({ voce, valore }) => (
+        <div>
+          <dt>{voce}</dt>
+          <dd>{valore}</dd>
+        </div>
+      ))}
+    </dl>
   </div>
 </section>

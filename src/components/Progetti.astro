@@ -5,23 +5,27 @@ interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const t = testi[lang];
 
-// Un case study = un quadrato. Per aggiungerne uno: un elemento qui che abbina
+// Un case study = una riga. Per aggiungerne uno: un elemento qui che abbina
 // i dati (testi[lang].progetti[n]) alla sua rotta (rotte.progetto2, ecc.).
 const progetti = [
   { dati: t.progetti[0], rotta: rotte.progetto[lang] },
 ];
 ---
 
-<section class="sezione sezione--nebbia" id="progetti" aria-labelledby="progetti-titolo">
+<section class="sezione sezione--seguito foglio foglio--fine" id="progetti" aria-labelledby="progetti-titolo">
   <div class="contenitore">
-    <h2 id="progetti-titolo">{t.interfaccia.progetti}</h2>
-    <ul class="progetti-griglia">
-      {progetti.map(({ dati, rotta }) => (
-        <li>
-          <a class="progetti-scheda" href={rotta}>
-            <h3>{dati.titoloBreve}</h3>
-            <p>{dati.breve}</p>
-            <span class="progetti-scheda__link">{t.interfaccia.leggiCaseStudy}</span>
+    <h2 id="progetti-titolo" data-rivela>{t.interfaccia.progetti}</h2>
+    <ul class="progetti-elenco">
+      {progetti.map(({ dati, rotta }, i) => (
+        <li data-rivela style={`--ritardo:${0.1 + i * 0.08}s`}>
+          <a class="progetto-riga" href={rotta}>
+            <span class="progetto-riga__indice" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            {/* Stesso nome di transizione del titolo nella pagina del progetto: il titolo "viaggia" da qui a là. */}
+            <h3 style={`view-transition-name:progetto-titolo-${i}`}>{dati.titoloBreve}</h3>
+            <div>
+              <p>{dati.breve}</p>
+              <span class="progetto-riga__link">{t.interfaccia.leggiCaseStudy}</span>
+            </div>
           </a>
         </li>
       ))}

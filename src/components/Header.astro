@@ -1,4 +1,5 @@
 ---
+import Marchio from './Marchio.astro';
 import { lingue, lingueSito, rotte, testi, type Lang, type Pagina } from '../i18n';
 import { sito } from '../sito';
 
@@ -7,10 +8,11 @@ const { lang, pagina } = Astro.props;
 const t = testi[lang].interfaccia;
 ---
 
-<header class="testata">
+<header class="testata scuro" data-testata>
   <div class="contenitore testata__riga">
     <a class="testata__nome" href={rotte.home[lang]} aria-current={pagina === 'home' ? 'page' : undefined}>
-      {sito.nome}
+      <Marchio />
+      <span class="testata__testo">{sito.nome}</span>
     </a>
     <div class="testata__azioni">
       <nav aria-label={t.lingua}>
@@ -35,4 +37,5 @@ const t = testi[lang].interfaccia;
       >{t.contatti}</a>
     </div>
   </div>
+  {pagina === 'progetto' && <span class="testata__progresso" aria-hidden="true"></span>}
 </header>
