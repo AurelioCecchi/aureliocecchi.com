@@ -17,7 +17,7 @@ const en: Testi = {
     },
     progetto2: {
       titolo: 'Case study: a local AI assistant for an admissions office',
-      descrizione: 'How I designed and shipped a fully local RAG assistant on a €320 mini PC: it answers on WhatsApp only with verified sentences.',
+      descrizione: 'How I designed and shipped a fully local RAG assistant on a €800 mini PC: it answers on WhatsApp only with verified sentences.',
     },
   },
 
@@ -175,8 +175,8 @@ const en: Testi = {
     {
       titolo: 'A local AI assistant for the admissions office',
       titoloBreve: 'Local AI assistant on WhatsApp',
-      sottotitolo: 'Fully local RAG on a €320 mini PC: it answers students on WhatsApp only with verified sentences, and the model, retrieval and archive never leave the office network.',
-      breve: 'For a university admissions office, a RAG system that runs entirely on a €320 mini PC: it answers on WhatsApp only with verified sentences, and in testing no invented fact got past the checks.',
+      sottotitolo: 'Fully local RAG on a €800 mini PC: it answers students on WhatsApp only with verified sentences, and the model, retrieval and archive never leave the office network.',
+      breve: 'For a university admissions office, a RAG system that runs entirely on a €800 mini PC: it answers on WhatsApp only with verified sentences, and in testing no invented fact got past the checks.',
 
       metadati: {
         cliente: 'University admissions office',
@@ -194,7 +194,7 @@ const en: Testi = {
 
       architettura: {
         paragrafi: [
-          'The server is a €320 mini PC (Ryzen 5 7640HS, 32 GB of RAM) with Ubuntu Server installed from scratch. Inference is CPU-only: two llama.cpp servers run as systemd services and listen on the local machine only, one for the generative model (Gemma 4 26B, about 23 GB) and one for embeddings, plus a faithfulness classifier. The binding constraint was memory, not compute: everything had to fit in RAM, with no swap, through a full test run.',
+          'The server is a €800 mini PC (Ryzen 5 7640HS, 32 GB of RAM) with Ubuntu Server installed from scratch. Inference is CPU-only: two llama.cpp servers run as systemd services and listen on the local machine only, one for the generative model (Gemma 4 26B, about 23 GB) and one for embeddings, plus a faithfulness classifier. The binding constraint was memory, not compute: everything had to fit in RAM, with no swap, through a full test run.',
           'The pipeline’s principle is that the system never answers “with low confidence”: a message either passes every gate or goes to a person. The model is treated as an untrusted extractor. It chooses which sentences of the approved documents answer the question, but the student only ever receives sentences copied word for word from the knowledge base, after a program has checked every claim: the quote exists in the passage, numbers and dates match, and the classifier confirms the quote supports the claim.',
           'The integration uses the official WhatsApp API in coexistence: the office keeps using the app on its phone and, if an operator replies first, the system notices and sends nothing. Only one secret HTTPS path is exposed for incoming messages; the models, the dashboard and SSH stay on the local network or a private VPN. On every message the receiver checks live, against the office’s Google Sheet, that the number belongs to a student of the programme, without keeping a copy: anyone not on the list is never even stored.',
           'During the day the machine runs at full capacity; from 18:00 to 09:00 it stops the models and keeps listening on about 0.9 GB of RAM, collecting messages for the morning. The office runs everything from a single page: drafts to approve, service health, a register of every decision, a knowledge-base editor and a stop button.',
@@ -236,7 +236,7 @@ const en: Testi = {
       ],
 
       consegne: [
-        '€320 mini PC set up as an AI server',
+        '€800 mini PC set up as an AI server',
         '4-gate RAG pipeline, with every claim verified',
         'Knowledge base: 38 categories, 71 passages, 479 example questions',
         '136-question test set, revised with 93 reasoned decisions',
@@ -259,7 +259,7 @@ const en: Testi = {
         ],
         aggiornamento: {
           data: '2026-11-14',
-          testo: 'Figures measured on the test sets and on the running system. The test labels were reviewed by me and the office has not yet signed them off; known limits remain, such as questions that depend on the previous message. That is why anything not close to an already approved answer stays a draft for the operator.',
+          testo: 'Figures measured on the test sets and on the running system. The test labels were reviewed by me and the office has not yet signed them off. To stay on the safe side, anything not close to an already approved answer still stays a draft for the operator.',
         },
       },
 

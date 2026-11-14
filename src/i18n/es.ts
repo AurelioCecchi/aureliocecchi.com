@@ -17,7 +17,7 @@ const es: Testi = {
     },
     progetto2: {
       titolo: 'Caso de estudio: asistente de IA local para una oficina de admisiones',
-      descrizione: 'Cómo diseñé y puse en producción un asistente RAG totalmente local en un mini PC de 320 €: responde por WhatsApp solo con frases verificadas.',
+      descrizione: 'Cómo diseñé y puse en producción un asistente RAG totalmente local en un mini PC de 800 €: responde por WhatsApp solo con frases verificadas.',
     },
   },
 
@@ -175,8 +175,8 @@ const es: Testi = {
     {
       titolo: 'Un asistente de IA local para la oficina de admisiones',
       titoloBreve: 'Asistente de IA local en WhatsApp',
-      sottotitolo: 'RAG totalmente local en un mini PC de 320 €: responde a los estudiantes por WhatsApp solo con frases verificadas, y el modelo, la búsqueda y el archivo no salen de la red de la oficina.',
-      breve: 'Para una oficina de admisiones universitaria, un sistema RAG que funciona por completo en un mini PC de 320 €: responde por WhatsApp solo con frases verificadas, y en las pruebas ningún dato inventado superó los controles.',
+      sottotitolo: 'RAG totalmente local en un mini PC de 800 €: responde a los estudiantes por WhatsApp solo con frases verificadas, y el modelo, la búsqueda y el archivo no salen de la red de la oficina.',
+      breve: 'Para una oficina de admisiones universitaria, un sistema RAG que funciona por completo en un mini PC de 800 €: responde por WhatsApp solo con frases verificadas, y en las pruebas ningún dato inventado superó los controles.',
 
       metadati: {
         cliente: 'Oficina de admisiones universitaria',
@@ -194,7 +194,7 @@ const es: Testi = {
 
       architettura: {
         paragrafi: [
-          'El servidor es un mini PC de 320 € (Ryzen 5 7640HS, 32 GB de RAM), con Ubuntu Server instalado desde cero. La inferencia es solo por CPU: dos servidores llama.cpp gestionados por systemd y accesibles únicamente en local, uno para el modelo generativo (Gemma 4 26B, unos 23 GB) y otro para los embeddings, más un clasificador de fidelidad. La limitación no era la potencia sino la memoria: todo debía caber en RAM, sin swap, durante una sesión de pruebas completa.',
+          'El servidor es un mini PC de 800 € (Ryzen 5 7640HS, 32 GB de RAM), con Ubuntu Server instalado desde cero. La inferencia es solo por CPU: dos servidores llama.cpp gestionados por systemd y accesibles únicamente en local, uno para el modelo generativo (Gemma 4 26B, unos 23 GB) y otro para los embeddings, más un clasificador de fidelidad. La limitación no era la potencia sino la memoria: todo debía caber en RAM, sin swap, durante una sesión de pruebas completa.',
           'El principio de la pipeline es que el sistema nunca responde «con poca seguridad»: un mensaje supera todos los controles o pasa a una persona. El modelo se trata como un extractor del que no se confía: elige qué frases de los documentos aprobados responden a la pregunta, pero al estudiante solo le llegan frases copiadas literalmente de la base de conocimiento, después de que un programa haya verificado cada afirmación: la cita existe en el pasaje, los números y las fechas coinciden, y el clasificador confirma que la cita respalda la afirmación.',
           'La integración usa la API oficial de WhatsApp en coexistencia: la oficina sigue usando la aplicación en el teléfono y, si un operador responde primero, el sistema lo detecta y no envía nada. Hacia fuera solo hay una ruta HTTPS secreta para los mensajes entrantes; los modelos, el panel y SSH se quedan en la red local o en una VPN privada. Con cada mensaje, el receptor comprueba en vivo, en la hoja de Google de la oficina, que el número sea de un estudiante del grado, sin guardar una copia: quien no está en la lista ni siquiera se archiva.',
           'De día la máquina trabaja a pleno rendimiento; de 18:00 a 9:00 detiene los modelos y se queda a la escucha con unos 0,9 GB de RAM, recogiendo los mensajes para la mañana. La oficina lo gestiona todo desde una sola página: borradores por aprobar, estado de los servicios, registro de cada decisión, editor de la base de conocimiento y un botón de parada.',
@@ -236,7 +236,7 @@ const es: Testi = {
       ],
 
       consegne: [
-        'Mini PC de 320 € configurado como servidor de IA',
+        'Mini PC de 800 € configurado como servidor de IA',
         'Pipeline RAG de 4 controles, con verificación de cada afirmación',
         'Base de conocimiento: 38 categorías, 71 pasajes, 479 preguntas de ejemplo',
         'Conjunto de prueba de 136 preguntas, revisadas con 93 decisiones razonadas',
@@ -259,7 +259,7 @@ const es: Testi = {
         ],
         aggiornamento: {
           data: '2026-11-14',
-          testo: 'Cifras medidas en los conjuntos de prueba y en el sistema en funcionamiento. Las etiquetas de las pruebas las revisé yo y la oficina aún no las ha validado; quedan límites conocidos, como las preguntas que dependen del mensaje anterior. Por eso, todo lo que no se parece a una respuesta ya aprobada se queda como borrador para el operador.',
+          testo: 'Cifras medidas en los conjuntos de prueba y en el sistema en funcionamiento. Las etiquetas de las pruebas las revisé yo y la oficina aún no las ha validado. Por prudencia, todo lo que no se parece a una respuesta ya aprobada se queda igualmente como borrador para el operador.',
         },
       },
 

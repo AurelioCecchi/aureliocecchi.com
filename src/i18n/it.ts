@@ -67,7 +67,7 @@ const it = {
     },
     progetto2: {
       titolo: 'Case study: assistente AI locale per un ufficio ammissioni',
-      descrizione: 'Come ho progettato e messo in produzione un assistente RAG interamente locale su un mini PC da 320 €: risponde su WhatsApp solo con frasi verificate.',
+      descrizione: 'Come ho progettato e messo in produzione un assistente RAG interamente locale su un mini PC da 800 €: risponde su WhatsApp solo con frasi verificate.',
     },
   },
 
@@ -233,8 +233,8 @@ const it = {
     {
       titolo: 'Un assistente AI locale per l’ufficio ammissioni',
       titoloBreve: 'Assistente AI locale su WhatsApp',
-      sottotitolo: 'RAG interamente in locale su un mini PC da 320 €: risponde agli studenti su WhatsApp solo con frasi verificate, e modello, ricerca e archivio non escono dalla rete dell’ufficio.',
-      breve: 'Per un ufficio ammissioni universitario, un sistema RAG che gira per intero su un mini PC da 320 €: risponde su WhatsApp solo con frasi verificate, e nei test nessun fatto inventato ha superato i controlli.',
+      sottotitolo: 'RAG interamente in locale su un mini PC da 800 €: risponde agli studenti su WhatsApp solo con frasi verificate, e modello, ricerca e archivio non escono dalla rete dell’ufficio.',
+      breve: 'Per un ufficio ammissioni universitario, un sistema RAG che gira per intero su un mini PC da 800 €: risponde su WhatsApp solo con frasi verificate, e nei test nessun fatto inventato ha superato i controlli.',
 
       metadati: {
         cliente: 'Ufficio ammissioni universitario',
@@ -252,7 +252,7 @@ const it = {
 
       architettura: {
         paragrafi: [
-          'Il server è un mini PC da 320 € (Ryzen 5 7640HS, 32 GB di RAM), con Ubuntu Server installato da zero. L’inferenza è solo su CPU: due server llama.cpp gestiti da systemd e in ascolto soltanto in locale, uno per il modello generativo (Gemma 4 26B, circa 23 GB) e uno per gli embedding, più un classificatore di fedeltà. Il vincolo non era la potenza ma la memoria: tutto doveva stare in RAM, senza swap, durante un’intera sessione di test.',
+          'Il server è un mini PC da 800 € (Ryzen 5 7640HS, 32 GB di RAM), con Ubuntu Server installato da zero. L’inferenza è solo su CPU: due server llama.cpp gestiti da systemd e in ascolto soltanto in locale, uno per il modello generativo (Gemma 4 26B, circa 23 GB) e uno per gli embedding, più un classificatore di fedeltà. Il vincolo non era la potenza ma la memoria: tutto doveva stare in RAM, senza swap, durante un’intera sessione di test.',
           'Il principio della pipeline è che il sistema non risponde mai «con poca sicurezza»: un messaggio supera ogni controllo, oppure va a una persona. Il modello è trattato come un estrattore di cui non ci si fida: sceglie quali frasi dei documenti approvati rispondono alla domanda, ma allo studente arrivano solo frasi copiate alla lettera dalla base di conoscenza, dopo che un programma ha verificato ogni affermazione: la citazione esiste nel passaggio, numeri e date coincidono, e il classificatore conferma che la citazione sostiene l’affermazione.',
           'L’integrazione usa l’API ufficiale di WhatsApp in coesistenza: l’ufficio continua a usare l’app sul telefono e, se un operatore risponde per primo, il sistema se ne accorge e non invia nulla. All’esterno è esposto un solo percorso HTTPS segreto per i messaggi in arrivo; modelli, cruscotto e SSH restano sulla rete locale o su una VPN privata. A ogni messaggio il ricevitore controlla dal vivo, sul foglio Google dell’ufficio, che il numero sia di uno studente del corso, senza tenerne una copia: chi non è in elenco non viene nemmeno archiviato.',
           'Di giorno la macchina lavora a pieno regime; dalle 18 alle 9 ferma i modelli e resta in ascolto con circa 0,9 GB di RAM, raccogliendo i messaggi per il mattino. L’ufficio governa tutto da un’unica pagina: bozze da approvare, stato dei servizi, registro di ogni decisione, editor della base di conoscenza e un pulsante di arresto.',
@@ -294,7 +294,7 @@ const it = {
       ],
 
       consegne: [
-        'Mini PC da 320 € configurato come server AI',
+        'Mini PC da 800 € configurato come server AI',
         'Pipeline RAG a 4 controlli, con verifica di ogni affermazione',
         'Base di conoscenza: 38 categorie, 71 passaggi, 479 domande d’esempio',
         'Set di prova da 136 domande, riviste con 93 decisioni motivate',
@@ -317,7 +317,7 @@ const it = {
         ],
         aggiornamento: {
           data: '2026-11-14', // giorno della messa in produzione
-          testo: 'Numeri misurati sui set di prova e sul sistema in esercizio. Le etichette dei test sono state riviste da me e l’ufficio non le ha ancora validate; restano limiti noti, come le domande che dipendono dal messaggio precedente. Per questo tutto ciò che non è vicino a una risposta già approvata resta una bozza per l’operatore.',
+          testo: 'Numeri misurati sui set di prova e sul sistema in esercizio. Le etichette dei test sono state riviste da me e l’ufficio non le ha ancora validate. Per prudenza, tutto ciò che non è vicino a una risposta già approvata resta comunque una bozza per l’operatore.',
         },
       },
 
