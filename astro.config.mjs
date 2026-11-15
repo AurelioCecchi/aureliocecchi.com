@@ -17,9 +17,9 @@ const rotte = {
     en: '/en/projects/physiotherapist-university/',
   },
   progetto2: {
-    it: '/progetti/local-rag-admissions-assistant/',
-    es: '/es/proyectos/local-rag-admissions-assistant/',
-    en: '/en/projects/local-rag-admissions-assistant/',
+    it: '/progetti/local-ai-customer-care/',
+    es: '/es/proyectos/local-ai-customer-care/',
+    en: '/en/projects/local-ai-customer-care/',
   },
 };
 

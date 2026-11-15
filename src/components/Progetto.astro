@@ -33,10 +33,12 @@ const dataAgg = agg
   <div class="contenitore binario progetto__corpo">
     <div class="binario__lato binario__lato--fisso" data-rivela>
       <dl class="dettagli dettagli--scheda">
-        <div>
-          <dt>{s.cliente}</dt>
-          <dd>{p.metadati.cliente}</dd>
-        </div>
+        {p.metadati.cliente && (
+          <div>
+            <dt>{s.cliente}</dt>
+            <dd>{p.metadati.cliente}</dd>
+          </div>
+        )}
         <div>
           <dt>{s.settore}</dt>
           <dd>{p.metadati.settore}</dd>

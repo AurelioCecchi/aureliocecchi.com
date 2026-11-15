@@ -12,12 +12,12 @@ const en: Testi = {
       descrizione: "Get in touch about a process to automate, an integration, or a Salesforce project. I reply to everyone, usually within a few business days.",
     },
     progetto: {
-      titolo: 'Case study: content architecture for international recruitment',
-      descrizione: 'How I designed the taxonomy and content for a lead-generation portal aimed at international students, for a European university: 51 articles, 29 EU/EEA states.',
+      titolo: 'Case study: content architecture for physiotherapist mobility in Europe',
+      descrizione: 'How I designed the taxonomy and content of physiotherapist.university, an information portal on physiotherapist mobility across Europe: 51 articles, 29 EU/EEA states.',
     },
     progetto2: {
-      titolo: 'Case study: a local AI assistant for an admissions office',
-      descrizione: 'How I designed and shipped a fully local RAG assistant on a €800 mini PC: it answers on WhatsApp only with verified sentences.',
+      titolo: 'Case study: a local AI assistant for customer care on WhatsApp',
+      descrizione: 'How I designed and shipped a fully local RAG assistant on a €800 mini PC: it answers customers on WhatsApp only with verified sentences.',
     },
   },
 
@@ -71,7 +71,7 @@ const en: Testi = {
       paragrafi: [
         'I work on AI automation and CRM systems. One point interests me most: putting a model to work inside a real process without the data leaving the company and without a wrong answer reaching the customer. That is why I design the checks first and the automation second: what can go out on its own, what goes through a person, what gets logged.',
         {
-          prima: 'In 2026 I put into production an AI assistant that runs entirely on a local server and answers on WhatsApp only with verified sentences, and I built the content architecture behind a European university’s international portal. When an integration I need doesn’t exist yet, I write it and publish it on my ',
+          prima: 'In 2026 I put into production a customer-care AI assistant that runs entirely on a local server and answers customers on WhatsApp only with verified sentences, and I built the content architecture of an information portal on physiotherapist mobility across Europe. When an integration I need doesn’t exist yet, I write it and publish it on my ',
           link: { url: 'https://github.com/AurelioCecchi', testo: 'GitHub' },
           dopo: '.',
         },
@@ -87,21 +87,21 @@ const en: Testi = {
 
   progetti: [
     {
-      titolo: 'Content architecture for international student recruitment',
-      titoloBreve: 'Content architecture for a university portal',
-      sottotitolo: 'Taxonomy, content and technical SEO for an international recruitment portal.',
-      breve: 'For a European university, a lead-generation portal covering 29 EU/EEA states: three topic clusters on a hierarchical taxonomy, 51 articles optimised on-page.',
+      titolo: 'Content architecture for physiotherapist mobility across Europe',
+      titoloBreve: 'A portal on physiotherapist mobility in Europe',
+      sottotitolo: 'Taxonomy, content and technical SEO for an information portal on the rules and the profession of physiotherapy across 29 EU/EEA states.',
+      breve: 'An information portal for physiotherapists who want to work in another European country, covering 29 EU/EEA states: three topic clusters on a hierarchical taxonomy, 51 articles optimised on-page.',
 
       metadati: {
-        cliente: 'European university',
-        settore: 'Higher education',
+        cliente: null,
+        settore: 'Healthcare · professional mobility in Europe',
         periodo: 'July – September 2026',
         ruolo: 'Content architecture, implementation',
         stack: ['WordPress', 'Yoast', 'MCP', 'HTML/CSS'],
       },
 
       problema: [
-        'The university needed a portal able to capture organic search from international students interested in enrolling, in a market covered by universities across 29 EU and EEA states.',
+        'physiotherapist.university is an information portal for physiotherapists who want to work in another European country: it explains the rules to follow in order to move and what the profession looks like in each of the 29 EU and EEA states. To be useful, it had to be found by people searching Google for those answers.',
         "Existing content was fragmented: isolated pages, no topical hierarchy, almost no internal linking. The site told neither Google nor readers which topics it was building authority on.",
         'The main risk was cannibalisation: different pages competing for the same queries, with no plan linking pillar content to supporting content.',
       ],
@@ -127,8 +127,8 @@ const en: Testi = {
         },
         {
           scelta: 'Inline HTML tables, not a downloadable document',
-          perche: 'Each programme had to include the data required under Article 11 in a table that was indexable, readable on mobile, and could be updated page by page without touching an external file.',
-          alternativa: 'A PDF per programme, the approach used previously: faster to produce in bulk, but invisible to search engines and awkward on mobile.',
+          perche: 'Each country page had to include the data required under Article 11 in a table that was indexable, readable on mobile, and could be updated page by page without touching an external file.',
+          alternativa: 'A PDF per country, the approach used previously: faster to produce in bulk, but invisible to search engines and awkward on mobile.',
         },
         {
           scelta: 'Hand-coded homepage in HTML/CSS',
@@ -173,44 +173,44 @@ const en: Testi = {
       linkAutore: null,
     },
     {
-      titolo: 'A local AI assistant for the admissions office',
-      titoloBreve: 'Local AI assistant on WhatsApp',
-      sottotitolo: 'Fully local RAG on a €800 mini PC: it answers students on WhatsApp only with verified sentences, and the model, retrieval and archive never leave the office network.',
-      breve: 'For a university admissions office, a RAG system that runs entirely on a €800 mini PC: it answers on WhatsApp only with verified sentences, and in testing no invented fact got past the checks.',
+      titolo: 'A local AI assistant for customer care on WhatsApp',
+      titoloBreve: 'Automated customer care on WhatsApp',
+      sottotitolo: 'Fully local RAG on a €800 mini PC: it answers customers on WhatsApp only with verified sentences, and the model, retrieval and archive never leave the company network.',
+      breve: 'For a client’s customer care, a RAG system that runs entirely on a €800 mini PC: it handles customer questions on WhatsApp automatically, only with verified sentences, and in testing no invented fact got past the checks.',
 
       metadati: {
-        cliente: 'University admissions office',
-        settore: 'Higher education',
+        cliente: 'Confidential',
+        settore: 'Customer care',
         periodo: 'Autumn 2026',
         ruolo: 'Design and delivery, from hardware to production',
         stack: ['Ubuntu Server', 'llama.cpp', 'Gemma 4 26B', 'HHEM-2.1', 'Python', 'SQLite', 'systemd', 'WhatsApp Cloud API', 'Tailscale'],
       },
 
       problema: [
-        "The admissions office was answering a constant stream of repetitive WhatsApp questions about deadlines, documents, fees and enrolment steps, for a bachelor's programme taught in English. It wanted to lighten that load without changing how it works: same number, same app on the office phone.",
-        'Three constraints ruled out a cloud model from day one: student data could not leave the office network, the cost had to be low and predictable, with no per-token billing and no GPU workstation, and the machine had to be quiet and always reachable.',
-        'The real risk was something else. An admissions assistant fails in one specific, expensive way: it states a deadline, fee or requirement that is plausible but wrong. The whole project is built around that single mistake it must not make.',
+        'The customer care team was answering a constant stream of repetitive WhatsApp questions about deadlines, documents, costs and procedural steps. It wanted to lighten that load without changing how it works: same number, same app on the company phone.',
+        'Three constraints ruled out a cloud model from day one: customer data could not leave the company network, the cost had to be low and predictable, with no per-token billing and no GPU workstation, and the machine had to be quiet and always reachable.',
+        'The real risk was something else. A customer-care assistant fails in one specific, expensive way: it states a deadline, cost or requirement that is plausible but wrong. The whole project is built around that single mistake it must not make.',
       ],
 
       architettura: {
         paragrafi: [
           'The server is a €800 mini PC (Ryzen 5 7640HS, 32 GB of RAM) with Ubuntu Server installed from scratch. Inference is CPU-only: two llama.cpp servers run as systemd services and listen on the local machine only, one for the generative model (Gemma 4 26B, about 23 GB) and one for embeddings, plus a faithfulness classifier. The binding constraint was memory, not compute: everything had to fit in RAM, with no swap, through a full test run.',
-          'The pipeline’s principle is that the system never answers “with low confidence”: a message either passes every gate or goes to a person. The model is treated as an untrusted extractor. It chooses which sentences of the approved documents answer the question, but the student only ever receives sentences copied word for word from the knowledge base, after a program has checked every claim: the quote exists in the passage, numbers and dates match, and the classifier confirms the quote supports the claim.',
-          'The integration uses the official WhatsApp API in coexistence: the office keeps using the app on its phone and, if an operator replies first, the system notices and sends nothing. Only one secret HTTPS path is exposed for incoming messages; the models, the dashboard and SSH stay on the local network or a private VPN. On every message the receiver checks live, against the office’s Google Sheet, that the number belongs to a student of the programme, without keeping a copy: anyone not on the list is never even stored.',
-          'During the day the machine runs at full capacity; from 18:00 to 09:00 it stops the models and keeps listening on about 0.9 GB of RAM, collecting messages for the morning. The office runs everything from a single page: drafts to approve, service health, a register of every decision, a knowledge-base editor and a stop button.',
+          'The pipeline’s principle is that the system never answers “with low confidence”: a message either passes every gate or goes to a person. The model is treated as an untrusted extractor. It chooses which sentences of the approved documents answer the question, but the customer only ever receives sentences copied word for word from the knowledge base, after a program has checked every claim: the quote exists in the passage, numbers and dates match, and the classifier confirms the quote supports the claim.',
+          'The integration uses the official WhatsApp API in coexistence: the customer care team keeps using the app on its phone and, if an operator replies first, the system notices and sends nothing. Only one secret HTTPS path is exposed for incoming messages; the models, the dashboard and SSH stay on the local network or a private VPN. On every message the receiver checks live, against the company’s Google Sheet, that the number belongs to a registered customer, without keeping a copy: anyone not on the list is never even stored.',
+          'During the day the machine runs at full capacity; from 18:00 to 09:00 it stops the models and keeps listening on about 0.9 GB of RAM, collecting messages for the morning. The team runs everything from a single page: drafts to approve, service health, a register of every decision, a knowledge-base editor and a stop button.',
           'Three investigations changed the project along the way. Memory: during a 185-question test run, swap grew to 2–4 GB; the cause was the memory-mapped model loading a piece at a time, visible only when measuring under full load, not at start-up. The measurement itself: reading 55 divergent cases by hand, I found that 27 of the 39 “errors” were errors in the test labels, and that one gate looked effective only because the same test questions were in its own list; that led to simplifying the pipeline. Privacy: on connection, WhatsApp synced the phone’s address book to the server, 5,569 contacts, which was found and deleted straight away.',
         ],
         immagine: {
           src: '/case-studies/local-rag-pipeline.svg',
           alt: 'Diagram of the path of one message: decomposition, exclusion, retrieval and constrained answer, verification and approval gate, with an exit to the operator at every step',
-          didascalia: 'The path of one message. Each gate can only stop it and hand it to a person; it becomes an automatic reply only if it passes them all and is close to an answer the office has already approved.',
+          didascalia: 'The path of one message. Each gate can only stop it and hand it to a person; it becomes an automatic reply only if it passes them all and is close to an answer the team has already approved.',
         },
       },
 
       decisioni: [
         {
-          scelta: 'RAG on the office’s documents, never fine-tuning',
-          perche: 'Fine-tuning teaches style, not facts: a model trained on old chats would generate dates and amounts that look right. Facts have to come from documents the office controls and can correct. The historical chat archive was used only to learn which questions arrive, never as a source of answers.',
+          scelta: 'RAG on the company’s documents, never fine-tuning',
+          perche: 'Fine-tuning teaches style, not facts: a model trained on old chats would generate dates and amounts that look right. Facts have to come from documents the company controls and can correct. The historical chat archive was used only to learn which questions arrive, never as a source of answers.',
           alternativa: 'Training a model on the archive of past conversations: it looks like the most direct route, but it produces plausible answers nobody has verified.',
         },
         {
@@ -219,19 +219,19 @@ const en: Testi = {
           alternativa: 'A dense 8-billion-parameter model, slightly more faithful on paper but far weaker at understanding rephrased or multi-part questions; or a dense 27-billion one, better phrased but slower and at the limit of the memory.',
         },
         {
-          scelta: 'The student only receives verified quotes',
+          scelta: 'The customer only receives verified quotes',
           perche: 'For every claim, the model must give the passage and the exact sentence it comes from. A program, with no generative model involved, checks that the sentence exists, that numbers and dates match and that a faithfulness classifier confirms it. One rejected claim sends the whole message to a person. In testing the separation is clean: a median score of 0.90 for accepted claims against 0.17 for rejected ones.',
-          alternativa: 'Sending the model’s own answer above a confidence threshold: more coverage from day one, but the model’s words would reach the student without anyone having checked them.',
+          alternativa: 'Sending the model’s own answer above a confidence threshold: more coverage from day one, but the model’s words would reach the customer without anyone having checked them.',
         },
         {
           scelta: 'Autonomy is earned one answer at a time',
-          perche: 'A verified answer is sent automatically only if it is very close to an answer the office has already approved and cites the same passages; otherwise it stays a draft. Every draft approved in the dashboard widens what can become automatic. That way a routing mistake costs one extra draft, not a wrong message to a student.',
+          perche: 'A verified answer is sent automatically only if it is very close to an answer the team has already approved and cites the same passages; otherwise it stays a draft. Every draft approved in the dashboard widens what can become automatic. That way a routing mistake costs one extra draft, not a wrong message to a customer.',
           alternativa: 'A classifier that decides up front whether to answer or hand over to the operator. I built and measured three: the best routed 115 questions out of 136 correctly and never reached 100%.',
         },
         {
           scelta: 'The official WhatsApp API, in coexistence with the app',
-          perche: 'The office keeps using WhatsApp Business on its phone as before, while the server receives messages directly from Meta. It costs 12 dollars a month, follows the platform’s rules, and the provider never stores message content.',
-          alternativa: 'Automating WhatsApp Web with a scripted browser: cheaper on paper, but against the terms of use, fragile, and with a real risk of the office number being banned.',
+          perche: 'The team keeps using WhatsApp Business on its phone as before, while the server receives messages directly from Meta. It costs 12 dollars a month, follows the platform’s rules, and the provider never stores message content.',
+          alternativa: 'Automating WhatsApp Web with a scripted browser: cheaper on paper, but against the terms of use, fragile, and with a real risk of the company number being banned.',
         },
       ],
 
@@ -241,8 +241,8 @@ const en: Testi = {
         'Knowledge base: 38 categories, 71 passages, 479 example questions',
         '136-question test set, revised with 93 reasoned decisions',
         'WhatsApp integration in coexistence, with a receiver running 24/7',
-        'Live student-registry filter: 5,397 rows read in about 1 second, no local copy',
-        'Office dashboard: drafts, approval, register, editor, emergency stop',
+        'Live customer-registry filter: 5,397 rows read in about 1 second, no local copy',
+        'Customer care dashboard: drafts, approval, register, editor, emergency stop',
         'Two operating modes: office hours and a night listener on about 0.9 GB of RAM',
         '56 automated tests on the integration layer, all passing',
         'Audit log of every decision and a draft privacy notice',
@@ -259,7 +259,7 @@ const en: Testi = {
         ],
         aggiornamento: {
           data: '2026-11-14',
-          testo: 'Figures measured on the test sets and on the running system. The test labels were reviewed by me and the office has not yet signed them off. To stay on the safe side, anything not close to an already approved answer still stays a draft for the operator.',
+          testo: 'Figures measured on the test sets and on the running system. The test labels were reviewed by me and the company has not yet signed them off. To stay on the safe side, anything not close to an already approved answer still stays a draft for the operator. The next step is bringing the same system to customer support by email.',
         },
       },
 

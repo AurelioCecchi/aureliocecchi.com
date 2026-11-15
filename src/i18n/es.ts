@@ -12,12 +12,12 @@ const es: Testi = {
       descrizione: 'Escríbeme para hablar de un proceso que automatizar, una integración o un proyecto de Salesforce. Respondo a todos, normalmente en pocos días laborables.',
     },
     progetto: {
-      titolo: 'Caso de estudio: arquitectura de contenidos para captación internacional',
-      descrizione: 'Cómo diseñé la taxonomía y los contenidos de un portal de generación de leads para estudiantes internacionales, para una universidad europea: 51 artículos, 29 Estados UE/EEE.',
+      titolo: 'Caso de estudio: arquitectura de contenidos para la movilidad de fisioterapeutas en Europa',
+      descrizione: 'Cómo diseñé la taxonomía y los contenidos de physiotherapist.university, un portal informativo sobre la movilidad europea de los fisioterapeutas: 51 artículos, 29 Estados UE/EEE.',
     },
     progetto2: {
-      titolo: 'Caso de estudio: asistente de IA local para una oficina de admisiones',
-      descrizione: 'Cómo diseñé y puse en producción un asistente RAG totalmente local en un mini PC de 800 €: responde por WhatsApp solo con frases verificadas.',
+      titolo: 'Caso de estudio: asistente de IA local para la atención al cliente por WhatsApp',
+      descrizione: 'Cómo diseñé y puse en producción un asistente RAG totalmente local en un mini PC de 800 €: responde a los clientes por WhatsApp solo con frases verificadas.',
     },
   },
 
@@ -71,7 +71,7 @@ const es: Testi = {
       paragrafi: [
         'Trabajo en automatización con IA y sistemas CRM. Me interesa un punto concreto: poner un modelo a trabajar dentro de un proceso real sin que los datos salgan de la empresa y sin que una respuesta equivocada llegue al cliente. Por eso diseño primero los controles y después la automatización: qué puede salir solo, qué pasa por una persona, qué queda registrado.',
         {
-          prima: 'En 2026 puse en producción un asistente de IA que funciona por completo en un servidor local y responde por WhatsApp solo con frases verificadas, y construí la arquitectura de contenidos del portal internacional de una universidad europea. Cuando necesito una integración que todavía no existe, la escribo y la publico en mi ',
+          prima: 'En 2026 puse en producción un asistente de IA de atención al cliente que funciona por completo en un servidor local y responde a los clientes por WhatsApp solo con frases verificadas, y construí la arquitectura de contenidos de un portal informativo sobre la movilidad de los fisioterapeutas en Europa. Cuando necesito una integración que todavía no existe, la escribo y la publico en mi ',
           link: { url: 'https://github.com/AurelioCecchi', testo: 'GitHub' },
           dopo: '.',
         },
@@ -87,21 +87,21 @@ const es: Testi = {
 
   progetti: [
     {
-      titolo: 'Arquitectura de contenidos para la captación de estudiantes internacionales',
-      titoloBreve: 'Arquitectura de contenidos para un portal universitario',
-      sottotitolo: 'Taxonomía, contenidos y SEO técnico para un portal de captación internacional.',
-      breve: 'Para una universidad europea, un portal de generación de leads con cobertura de 29 Estados UE/EEE: tres clústeres temáticos en una taxonomía jerárquica, 51 artículos optimizados on-page.',
+      titolo: 'Arquitectura de contenidos para la movilidad de fisioterapeutas en Europa',
+      titoloBreve: 'Un portal sobre la movilidad de fisioterapeutas en Europa',
+      sottotitolo: 'Taxonomía, contenidos y SEO técnico para un portal informativo sobre las normas y la profesión de fisioterapeuta en 29 Estados UE/EEE.',
+      breve: 'Un portal informativo para fisioterapeutas que quieren trabajar en otro país europeo, con cobertura de 29 Estados UE/EEE: tres clústeres temáticos en una taxonomía jerárquica, 51 artículos optimizados on-page.',
 
       metadati: {
-        cliente: 'Universidad europea',
-        settore: 'Educación superior',
+        cliente: null,
+        settore: 'Sanidad · movilidad profesional en Europa',
         periodo: 'Julio – septiembre de 2026',
         ruolo: 'Arquitectura de contenidos, implementación',
         stack: ['WordPress', 'Yoast', 'MCP', 'HTML/CSS'],
       },
 
       problema: [
-        'La universidad necesitaba un portal capaz de captar la búsqueda orgánica de estudiantes internacionales interesados en cursar sus estudios, en un mercado cubierto por universidades en 29 Estados de la UE y el EEE.',
+        'physiotherapist.university es un portal informativo para fisioterapeutas que quieren trabajar en otro país europeo: explica las normas que hay que cumplir para trasladarse y las características de la profesión en cada uno de los 29 Estados de la UE y el EEE. Para ser útil, tenía que aparecer cuando alguien busca esas respuestas en Google.',
         'Los contenidos existentes estaban fragmentados: páginas aisladas, sin jerarquía temática, con enlazado interno casi inexistente. El sitio no comunicaba a Google, ni a los lectores, sobre qué temas construía autoridad.',
         'El riesgo principal era la canibalización: páginas distintas compitiendo por las mismas búsquedas, sin un plan de enlazado entre contenidos pilares y contenidos de apoyo.',
       ],
@@ -127,8 +127,8 @@ const es: Testi = {
         },
         {
           scelta: 'Tablas informativas en HTML inline, no un documento descargable',
-          perche: 'Cada programa debía incluir los datos exigidos por el Artículo 11 en una tabla indexable, legible desde móvil y actualizable página por página sin tocar un archivo externo.',
-          alternativa: 'Un PDF por programa, el enfoque usado anteriormente: más rápido de producir en bloque, pero invisible para los buscadores e incómodo en móvil.',
+          perche: 'Cada ficha de país debía incluir los datos exigidos por el Artículo 11 en una tabla indexable, legible desde móvil y actualizable página por página sin tocar un archivo externo.',
+          alternativa: 'Un PDF por país, el enfoque usado anteriormente: más rápido de producir en bloque, pero invisible para los buscadores e incómodo en móvil.',
         },
         {
           scelta: 'Página de inicio escrita a mano en HTML/CSS',
@@ -173,44 +173,44 @@ const es: Testi = {
       linkAutore: null,
     },
     {
-      titolo: 'Un asistente de IA local para la oficina de admisiones',
-      titoloBreve: 'Asistente de IA local en WhatsApp',
-      sottotitolo: 'RAG totalmente local en un mini PC de 800 €: responde a los estudiantes por WhatsApp solo con frases verificadas, y el modelo, la búsqueda y el archivo no salen de la red de la oficina.',
-      breve: 'Para una oficina de admisiones universitaria, un sistema RAG que funciona por completo en un mini PC de 800 €: responde por WhatsApp solo con frases verificadas, y en las pruebas ningún dato inventado superó los controles.',
+      titolo: 'Un asistente de IA local para la atención al cliente por WhatsApp',
+      titoloBreve: 'Atención al cliente automática por WhatsApp',
+      sottotitolo: 'RAG totalmente local en un mini PC de 800 €: responde a los clientes por WhatsApp solo con frases verificadas, y el modelo, la búsqueda y el archivo no salen de la red de la empresa.',
+      breve: 'Para la atención al cliente de una empresa, un sistema RAG que funciona por completo en un mini PC de 800 €: atiende a los clientes por WhatsApp de forma automática, solo con frases verificadas, y en las pruebas ningún dato inventado superó los controles.',
 
       metadati: {
-        cliente: 'Oficina de admisiones universitaria',
-        settore: 'Educación superior',
+        cliente: 'Confidencial',
+        settore: 'Atención al cliente',
         periodo: 'Otoño de 2026',
         ruolo: 'Diseño y realización, del hardware a la puesta en producción',
         stack: ['Ubuntu Server', 'llama.cpp', 'Gemma 4 26B', 'HHEM-2.1', 'Python', 'SQLite', 'systemd', 'WhatsApp Cloud API', 'Tailscale'],
       },
 
       problema: [
-        'La oficina de admisiones recibía por WhatsApp un flujo constante de preguntas repetitivas sobre plazos, documentos, tasas y pasos de la matrícula, para un grado impartido en inglés. Quería aliviar esa carga sin cambiar su forma de trabajar: el mismo número y la misma aplicación en el teléfono de la oficina.',
-        'Tres condiciones descartaban desde el principio un modelo en la nube: los datos de los estudiantes no debían salir de la red de la oficina, el coste debía ser bajo y previsible, sin tarifas por uso ni estaciones de trabajo con GPU, y la máquina debía ser silenciosa y estar siempre disponible.',
-        'El riesgo real era otro. Un asistente de admisiones falla de una manera concreta y cara: comunica un plazo, una tasa o un requisito plausible pero falso. Todo el proyecto está construido en torno a ese único error que no se puede cometer.',
+        'El servicio de atención al cliente recibía por WhatsApp un flujo constante de preguntas repetitivas sobre plazos, documentos, costes y pasos de los trámites. Quería aliviar esa carga sin cambiar su forma de trabajar: el mismo número y la misma aplicación en el teléfono de la empresa.',
+        'Tres condiciones descartaban desde el principio un modelo en la nube: los datos de los clientes no debían salir de la red de la empresa, el coste debía ser bajo y previsible, sin tarifas por uso ni estaciones de trabajo con GPU, y la máquina debía ser silenciosa y estar siempre disponible.',
+        'El riesgo real era otro. Un asistente de atención al cliente falla de una manera concreta y cara: comunica un plazo, un coste o un requisito plausible pero falso. Todo el proyecto está construido en torno a ese único error que no se puede cometer.',
       ],
 
       architettura: {
         paragrafi: [
           'El servidor es un mini PC de 800 € (Ryzen 5 7640HS, 32 GB de RAM), con Ubuntu Server instalado desde cero. La inferencia es solo por CPU: dos servidores llama.cpp gestionados por systemd y accesibles únicamente en local, uno para el modelo generativo (Gemma 4 26B, unos 23 GB) y otro para los embeddings, más un clasificador de fidelidad. La limitación no era la potencia sino la memoria: todo debía caber en RAM, sin swap, durante una sesión de pruebas completa.',
-          'El principio de la pipeline es que el sistema nunca responde «con poca seguridad»: un mensaje supera todos los controles o pasa a una persona. El modelo se trata como un extractor del que no se confía: elige qué frases de los documentos aprobados responden a la pregunta, pero al estudiante solo le llegan frases copiadas literalmente de la base de conocimiento, después de que un programa haya verificado cada afirmación: la cita existe en el pasaje, los números y las fechas coinciden, y el clasificador confirma que la cita respalda la afirmación.',
-          'La integración usa la API oficial de WhatsApp en coexistencia: la oficina sigue usando la aplicación en el teléfono y, si un operador responde primero, el sistema lo detecta y no envía nada. Hacia fuera solo hay una ruta HTTPS secreta para los mensajes entrantes; los modelos, el panel y SSH se quedan en la red local o en una VPN privada. Con cada mensaje, el receptor comprueba en vivo, en la hoja de Google de la oficina, que el número sea de un estudiante del grado, sin guardar una copia: quien no está en la lista ni siquiera se archiva.',
-          'De día la máquina trabaja a pleno rendimiento; de 18:00 a 9:00 detiene los modelos y se queda a la escucha con unos 0,9 GB de RAM, recogiendo los mensajes para la mañana. La oficina lo gestiona todo desde una sola página: borradores por aprobar, estado de los servicios, registro de cada decisión, editor de la base de conocimiento y un botón de parada.',
+          'El principio de la pipeline es que el sistema nunca responde «con poca seguridad»: un mensaje supera todos los controles o pasa a una persona. El modelo se trata como un extractor del que no se confía: elige qué frases de los documentos aprobados responden a la pregunta, pero al cliente solo le llegan frases copiadas literalmente de la base de conocimiento, después de que un programa haya verificado cada afirmación: la cita existe en el pasaje, los números y las fechas coinciden, y el clasificador confirma que la cita respalda la afirmación.',
+          'La integración usa la API oficial de WhatsApp en coexistencia: el equipo de atención al cliente sigue usando la aplicación en el teléfono y, si un operador responde primero, el sistema lo detecta y no envía nada. Hacia fuera solo hay una ruta HTTPS secreta para los mensajes entrantes; los modelos, el panel y SSH se quedan en la red local o en una VPN privada. Con cada mensaje, el receptor comprueba en vivo, en la hoja de Google de la empresa, que el número sea de un cliente registrado, sin guardar una copia: quien no está en la lista ni siquiera se archiva.',
+          'De día la máquina trabaja a pleno rendimiento; de 18:00 a 9:00 detiene los modelos y se queda a la escucha con unos 0,9 GB de RAM, recogiendo los mensajes para la mañana. El equipo lo gestiona todo desde una sola página: borradores por aprobar, estado de los servicios, registro de cada decisión, editor de la base de conocimiento y un botón de parada.',
           'Tres investigaciones cambiaron el proyecto sobre la marcha. La memoria: durante una prueba de 185 preguntas la swap crecía hasta 2–4 GB; la causa era el modelo mapeado en memoria, que se cargaba poco a poco, y solo se veía midiendo bajo carga completa, no al arrancar. La propia medición: al leer a mano 55 casos divergentes descubrí que 27 de los 39 «errores» eran errores en las etiquetas de la prueba, y que un control parecía eficaz solo porque las mismas preguntas de la prueba estaban en su lista; de ahí la decisión de simplificar la pipeline. La privacidad: al conectarse, WhatsApp sincronizó en el servidor la agenda del teléfono, 5.569 contactos, detectada y borrada de inmediato.',
         ],
         immagine: {
           src: '/case-studies/local-rag-pipeline.svg',
           alt: 'Esquema del recorrido de un mensaje: descomposición, exclusión, búsqueda y respuesta restringida, verificación y control de aprobación, con una salida hacia el operador en cada paso',
-          didascalia: 'El recorrido de un mensaje. Cada control solo puede detenerlo y pasarlo a una persona; se convierte en respuesta automática únicamente si los supera todos y se parece a una respuesta ya aprobada por la oficina.',
+          didascalia: 'El recorrido de un mensaje. Cada control solo puede detenerlo y pasarlo a una persona; se convierte en respuesta automática únicamente si los supera todos y se parece a una respuesta ya aprobada por el equipo.',
         },
       },
 
       decisioni: [
         {
-          scelta: 'RAG sobre los documentos de la oficina, nunca fine-tuning',
-          perche: 'El fine-tuning enseña el estilo, no los hechos: un modelo entrenado con los chats antiguos generaría fechas e importes que parecen correctos. Los hechos deben venir de documentos que la oficina controla y puede corregir. El archivo histórico de chats sirvió solo para saber qué preguntas llegan, nunca como fuente de respuestas.',
+          scelta: 'RAG sobre los documentos de la empresa, nunca fine-tuning',
+          perche: 'El fine-tuning enseña el estilo, no los hechos: un modelo entrenado con los chats antiguos generaría fechas e importes que parecen correctos. Los hechos deben venir de documentos que la empresa controla y puede corregir. El archivo histórico de chats sirvió solo para saber qué preguntas llegan, nunca como fuente de respuestas.',
           alternativa: 'Entrenar un modelo con el archivo de conversaciones pasadas: parece el camino más directo, pero produce respuestas plausibles que nadie ha verificado.',
         },
         {
@@ -219,19 +219,19 @@ const es: Testi = {
           alternativa: 'Un modelo denso de 8.000 millones de parámetros, algo más fiel sobre el papel pero mucho más débil al entender preguntas reformuladas o con varias partes; o un denso de 27.000 millones, mejor en la forma pero más lento y al límite de la memoria.',
         },
         {
-          scelta: 'Al estudiante solo le llegan citas verificadas',
+          scelta: 'Al cliente solo le llegan citas verificadas',
           perche: 'Para cada afirmación, el modelo debe indicar el pasaje y la frase exacta de la que la extrae. Un programa, sin ningún modelo generativo, comprueba que la frase existe, que los números y las fechas coinciden y que un clasificador de fidelidad la confirma. Basta una afirmación rechazada para que todo el mensaje pase a una persona. En las pruebas la separación es clara: puntuación mediana de 0,90 en las afirmaciones aceptadas y de 0,17 en las rechazadas.',
-          alternativa: 'Enviar la respuesta escrita por el modelo por encima de cierto umbral de confianza: más cobertura desde el primer día, pero las palabras del modelo llegarían al estudiante sin que nadie las hubiera comprobado.',
+          alternativa: 'Enviar la respuesta escrita por el modelo por encima de cierto umbral de confianza: más cobertura desde el primer día, pero las palabras del modelo llegarían al cliente sin que nadie las hubiera comprobado.',
         },
         {
           scelta: 'La autonomía se gana respuesta a respuesta',
-          perche: 'Una respuesta verificada sale en automático solo si se parece mucho a una respuesta ya aprobada por la oficina y cita los mismos pasajes; si no, se queda como borrador. Cada borrador aprobado desde el panel amplía lo que puede volverse automático. Así, un error de enrutamiento cuesta un borrador de más, no un mensaje equivocado a un estudiante.',
+          perche: 'Una respuesta verificada sale en automático solo si se parece mucho a una respuesta ya aprobada por el equipo y cita los mismos pasajes; si no, se queda como borrador. Cada borrador aprobado desde el panel amplía lo que puede volverse automático. Así, un error de enrutamiento cuesta un borrador de más, no un mensaje equivocado a un cliente.',
           alternativa: 'Un clasificador que decide de antemano si responder o pasar al operador. Construí y medí tres: el mejor enrutaba bien 115 preguntas de 136 y nunca llegaba al 100 %.',
         },
         {
           scelta: 'API oficial de WhatsApp, en coexistencia con la aplicación',
-          perche: 'La oficina sigue usando WhatsApp Business en el teléfono como antes, mientras el servidor recibe los mensajes directamente de Meta. Cuesta 12 dólares al mes, respeta las normas de la plataforma y el proveedor no conserva el contenido de los mensajes.',
-          alternativa: 'Automatizar WhatsApp Web con un navegador controlado por software: más barato sobre el papel, pero contrario a las condiciones de uso, frágil y con el riesgo real de que bloqueen el número de la oficina.',
+          perche: 'El equipo sigue usando WhatsApp Business en el teléfono como antes, mientras el servidor recibe los mensajes directamente de Meta. Cuesta 12 dólares al mes, respeta las normas de la plataforma y el proveedor no conserva el contenido de los mensajes.',
+          alternativa: 'Automatizar WhatsApp Web con un navegador controlado por software: más barato sobre el papel, pero contrario a las condiciones de uso, frágil y con el riesgo real de que bloqueen el número de la empresa.',
         },
       ],
 
@@ -241,8 +241,8 @@ const es: Testi = {
         'Base de conocimiento: 38 categorías, 71 pasajes, 479 preguntas de ejemplo',
         'Conjunto de prueba de 136 preguntas, revisadas con 93 decisiones razonadas',
         'Integración con WhatsApp en coexistencia, con receptor activo las 24 horas',
-        'Filtro del registro de estudiantes en vivo: 5.397 filas leídas en 1 segundo, sin copia local',
-        'Panel para la oficina: borradores, aprobación, registro, editor y parada de emergencia',
+        'Filtro del registro de clientes en vivo: 5.397 filas leídas en 1 segundo, sin copia local',
+        'Panel para el equipo de atención al cliente: borradores, aprobación, registro, editor y parada de emergencia',
         'Dos modos de funcionamiento: horario de oficina y escucha nocturna con unos 0,9 GB de RAM',
         '56 pruebas automáticas sobre la capa de integración, todas superadas',
         'Registro de auditoría de cada decisión y borrador del aviso de privacidad',
@@ -259,7 +259,7 @@ const es: Testi = {
         ],
         aggiornamento: {
           data: '2026-11-14',
-          testo: 'Cifras medidas en los conjuntos de prueba y en el sistema en funcionamiento. Las etiquetas de las pruebas las revisé yo y la oficina aún no las ha validado. Por prudencia, todo lo que no se parece a una respuesta ya aprobada se queda igualmente como borrador para el operador.',
+          testo: 'Cifras medidas en los conjuntos de prueba y en el sistema en funcionamiento. Las etiquetas de las pruebas las revisé yo y la empresa aún no las ha validado. Por prudencia, todo lo que no se parece a una respuesta ya aprobada se queda igualmente como borrador para el operador. El siguiente paso es llevar el mismo sistema a la atención por correo electrónico.',
         },
       },
 
